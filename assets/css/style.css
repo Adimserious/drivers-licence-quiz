@@ -1,65 +1,198 @@
 * {
+    /* This overrides default browser settings */
     margin: 0;
     padding: 0;
-    font-family: "poppins", "sans-serif";
     box-sizing: border-box;
 }
 
 body {
-    background: red;
-    color: white;
+    background: red, url('../images/cars-image.jpg') fixed center / cover; ;
+    color: black;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.app {
-    background: hwb(120 8% 92%);
-    width: 90%;
-    max-width: 600px;
-    margin: 100px auto 0;
+/* This pushes the footer down to the bottom of the page */
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    align-content: flex-end;
+}
+
+/* header styles */
+.heading {
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    text-decoration: underline;
+    font-size: 2rem;
+    padding-top: 20px;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 5px;
+}
+
+/* main body styles */
+#welcome-div,
+#prompt-div {
+    border: solid #fff 2px;
     border-radius: 10px;
-    padding: 30px;
+    margin: 30px 50px 0;
+    background-color: red;
 }
 
-.app h1 {
-    font-size: 25px;
-    font-weight: 600;
-    border-bottom: 1px solid;
-    padding-bottom: 30px;
+#welcome-text,
+#prompt-text {
+    color: black;
+    padding: 5px;
+    font-size: 1.5em;
+    text-align: center;
 }
 
-.quiz {
-    padding: 20px 0;
+/* styles for the form */
+#form {
+    background-color: red;
+    margin: 0 20px 50px;
+    border-radius: 10px;
+    max-height: 1000px;
+    transition: max-height 1.5s;
+    overflow: hidden;
 }
 
-.quiz h2 {
-    font-size: 18px;
-    font-weight: 600;
+#inputs {
+    background-color: #000;
+    border: none;
+    padding: 20px;
+    color: yellow;
+    border-radius: 10px;
+}
+
+#form-title {
+    display: flex;
 }
 
 .btn {
-    font-weight: 500;
-    color: #000;
-    width: 100%;
-    border: 1px solid;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: left;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s;
+    background-color: white;
+    color: red;
+    font-weight: 600;
 }
+
+#form-heading {
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-size: 1.5em;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+}
+
+/* Input Styles */
+#inputs {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex-basis: 300px;
+}
+
+/* Input placeholder color */
+form input::placeholder {
+    color: black;
+}
+
+#form input:hover {
+    background: yellow;
+}
+
+/* Submit button Styles */
+form #submitBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+form #guestBtn {
+    align-content: center;
+    margin-right: 20px;
+}
+
+form #guestBtn:hover {
+    color: black;
+    cursor: pointer;
+}
+
+form button {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 1em;
+    background-color: transparent;
+    border-color: transparent;
+    color: #fff;
+    border-bottom: black 2px solid;
+    padding: 5px;
+    letter-spacing: 2px;
+}
+
+form button:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.error-msg {
+    color: black;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+#confirm-password {
+    max-height: 80px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    transition: padding 0.5s;
+}
+
+/* Signup/Signin Button Styles */
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 10px 40px;
+}
+
+form .btn {
+    background-color: #363636;
+    border-radius: 10px;
+    text-decoration: none;
+    border: #fff 2px solid;
+    padding: 10px 50px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+form .active {
+    background-color: rgb(29, 29, 129);
+}
+ 
+
+
+
+
+
 
 .btn:hover {
     background: yellow 
 }
 
-#next-btn {
-    color: #000;
-    font-weight: 500;
-    width: 150px;
-    border: 0;
-    padding: 10px;
-    margin: 20px auto 0;
-    border-radius: 4px;
-    cursor: pointer;
-    display: none;
-}
+
+
+
