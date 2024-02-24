@@ -30,8 +30,8 @@ function displaySignUp(){
     signup.classList.add('active');
     signin.classList.remove('active');
     passwordConfirmedArea.style.maxHeight = '80px';
-    passwordConfirmedArea.style.paddingBottom = '20px';
-    passwordConfirmedArea.style.paddingTop = '20px';
+    passwordConfirmedArea.style.paddingBottom = '10px';
+    passwordConfirmedArea.style.paddingTop = '10px';
     passwordArea.setAttribute('placeholder', 'Create Password');
     usernameArea.setAttribute('placeholder', 'Create Username');
 }
@@ -118,3 +118,38 @@ function beginHover(event){
     beginBtn.style.color = 'yellow';
     beginBtn.style.cursor = 'pointer';
 }
+
+/**
+ * This function makes the Begin Quiz Button and border 
+ * color change from yeloow to white
+ */
+function beginOut(event){
+    beginBtn.style.borderColor = 'white';
+    beginBtn.style.color = 'white';
+}
+
+let beginButton = document.getElementById('beginBtn');
+beginButton.addEventListener('mouseover', beginHover);
+beginButton.addEventListener('mouseout', beginOut);
+
+/**
+ * This function hides the Begin Quiz Window by setting the max-height
+ * to 0px, as well also removes the transition delay
+ */
+function hideBeginWindow(){
+    let begin = document.getElementById('beginDiv');
+    begin.style.maxHeight = '0';
+    begin.style.transitionDelay = '0s';
+}
+
+/**
+ * This function reveals the quiz window by setting the max-height
+ * property to 1000px
+ */
+function showQuestionWindow() {
+    let questionWindow = document.getElementById('questionWindow');
+    let windowWidth = window.innerWidth;
+    questionWindow.style.maxHeight = '1000px';
+    questionWindow.style.transitionDelay = '0s';
+}
+
