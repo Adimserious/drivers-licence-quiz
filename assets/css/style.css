@@ -6,12 +6,13 @@
 }
 
 body {
-    background: red, 
+    background: red;
     color: black;
     width: 100%;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+    
 }
 
 /* This pushes the footer down to the bottom of the page */
@@ -30,7 +31,7 @@ footer {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 5px;
-    text-decoration: underline;
+    text-decoration: solid;
     font-size: 2rem;
     padding-top: 20px;
     text-underline-offset: 8px;
@@ -48,10 +49,10 @@ footer {
 
 #welcome-text,
 #prompt-text {
-    color: black;
     padding: 5px;
     font-size: 1.5em;
     text-align: center;
+    color: black;
 }
 
 /* styles for the form */
@@ -87,7 +88,7 @@ footer {
     color: black;
     text-align: center;
     font-size: 1.5em;
-    text-decoration: underline;
+    text-decoration: solid;
     text-underline-offset: 10px;
     text-decoration-thickness: 5px;
     margin-top: 5px;
