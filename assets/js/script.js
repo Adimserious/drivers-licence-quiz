@@ -22,7 +22,7 @@ function displaySignIn(){
 }
 
 /**
- * This function will show the 'confirm passowrd' field, change the title to 'sign-up'
+ * This function will change the title to 'sign-up', show 'confirm password' area,
  * and highlight the sign-up button. Placeholder text changes as well.
  */
 function displaySignUp(){
@@ -30,8 +30,8 @@ function displaySignUp(){
     signup.classList.add('active');
     signin.classList.remove('active');
     passwordConfirmedArea.style.maxHeight = '80px';
-    passwordConfirmedArea.style.paddingBottom = '10px';
-    passwordConfirmedArea.style.paddingTop = '10px';
+    passwordConfirmedArea.style.paddingBottom = '1px';
+    passwordConfirmedArea.style.paddingTop = '1px';
     passwordArea.setAttribute('placeholder', 'Create Password');
     usernameArea.setAttribute('placeholder', 'Create Username');
 }
@@ -100,56 +100,320 @@ function hideForm(){
     showBeginWindow();
 }
 
-// This function shows the Begin Quiz Window
+// This function shows the Begin Quiz area
  
 function showBeginWindow(){
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = '1000px';
-    begin.style.transitionDelay = '1s';
+    begin.style.transitionDelay = '2s';
+    begin.style.backgroundColor = 'red'
 }
 
 /**
  * This function makes the Begin Quiz button change border and font
- * color to yellow
+ * color to yellow and red respectively when pointed
  */
 
 function beginHover(event){
-    beginBtn.style.borderColor = 'yelow';
-    beginBtn.style.color = 'yellow';
+    beginBtn.style.borderColor = 'yellow';
+    beginBtn.style.color = 'red';
     beginBtn.style.cursor = 'pointer';
 }
 
 /**
  * This function makes the Begin Quiz Button and border 
- * color change from yeloow to white
+ * color change from yelow/red to white at mouse-out
  */
 function beginOut(event){
     beginBtn.style.borderColor = 'white';
     beginBtn.style.color = 'white';
 }
 
-let beginButton = document.getElementById('beginBtn');
-beginButton.addEventListener('mouseover', beginHover);
-beginButton.addEventListener('mouseout', beginOut);
+let beginBtn = document.getElementById('beginBtn');
+beginBtn.addEventListener('mouseover', beginHover);
+beginBtn.addEventListener('mouseout', beginOut);
 
 /**
  * This function hides the Begin Quiz Window by setting the max-height
  * to 0px, as well also removes the transition delay
  */
-function hideBeginWindow(){
+function hideBeginArea(){
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = '0';
     begin.style.transitionDelay = '0s';
 }
 
 /**
- * This function reveals the quiz window by setting the max-height
+ * This function reveals the quiz area by setting the max-height
  * property to 1000px
  */
-function showQuestionWindow() {
-    let questionWindow = document.getElementById('questionWindow');
+function showQuestionArea() {
+    let questionArea = document.getElementById('questionArea');
     let windowWidth = window.innerWidth;
-    questionWindow.style.maxHeight = '1000px';
+    questionArea.style.maxHeight = '1000px';
+    questionArea.style.transitionDelay = '0s';
+
+
+// This if statement sets the min-height of the quiz area
+    if (windowWidth < '500') {
+        questionArea.style.minHeight = '710px';
+    } else if (windowWidth < '768') {
+        questionArea.style.minHeight = '850px';
+    } else if (windowWidth < '1000') {
+        questionArea.style.minHeight = '850px';
+    } else {
+        questionArea.style.minHeight = '750px';
+}
+}
+
+// This section adds functionality to the quiz area
+
+let nextQuestionBtn = document.getElementById('nextQuestionBtn');
+let questionText = document.getElementById('questionText');
+let answerDiv = document.getElementById('answerDiv');
+let shuffledQuestions;
+let currentQuestionIndex;
+let score = 0;
+
+
+/**
+ * This function hides the Begin Quiz Area and reveals the Question Area. It also shuffles the
+ * question order using the sort and random functions. Sets question index to 0.
+ */
+function runQuiz() {
+    hideBeginArea();
+    showQuestionArea();
+    shuffledQuestions = licenceQuestions.sort(() => Math.random() - 0.5);
+    currentQuestionIndex = 0;
+    getQuestion();
+}
+beginBtn.addEventListener('click', runQuiz);
+
+nextQuestionBtn.addEventListener('click', () => {
+    currentQuestionIndex++;
+    getQuestion();
+});
+
+/**
+ * This function takes the parameters of the question objects and passes them into
+ * the getNextQuestion function. Sets the question number in the quiz area.
+ */
+function getQuestion(){
+    resetState();
+    getNextQuestion(shuffledQuestions[currentQuestionIndex]);
+    let questionNumber = document.getElementById('questionNoText');
+    questionNumber.innerHTML = `<span class="white">Question ` + (parseInt(currentQuestionIndex) + 1) + ` of 10</span>`;
+
+    /**
+ * This function sets the question Inner-html using question parameter.
+ * Creates new question divs with the answers passed to the function.
+ * It adds the class of correct to the answers that are correct.
+ */
+function getNextQuestion(licenceQuestions) {
+    questionText.innerHTML = licenceQuestions.question;
+    licenceQuestions.answer.forEach(answer => {
+        let button = document.createElement('div');
+        button.innerHTML = answer.text;
+        button.classList.add('answerText');
+        if (answer.correct){
+            button.dataset.correct = answer.correct;
+        } button.addEventListener('click', showAnswer);
+        answerDiv.appendChild(button);
+    });
+}
+
+}
+
+/**
+ * This function removes the div elements created in the function above,
+ * thus setting the state of the questionWindow back to default.
+ * Removes the display of the Next Question button.
+ */
+function resetState(){
+    nextQuestionBtn.style.display = 'none';
+    while (answerDiv.firstChild){
+        answerDiv.removeChild(answerDiv.firstChild);
+    }
+}
+
+/**
+ * This function deactivates the answer buttons after the first click.
+ * Passes the correct value to the function of setAnswerClass.
+ * Determines whether to show the Next Question button or See Results Button.
+  */
+function showAnswer(e){
+    // This removes the event listener after the first click.
+    let eventButtons = document.getElementsByClassName('answerText');
+    for (let eventButton of eventButtons) {
+        eventButton.removeEventListener('click', showAnswer);
+    }
+    
+    // This takes the object's correct value and passes it to the setAnswer Class function
+    let clickedButton = e.target;
+    Array.from(answerDivElement.children).forEach(button => {
+        setAnswerClass(button, button.dataset.correct);
+    });
+
+    // This increments the user's score by 1 if answered correctly
+    let dataType = clickedButton.classList.contains('correct');
+    if (dataType) {
+        score = ++score;
+        let scoreText = document.getElementById('score');
+    scoreText.innerHTML = parseInt(score);
+    };   
+
+    // This if statement determines whether the nextQuestion Button or seeResults button is displayed
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+         nextQuestionBtn.style.display = 'block';
+    } else if (shuffledQuestions.length = currentQuestionIndex + 1) {
+        let seeResultsBtn = document.getElementById('seeResultsID');
+        seeResultsBtn.classList.add('seeResultsBtn');
+        seeResultsBtn.classList.add('question-btn');
+        seeResultsBtn.style.cursor = 'pointer';
+        seeResultsBtn.style.display = 'block';
+        seeResultsBtn.addEventListener('click', showResultsWindow);
+    }
+}
+
+/**
+ * This function takes the parameter of the question objects answer values, if correct it adds
+ * the data-type of correct, if wrong it adds the data-type of wrong.
+  */
+function setAnswerClass(element, correct){
+    // The clear answer class removes the datatype and class for the next question
+    clearAnswerClass(element);
+    if (correct) {
+        element.classList.add('correct');
+        element.setAttribute('data-type', 'correct');
+    } else {
+        element.classList.add('wrong');
+        element.setAttribute('data-type', 'false');
+    }
+}
+
+/**
+ * This function removes both the class and data-type of the parameters passed
+ * to the function so that they are clear for the next question.
+ */
+function clearAnswerClass(element){
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
+    element.removeAttribute('data-type', 'correct');
+    element.removeAttribute('data-type', 'false');
+}
+
+// This section refers to the Results Window 
+
+/**
+ * This function collapses the question window and shows the results window.
+  */
+function showResultsArea() {
+    let questionArea = document.getElementById('questionArea');
+    questionArea.style.maxHeight = '0';
+    questionArea.style.minHeight = '0';
+    questionArea.style.transitionDelay = '0s';
+    let resultsWindow = document.getElementById('resultsDiv');
+    resultsWindow.style.maxHeight ='1000px';
+    resultsWindow.style.transitionDelay = '2s';
+};
+
+/**
+ * This function closes the Results Window by setting the maxHeight to 0px.
+  */
+function closeQuiz() {
+    let resultsWindow = document.getElementById('resultsDiv');
+    resultsWindow.style.maxHeight ='0';
+    resultsWindow.style.transitionDelay = '0s';
+}
+
+/**
+ * This function closes the Results Window and re-opens the 
+ * BeginQuiz window for the user to replay the quiz. Reset's the user score.
+  */
+function tryAgain() {
+    closeQuiz();
+    showBeginWindow();
+    let seeResultsBtn = document.getElementById('seeResultsID');
+    seeResultsBtn.style.display = 'none';
+    seeResultsBtn.classList.remove('seeResultsBtn');
+    seeResultsBtn.classList.remove('question-btn');
+
+    // User score is set back to 0
+    score = 0;
+}
+
+let tryAgainBtn = document.getElementById('tryAgainBtn');
+tryAgainBtn.addEventListener('click', tryAgain);
+
+let exitQuizBtn = document.getElementById('exitQuizBtn');
+exitQuizBtn.addEventListener('click', closeQuiz);
+
+/**
+ * This function allows the user to exit the quiz window through clicking 
+ * the X at the top-right corner of the quiz window.
+  */
+function exitQuiz() {
+    let questionWindow = document.getElementById('questionWindow');
+    questionWindow.style.maxHeight = '0';
+    questionWindow.style.minHeight = '0';
     questionWindow.style.transitionDelay = '0s';
 }
 
+let crossBtn = document.getElementById('quizCross');
+crossBtn.addEventListener('click', exitQuiz);
+
+
+
+
+
+// These are the questions for the quiz.
+const easyQuestions = [
+    {
+        question: 'Your passenger wants to discuss something with you during the journey. what should you do?',
+        answer: [
+            {text: "Concentrate on the discussion", correct: false},
+            {text: "Concentrate on the driving", correct: true},
+            {text: "Concentrate on the discussion and driving", correct: false},
+        ]
+    },
+    {
+        question: 'What could cause the vehicle to leave the road?',
+        answer: [
+            {text: "Tiredness", correct: false},
+            {text: "Distraction", correct: false},
+            {text: "Inattention", correct: true},
+        ]
+    },
+    {
+        question: 'What can inpair fitness to drive?',
+        answer: [
+            {text: "Fatigue", correct: true},
+            {text: "Certain medicines", correct: true},
+            {text: "Alcohol and other intoxicants", correct: true},
+        ]        
+    },
+    {
+        question: 'What should you do if you start feeling tired while driving?',
+        answer: [
+            {text: "Take a break straightaway", correct: true},
+            {text: "Get out of the car and move around in the fresh air", correct: true},
+            {text: "Listen to stimulating music", correct: false},
+        ]
+    },
+    {
+        question: 'What emotions can influence driving behaviour?',
+        answer: [
+            {text: "Sorrow and worry", correct: true},
+            {text: "Happiness and exuberance", correct: true},
+            {text: "Anger and rage", correct: true},
+        ]
+    },
+    {
+        question: 'What can be the effect of even small quantities of alcohol?',
+        answer: [
+            {text: "Reckless driving", correct: true},
+            {text: "Delayed reactions", correct: true},
+            {text: "Impairment of hearing and vision", correct: true},
+        ]
+    }
+];

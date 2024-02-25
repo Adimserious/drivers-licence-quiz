@@ -6,7 +6,7 @@
 }
 
 body {
-    background: red;
+    background: black;
     color: black;
     width: 100%;
     min-height: 100vh;
@@ -27,7 +27,7 @@ footer {
 
 /* header styles */
 .heading {
-    color: black;
+    color: white;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 5px;
@@ -63,15 +63,7 @@ footer {
     max-height: 1000px;
     transition: max-height 1.5s;
     overflow: hidden;
-}
-
-#inputs {
-    background-color: #000;
-    border: none;
-    padding: 20px;
-    color: yellow;
-    border-radius: 10px;
-}
+} 
 
 #form-title {
     display: flex;
@@ -96,8 +88,12 @@ footer {
     letter-spacing: 3px;
 }
 
-/* Input Styles */
+/* this is a div */
 #inputs {
+    background-color: #000;
+    border: none;
+    padding: 20px;
+    border-radius: 20px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -109,7 +105,7 @@ form input::placeholder {
     color: black;
 }
 
-#form input:hover {
+form input:hover {
     background: yellow;
 }
 
@@ -149,7 +145,7 @@ form button:hover {
 }
 
 .error-msg {
-    color: black;
+    color: white;
     font-weight: bold;
     margin-left: 20px;
 }
@@ -226,11 +222,11 @@ form .active {
     letter-spacing: 3px;
 }
 
-/* Question Window section */
+/* Question Area section */
 
-#questionWindow {
-    color: black;
-    background-color: rgba(247, 7, 7, 0.7);
+#questionArea {
+    color: white;
+    background-color: black;
     border-radius: 10px;
     margin: 50px;
     position: relative;
@@ -243,7 +239,7 @@ form .active {
 }
 
 /* This refers to the question number text */
-#questionNoTextDiv {
+#question-no-text-div {
     display: flex;
     justify-content: space-between;
 }
@@ -280,7 +276,7 @@ i:hover {
     border: #fff 2px solid;
     border-radius: 10px;
     padding: 10px;
-    background-color: red;
+    background-color: black;
 }
 
 /* These stlyes are for the answers div and text class */
@@ -322,7 +318,7 @@ i:hover {
 }
 
 .question-btn:hover {
-    border: #000080 2px solid;
+    border: yellow 2px solid;
     cursor: pointer;
 }
 
@@ -330,7 +326,7 @@ i:hover {
     display: none;
 }
 
-/* These classes style the answerText elements based on what value the setAnswerCkass function 
+/* These classes style the answerText elements based on what value the setAnswerClass function 
         passes to them */
 .correct, .correct:hover {
      border: #00c04b 2px solid;
@@ -338,8 +334,8 @@ i:hover {
 }
 
 .wrong {
-    border: green 2px solid;
-    color: green;
+    border: red 2px solid;
+    color: red;
 }
 
 /* This section refers to the results window */
