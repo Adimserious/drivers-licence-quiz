@@ -202,7 +202,7 @@ function getQuestion(){
     resetState();
     getNextQuestion(shuffledQuestions[currentQuestionIndex]);
     let questionNumber = document.getElementById('questionNoText');
-    questionNumber.innerHTML = `<span class="white">Question ` + (parseInt(currentQuestionIndex) + 1) + ` of 10</span>`;
+    questionNumber.innerHTML = `<span class="blue">Question ` + (parseInt(currentQuestionIndex) + 1) + ` of 10</span>`;
 
     /**
  * This function sets the question Inner-html using question parameter.
@@ -250,7 +250,7 @@ function showAnswer(e){
     
     // This takes the object's correct value and passes it to the setAnswer Class function
     let clickedButton = e.target;
-    Array.from(answerDivElement.children).forEach(button => {
+    Array.from(answerDiv.children).forEach(button => {
         setAnswerClass(button, button.dataset.correct);
     });
 
@@ -271,7 +271,7 @@ function showAnswer(e){
         seeResultsBtn.classList.add('question-btn');
         seeResultsBtn.style.cursor = 'pointer';
         seeResultsBtn.style.display = 'block';
-        seeResultsBtn.addEventListener('click', showResultsWindow);
+        seeResultsBtn.addEventListener('click', showResultsArea);
     }
 }
 
@@ -302,10 +302,10 @@ function clearAnswerClass(element){
     element.removeAttribute('data-type', 'false');
 }
 
-// This section refers to the Results Window 
+// This section refers to the Results Area 
 
 /**
- * This function collapses the question window and shows the results window.
+ * This function closes the question Area and shows the results Area.
   */
 function showResultsArea() {
     let questionArea = document.getElementById('questionArea');
@@ -318,7 +318,7 @@ function showResultsArea() {
 };
 
 /**
- * This function closes the Results Window by setting the maxHeight to 0px.
+ * This function closes the Results Area by setting the maxHeight to 0px.
   */
 function closeQuiz() {
     let resultsWindow = document.getElementById('resultsDiv');
@@ -327,8 +327,8 @@ function closeQuiz() {
 }
 
 /**
- * This function closes the Results Window and re-opens the 
- * BeginQuiz window for the user to replay the quiz. Reset's the user score.
+ * This function closes the Results Area and re-opens the 
+ * BeginQuiz Area for the user to repeat the quiz. Reset's the user score.
   */
 function tryAgain() {
     closeQuiz();
@@ -349,7 +349,7 @@ let exitQuizBtn = document.getElementById('exitQuizBtn');
 exitQuizBtn.addEventListener('click', closeQuiz);
 
 /**
- * This function allows the user to exit the quiz window through clicking 
+ * This function allows the user to exit the quiz Area by clicking 
  * the X at the top-right corner of the quiz window.
   */
 function exitQuiz() {
@@ -367,7 +367,7 @@ crossBtn.addEventListener('click', exitQuiz);
 
 
 // These are the questions for the quiz.
-const easyQuestions = [
+const licenceQuestions = [
     {
         question: 'Your passenger wants to discuss something with you during the journey. what should you do?',
         answer: [
@@ -387,15 +387,15 @@ const easyQuestions = [
     {
         question: 'What can inpair fitness to drive?',
         answer: [
-            {text: "Fatigue", correct: true},
+            {text: "Fatigue", correct: false},
             {text: "Certain medicines", correct: true},
-            {text: "Alcohol and other intoxicants", correct: true},
+            {text: "Alcohol and other intoxicants", correct: false},
         ]        
     },
     {
         question: 'What should you do if you start feeling tired while driving?',
         answer: [
-            {text: "Take a break straightaway", correct: true},
+            {text: "Take a break straightaway", correct: false},
             {text: "Get out of the car and move around in the fresh air", correct: true},
             {text: "Listen to stimulating music", correct: false},
         ]
@@ -403,8 +403,8 @@ const easyQuestions = [
     {
         question: 'What emotions can influence driving behaviour?',
         answer: [
-            {text: "Sorrow and worry", correct: true},
-            {text: "Happiness and exuberance", correct: true},
+            {text: "Sorrow and worry", correct: false},
+            {text: "Happiness and exuberance", correct: false},
             {text: "Anger and rage", correct: true},
         ]
     },
@@ -412,8 +412,44 @@ const easyQuestions = [
         question: 'What can be the effect of even small quantities of alcohol?',
         answer: [
             {text: "Reckless driving", correct: true},
-            {text: "Delayed reactions", correct: true},
-            {text: "Impairment of hearing and vision", correct: true},
-        ]
-    }
-];
+            {text: "Delayed reactions", correct: false},
+            {text: "Impairment of hearing and vision", correct: false},
+        ]
+    },
+    {
+        question: 'Are drivers during their probation period allowed to be under the influence of alcohol when driving motor vehicles?',
+        answer: [
+            {text: "yes, up to a blood alcohol level of 30 miligrams", correct: false},
+            {text: "No, definitely not", correct: true},
+            {text: "yes, upto 50 miligram if they have not commited any alcohol related traffic violation", correct: false},
+        ]
+    },
+    {
+        question: 'When will offences carrying two points be deleted from the Central Register of Road Traffic Offenders?',
+        answer: [
+            {text: "-5 years", correct: true},
+            {text: "-2 years", correct: false},
+            {text: "-3 years", correct: false},
+        ]
+    },
+    {
+        question: 'You want to carry a child in your car, when must you use a child seat for this purpose?',
+        answer: [
+            {text: "If the child is older than 12 years and is under 150 cm height", correct: false},
+            {text: "If the child is older than 12 years and taller than 150 cm", correct: false},
+            {text: "If the child is younger than 12 years old and under 150 cm height", correct: true},
+        ]
+    },
+    {
+        question: 'What ?',
+        answer: [
+            {text: "Reckless driving", correct: true},
+            {text: "Delayed reactions", correct: false},
+            {text: "Impairment of hearing and vision", correct: false},
+        ]
+    }
+
+
+
+
+]
