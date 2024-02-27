@@ -102,7 +102,8 @@ footer {
 
 /* Input placeholder color */
 form input::placeholder {
-    color: black;
+    color: white;
+    background-color: purple;
 }
 
 form input:hover {
@@ -342,7 +343,7 @@ i:hover {
 /* This section refers to the results window */
 
 #resultsDiv {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: purple;
     margin: 30px 40px;
     border-radius: 10px;
     display: flex;
@@ -357,9 +358,9 @@ i:hover {
 }
 
 #resultsText {
-    color: red;
-    background-color: black;
-    border: 2px yellow solid;
+    color: purple;
+    background-color: pink;
+    border: 2px white solid;
     border-radius: 10px;
     font-size: 3rem;
     text-align: center;
@@ -373,21 +374,21 @@ i:hover {
 }
 
 .resetBtn {
-        color: red;
-        border: black 2px solid;
+        color: purple;
+        border: white 2px solid;
         font-weight: bold;
         padding: 15px;
         border-radius: 20px;
         font-size: 1.5em;
         margin: 20px 100px;
-        background-color: yellow;
+        background-color: pink;
         text-align: center;
         justify-content: center;
 }
 
 .resetBtn:hover {
     cursor: pointer;
-    border: yellow 2px solid;
+    border: green 2px solid;
 }
 
 /* Media Query for Tablets and higher (768px and higher) */
