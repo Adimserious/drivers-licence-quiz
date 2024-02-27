@@ -228,7 +228,7 @@ function getNextQuestion(licenceQuestions) {
 
 /**
  * This function removes the div elements created in the function above,
- * Thereby setting the state of the questionWindow back to default.
+ * Thereby setting the state of the questionArea back to default.
  * Removes the display of the Next Question button.
  */
 function resetState(){
@@ -239,7 +239,7 @@ function resetState(){
 }
 
 /**
- * This function deactivates the answer buttons after the first click.
+ * This function deactivates the answer buttons after first click.
  * Passes the correct value to the function of setAnswerClass.
  * Determines whether to show the Next Question button or See Results Button.
   */
@@ -250,13 +250,13 @@ function showAnswer(e){
         eventButton.removeEventListener('click', showAnswer);
     }
     
-    // This takes the object's correct value and passes it to the setAnswer Class function
+    // This will take the object's correct value and passes it to the setAnswer Class function
     let clickedButton = e.target;
     Array.from(answerDiv.children).forEach(button => {
         setAnswerClass(button, button.dataset.correct);
     });
 
-    // This increments the user's score by 1 if answered correctly
+    // This increments the user's score by 1 if its answered correctly
     let dataType = clickedButton.classList.contains('correct');
     if (dataType) {
         score = ++score;
@@ -264,7 +264,7 @@ function showAnswer(e){
     scoreText.innerHTML = parseInt(score);
     };   
 
-    // This if statement determines whether the nextQuestion Button or seeResults button is displayed
+    // This if statement determines whether the nextQuestion Button or seeResults button is shown
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
          nextQuestionBtn.style.display = 'block';
     } else if (shuffledQuestions.length = currentQuestionIndex + 1) {
@@ -295,7 +295,7 @@ function setAnswerClass(element, correct){
 
 /**
  * This function removes both the class and data-type of the parameters passed
- * to the function so that they are clear for the next question.
+ * to the function so that they are cleared for the next question.
  */
 function clearAnswerClass(element){
     element.classList.remove('correct');
@@ -328,7 +328,7 @@ function closeQuiz() {
 
 /**
  * This function closes the Results Area and re-opens the 
- * BeginQuiz Area for the user to repeat the quiz. Reset's the user score.
+ * StartQuiz Area for the user to repeat the quiz. Reset's the user score.
   */
 function tryAgain() {
     closeQuiz();
@@ -350,23 +350,23 @@ exitQuizBtn.addEventListener('click', closeQuiz);
 
 /**
  * This function allows the user to exit the quiz Area by clicking 
- * the X at the top-right corner of the quiz window.
+ * the X at the top-right corner of the quiz area.
   */
 function exitQuiz() {
-    let questionWindow = document.getElementById('questionWindow');
-    questionWindow.style.maxHeight = '0';
-    questionWindow.style.minHeight = '0';
-    questionWindow.style.transitionDelay = '0s';
+    let questionWindow = document.getElementById('questionArea');
+    questionArea.style.maxHeight = '0';
+    questionArea.style.minHeight = '0';
+    questionArea.style.transitionDelay = '0s';
 }
 
-let crossBtn = document.getElementById('quizCross');
+let crossBtn = document.getElementById('quizExit');
 crossBtn.addEventListener('click', exitQuiz);
 
 
 
 
 
-// These are the questions for the quiz.
+// These are the quiz questions
 const licenceQuestions = [
     {
         question: 'Your passenger wants to discuss something with you during the journey. what should you do?',
@@ -421,7 +421,7 @@ const licenceQuestions = [
         answer: [
             {text: "yes, up to a blood alcohol level of 30 miligrams", correct: false},
             {text: "No, definitely not", correct: true},
-            {text: "yes, upto 50 miligram if they have not commited any alcohol violation", correct: false},
+            {text: "upto 50 miligram if they haven't commited any alcohol violation", correct: false},
         ]
     },
     {

@@ -1,5 +1,5 @@
 * {
-    /* Gobal style to overrides default browser settings */
+    /* Gobal style to override default browser settings */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,7 +15,7 @@ body {
     
 }
 
-/* This pushes the footer down to the bottom of the page */
+/* This pushes the footer down to the bottom of the page and occupy surplus space */
 main {
     flex: 1 0 auto;
     background: url('../images/cars.png') fixed center / cover;
@@ -55,7 +55,7 @@ footer {
     color: white;
 }
 
-/* styles for the form */
+/* form styles */
 #form-div {
     background-color: purple;
     margin: 0 20px 50px;
@@ -74,7 +74,7 @@ footer {
     color: red;
     font-weight: 600;
 }
-
+/* Sign up vs Sign in text */
 #form-heading {
     width: 100%;
     color: white;
@@ -88,7 +88,7 @@ footer {
     letter-spacing: 3px;
 }
 
-/* this is a div */
+/* this is the imput div */
 #inputs {
     background-color: pink;
     border: none;
@@ -100,7 +100,7 @@ footer {
     flex-basis: 300px;
 }
 
-/* Input placeholder color */
+/* Input placeholder styles */
 form input::placeholder {
     color: white;
     background-color: purple;
@@ -110,7 +110,7 @@ form input:hover {
     background: pink;
 }
 
-/* Submit button Styles */
+/* This is the Submit button Styles */
 form #submitBtns {
     display: flex;
     flex-direction: row;
@@ -158,7 +158,7 @@ form button:hover {
     transition: padding 0.5s;
 }
 
-/* Signup/Signin Button Styles */
+/* Signup vs Signin Button Styles */
 
 .buttons {
     display: flex;
@@ -187,10 +187,10 @@ form .active {
 }
  
 .btn:hover {
-    background: purple; 
+    background: purple;
 }
 
-/* This section is for the difficulties */
+/* This is the start quiz div */
 
 #beginDiv {
     background-color: purple;
@@ -209,7 +209,7 @@ form .active {
     transition: max-height 1.5s;
 }
 
- /* This style targets the div's child */
+ /* This style targets the beginDiv's child */
  #beginDiv div {
     padding: 20px;
     border: white 2px solid;
@@ -253,7 +253,7 @@ form .active {
     text-decoration-thickness: 3px;
 }
 
-  /* This refers to the X icon */
+  /* These styles refers to the X icon */
   i {
     color: pink;
     margin: 25px;
@@ -261,7 +261,7 @@ form .active {
 }
 
 i:hover {
-    color: purple;
+    color: white;
     cursor: pointer;
 }
 
@@ -328,7 +328,7 @@ i:hover {
     display: none;
 }
 
-/* These classes style the answerText elements based on what value the setAnswerClass function 
+/* These classes style the answerText elements according to what value the setAnswerClass function 
         passes to them */
 .correct, .correct:hover {
      border: #00c04b 2px solid;
@@ -340,7 +340,7 @@ i:hover {
     color: red;
 }
 
-/* This section refers to the results window */
+/* This section refers to the results area*/
 
 #resultsDiv {
     background-color: purple;

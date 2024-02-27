@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Driving Licence Quiz App</title>
+    <script src="https://kit.fontawesome.com/c2a5ce9714.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -20,7 +21,7 @@
         <!-- this is the main content -->
         <div id="welcome-div">
             <p id="welcome-text">
-                Welcome to the driving licence quiz, this quiz provides English questions for the thorie training exam to obtain a drivers license in Germany
+                Welcome to the driving licence quiz, this quiz provides you with the English questions for the theorie training exam to obtain a drivers license in Germany
             </p>
         </div>
         <br>
@@ -57,11 +58,13 @@
                   </div>
                   <br>
                   <br>
+                  
                   <!-- This div contains Sign-Up and Sign-In Buttons -->
                   <div class="buttons">
                     <button class="btn active" type="button" id="signupBtn">Sign Up</button>
                     <button class="btn" type="button" id="signinBtn">Sign In</button>
                   </div>
+
             </form>
         </div>
        <br>
@@ -73,11 +76,11 @@
        </div>
 
         <!-- This section contains the Quiz Area -->
-    <div id="questionBackground" aria-labelledby="questionBackground questionArea questionNoTextDiv questionNoText questionDiv questionText answerDiv">
+    <div id="questionBackground">
         <div id="questionArea">
           <div id="question-no-text-div" aria-labelledby="questionNoText quizCross">
             <p id="questionNoText"><span class="white">Question 1 of 10</span></p>
-            <i class="fa-solid fa-xmark" id="quizCross" aria-label="Click this button to close the quiz window"></i>
+            <i class="fa-solid fa-xmark" id="quizExit" aria-label="Click this button to close the quiz window"></i>
           </div>
 
           <div id="questionDiv">
@@ -108,7 +111,7 @@
       </div>
       <br>
 
-      <!-- This section contains the results window -->
+      <!-- This section contains the results area -->
     <div id="resultsDiv">
         <p id="resultsText">Good job, you scored <span id="score">5</span> of out 10!</p>
     <br>
@@ -119,7 +122,9 @@
     
     </main>
 
-    <footer></footer>
+    <footer>
+
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
