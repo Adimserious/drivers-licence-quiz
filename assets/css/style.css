@@ -6,7 +6,7 @@
 }
 
 body {
-    background: black;
+    background: pink;
     color: black;
     width: 100%;
     min-height: 100vh;
@@ -27,7 +27,7 @@ footer {
 
 /* header styles */
 .heading {
-    color: white;
+    color: purple;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 5px;
@@ -41,10 +41,10 @@ footer {
 /* main body styles */
 #welcome-div,
 #prompt-div {
-    border: solid #fff 2px;
+    border: solid pink 2px;
     border-radius: 10px;
     margin: 30px 50px 0;
-    background-color: red;
+    background-color: purple;
 }
 
 #welcome-text,
@@ -52,12 +52,12 @@ footer {
     padding: 5px;
     font-size: 1.5em;
     text-align: center;
-    color: black;
+    color: white;
 }
 
 /* styles for the form */
 #form-div {
-    background-color: red;
+    background-color: purple;
     margin: 0 20px 50px;
     border-radius: 10px;
     max-height: 1000px;
@@ -77,7 +77,7 @@ footer {
 
 #form-heading {
     width: 100%;
-    color: black;
+    color: white;
     text-align: center;
     font-size: 1.5em;
     text-decoration: solid;
@@ -90,7 +90,7 @@ footer {
 
 /* this is a div */
 #inputs {
-    background-color: #000;
+    background-color: pink;
     border: none;
     padding: 20px;
     border-radius: 20px;
@@ -106,7 +106,7 @@ form input::placeholder {
 }
 
 form input:hover {
-    background: yellow;
+    background: pink;
 }
 
 /* Submit button Styles */
@@ -122,7 +122,7 @@ form #guestBtn {
 }
 
 form #guestBtn:hover {
-    color: black;
+    color: pink;
     cursor: pointer;
 }
 
@@ -134,13 +134,13 @@ form button {
     background-color: transparent;
     border-color: transparent;
     color: #fff;
-    border-bottom: black 2px solid;
+    border-bottom: pink 2px solid;
     padding: 5px;
     letter-spacing: 2px;
 }
 
 form button:hover {
-    color: black;
+    color: pink;
     cursor: pointer;
 }
 
@@ -170,10 +170,10 @@ form button:hover {
 }
 
 form .btn {
-    background-color: #363636;
+    background-color: pink;
     border-radius: 30px;
     text-decoration: none;
-    border: #fff 2px solid;
+    border: white 2px solid;
     padding: 5px 20px;
     letter-spacing: 3px;
     cursor: pointer;
@@ -182,17 +182,17 @@ form .btn {
 }
 
 form .active {
-    background-color: rgb(29, 29, 129);
+    background-color: pink;
 }
  
 .btn:hover {
-    background: yellow 
+    background: purple; 
 }
 
 /* This section is for the difficulties */
 
 #beginDiv {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: purple;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -211,9 +211,9 @@ form .active {
  /* This style targets the div's child */
  #beginDiv div {
     padding: 20px;
-    border: red 2px solid;
-    color: #fff;
-    background-color: #000;
+    border: white 2px solid;
+    color: purple;
+    background-color: pink;
     text-align: center;
     margin: 20px 50px 50px;
     border-radius: 30px;
@@ -226,7 +226,7 @@ form .active {
 
 #questionArea {
     color: white;
-    background-color: black;
+    background-color: purple;
     border-radius: 10px;
     margin: 50px;
     position: relative;
@@ -245,7 +245,7 @@ form .active {
 }
 
 #questionNoText {
-    color: #f00;
+    color: white;
     padding: 30px 0 0 20px;
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -254,42 +254,43 @@ form .active {
 
   /* This refers to the X icon */
   i {
-    color: #fff;
+    color: pink;
     margin: 25px;
     font-size: 1.5em;
 }
 
 i:hover {
-    color: #363636;
+    color: purple;
     cursor: pointer;
 }
 
  /* These styles refer to the question div and text */
  #questionDiv {
-    border: #f00 2px solid;
+    border: pink 2px solid;
     border-radius: 10px;
     margin: 20px;
 }
 
 #questionText {
     text-align: left;
-    border: #fff 2px solid;
+    border: pink 2px solid;
     border-radius: 10px;
     padding: 10px;
-    background-color: black;
+    background-color: purple;
 }
 
 /* These stlyes are for the answers div and text class */
 .answerText {
     margin: 20px;
-    background-color: black;
+    background-color: pink;
     border: #fff 2px solid;
     border-radius: 30px;
+    color: purple;
 }
 
 .answerText:hover {
-    border: 2px black solid;
-    color: #f00;
+    border: 2px purple solid;
+    color: red;
     cursor: pointer;
 }
 
@@ -306,19 +307,19 @@ i:hover {
 }
 
 .question-btn {
-    border: #f00 2px solid;
+    border: pink 2px solid;
     font-weight: bold;
     padding: 15px;
     border-radius: 20px;
     font-size: 1em;
     margin: 0 30px 20px 30px;
-    background-color: #000;
+    background-color: purple;
     text-align: center;
     width: fit-content;
 }
 
 .question-btn:hover {
-    border: yellow 2px solid;
+    border: white 2px solid;
     cursor: pointer;
 }
 

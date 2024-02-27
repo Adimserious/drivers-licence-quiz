@@ -106,27 +106,28 @@ function showBeginWindow(){
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = '1000px';
     begin.style.transitionDelay = '2s';
-    begin.style.backgroundColor = 'red'
+    begin.style.backgroundColor = 'purple'
 }
 
 /**
  * This function makes the Begin Quiz button change border and font
- * color to yellow and red respectively when pointed
+ * color to black and white respectively when pointed
  */
 
 function beginHover(event){
-    beginBtn.style.borderColor = 'yellow';
-    beginBtn.style.color = 'red';
+    beginBtn.style.borderColor = 'black';
+    beginBtn.style.color = 'white';
+    beginBtn.style.backgroundColor = 'pink';
     beginBtn.style.cursor = 'pointer';
 }
 
 /**
  * This function makes the Begin Quiz Button and border 
- * color change from yelow/red to white at mouse-out
+ * color change from white/purple at mouse-out
  */
 function beginOut(event){
     beginBtn.style.borderColor = 'white';
-    beginBtn.style.color = 'white';
+    beginBtn.style.color = 'purple';
 }
 
 let beginBtn = document.getElementById('beginBtn');
@@ -134,7 +135,7 @@ beginBtn.addEventListener('mouseover', beginHover);
 beginBtn.addEventListener('mouseout', beginOut);
 
 /**
- * This function hides the Begin Quiz Window by setting the max-height
+ * This function hides the Begin Quiz Area by setting the max-height
  * to 0px, as well also removes the transition delay
  */
 function hideBeginArea(){
@@ -154,7 +155,8 @@ function showQuestionArea() {
     questionArea.style.transitionDelay = '0s';
 
 
-// This if statement sets the min-height of the quiz area
+//  If statement  to set the min-height of the quiz area
+
     if (windowWidth < '500') {
         questionArea.style.minHeight = '710px';
     } else if (windowWidth < '768') {
@@ -226,7 +228,7 @@ function getNextQuestion(licenceQuestions) {
 
 /**
  * This function removes the div elements created in the function above,
- * thus setting the state of the questionWindow back to default.
+ * Thereby setting the state of the questionWindow back to default.
  * Removes the display of the Next Question button.
  */
 function resetState(){
@@ -304,9 +306,8 @@ function clearAnswerClass(element){
 
 // This section refers to the Results Area 
 
-/**
- * This function closes the question Area and shows the results Area.
-  */
+ // This function closes the question Area and shows the results Area.
+
 function showResultsArea() {
     let questionArea = document.getElementById('questionArea');
     questionArea.style.maxHeight = '0';
@@ -317,9 +318,8 @@ function showResultsArea() {
     resultsWindow.style.transitionDelay = '2s';
 };
 
-/**
- * This function closes the Results Area by setting the maxHeight to 0px.
-  */
+ // This function closes the Results Area by setting the maxHeight to 0px.
+
 function closeQuiz() {
     let resultsWindow = document.getElementById('resultsDiv');
     resultsWindow.style.maxHeight ='0';
@@ -421,7 +421,7 @@ const licenceQuestions = [
         answer: [
             {text: "yes, up to a blood alcohol level of 30 miligrams", correct: false},
             {text: "No, definitely not", correct: true},
-            {text: "yes, upto 50 miligram if they have not commited any alcohol related traffic violation", correct: false},
+            {text: "yes, upto 50 miligram if they have not commited any alcohol violation", correct: false},
         ]
     },
     {
@@ -435,17 +435,17 @@ const licenceQuestions = [
     {
         question: 'You want to carry a child in your car, when must you use a child seat for this purpose?',
         answer: [
-            {text: "If the child is older than 12 years and is under 150 cm height", correct: false},
+            {text: "If the child is older than 12 years and is under 150 cm", correct: false},
             {text: "If the child is older than 12 years and taller than 150 cm", correct: false},
-            {text: "If the child is younger than 12 years old and under 150 cm height", correct: true},
+            {text: "If the child is younger than 12 years and under 150 cm", correct: true},
         ]
     },
     {
-        question: 'What ?',
+        question: 'What is the maximum length of time you are allowed to stop at a bus stop provided you do not present an obstruction to buses?',
         answer: [
-            {text: "Reckless driving", correct: true},
-            {text: "Delayed reactions", correct: false},
-            {text: "Impairment of hearing and vision", correct: false},
+            {text: "3 minutes", correct: true},
+            {text: "8 minutes", correct: false},
+            {text: "5 minutes", correct: false},
         ]
     }
 
