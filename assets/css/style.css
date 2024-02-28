@@ -6,7 +6,7 @@
 }
 
 body {
-    background: pink;
+    background: burlywood;
     color: black;
     width: 100%;
     min-height: 100vh;
@@ -27,7 +27,7 @@ footer {
 
 /* header styles */
 .heading {
-    color: purple;
+    color: black;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 5px;
@@ -41,10 +41,10 @@ footer {
 /* main body styles */
 #welcome-div,
 #prompt-div {
-    border: solid pink 2px;
+    border: solid black 2px;
     border-radius: 10px;
     margin: 30px 50px 0;
-    background-color: purple;
+    background-color: burlywood;
 }
 
 #welcome-text,
@@ -52,12 +52,12 @@ footer {
     padding: 5px;
     font-size: 1.5em;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 /* form styles */
 #form-div {
-    background-color: purple;
+    background-color: burlywood;
     margin: 0 20px 50px;
     border-radius: 10px;
     max-height: 1000px;
@@ -77,7 +77,7 @@ footer {
 /* Sign up vs Sign in text */
 #form-heading {
     width: 100%;
-    color: white;
+    color: black;
     text-align: center;
     font-size: 1.5em;
     text-decoration: solid;
@@ -90,7 +90,7 @@ footer {
 
 /* this is the imput div */
 #inputs {
-    background-color: pink;
+    background-color: black;
     border: none;
     padding: 20px;
     border-radius: 20px;
@@ -103,11 +103,11 @@ footer {
 /* Input placeholder styles */
 form input::placeholder {
     color: white;
-    background-color: purple;
+    background-color: burlywood;
 }
 
 form input:hover {
-    background: pink;
+    background: black;
 }
 
 /* This is the Submit button Styles */
@@ -120,13 +120,14 @@ form #submitBtns {
 form #guestBtn {
     align-content: center;
     margin-right: 20px;
+    color: black;
 }
 
 form #guestBtn:hover {
-    color: pink;
+    color: white;
     cursor: pointer;
 }
-
+/* Submit text styles */
 form button {
     margin-left: 20px;
     margin-bottom: 10px;
@@ -134,14 +135,14 @@ form button {
     font-size: 1em;
     background-color: transparent;
     border-color: transparent;
-    color: #fff;
-    border-bottom: pink 2px solid;
+    color: black;
+    border-bottom: white 2px solid;
     padding: 5px;
     letter-spacing: 2px;
 }
-
+/* Submit text */
 form button:hover {
-    color: pink;
+    color: white;
     cursor: pointer;
 }
 
@@ -169,9 +170,9 @@ form button:hover {
     margin-top: 20px;
     font-size: 1em;
 }
-
+/* Sign in text */
 form .btn {
-    background-color: pink;
+    background-color: black;
     border-radius: 30px;
     text-decoration: none;
     border: white 2px solid;
@@ -181,19 +182,20 @@ form .btn {
     font-weight: bold;
     color: white;
 }
-
+/* Sign up text */
 form .active {
-    background-color: pink;
+    background-color: white;
+    color: black;
 }
- 
+/* Sign up vs sign */ 
 .btn:hover {
-    background: purple;
+    background: burlywood;
 }
 
 /* This is the start quiz div */
 
 #beginDiv {
-    background-color: purple;
+    background-color: burlywood;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -213,8 +215,8 @@ form .active {
  #beginDiv div {
     padding: 20px;
     border: white 2px solid;
-    color: purple;
-    background-color: pink;
+    color: white;
+    background-color: black;
     text-align: center;
     margin: 20px 50px 50px;
     border-radius: 30px;
@@ -226,8 +228,8 @@ form .active {
 /* Question Area section */
 
 #questionArea {
-    color: white;
-    background-color: purple;
+    color: black;
+    background-color: burlywood;
     border-radius: 10px;
     margin: 50px;
     position: relative;
@@ -239,14 +241,14 @@ form .active {
     overflow: hidden;
 }
 
-/* This refers to the question number text */
+/* Refers to the question number text */
 #question-no-text-div {
     display: flex;
     justify-content: space-between;
 }
-
+/* Refers to question 1 of 10 text */
 #questionNoText {
-    color: white;
+    color: black;
     padding: 30px 0 0 20px;
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -255,7 +257,7 @@ form .active {
 
   /* These styles refers to the X icon */
   i {
-    color: pink;
+    color: black;
     margin: 25px;
     font-size: 1.5em;
 }
@@ -267,31 +269,31 @@ i:hover {
 
  /* These styles refer to the question div and text */
  #questionDiv {
-    border: pink 2px solid;
+    border: black 2px solid;
     border-radius: 10px;
     margin: 20px;
 }
 
 #questionText {
     text-align: left;
-    border: pink 2px solid;
+    border: white 2px solid;
     border-radius: 10px;
     padding: 10px;
-    background-color: purple;
+    background-color: burlywood;
 }
 
 /* These stlyes are for the answers div and text class */
 .answerText {
     margin: 20px;
-    background-color: pink;
+    background-color: black;
     border: #fff 2px solid;
     border-radius: 30px;
-    color: purple;
+    color: white;
 }
 
 .answerText:hover {
-    border: 2px purple solid;
-    color: red;
+    border: 2px solid;
+    color: burlywood;
     cursor: pointer;
 }
 
@@ -308,19 +310,20 @@ i:hover {
 }
 
 .question-btn {
-    border: pink 2px solid;
+    border: white 2px solid;
+    color: white;
     font-weight: bold;
     padding: 15px;
     border-radius: 20px;
     font-size: 1em;
     margin: 0 30px 20px 30px;
-    background-color: purple;
+    background-color: black;
     text-align: center;
     width: fit-content;
 }
 
 .question-btn:hover {
-    border: white 2px solid;
+    border: black 2px solid;
     cursor: pointer;
 }
 
@@ -343,7 +346,7 @@ i:hover {
 /* This section refers to the results area*/
 
 #resultsDiv {
-    background-color: purple;
+    background-color: burlywood;
     margin: 30px 40px;
     border-radius: 10px;
     display: flex;
@@ -358,8 +361,8 @@ i:hover {
 }
 
 #resultsText {
-    color: purple;
-    background-color: pink;
+    color: white;
+    background-color: black;
     border: 2px white solid;
     border-radius: 10px;
     font-size: 3rem;
@@ -374,21 +377,22 @@ i:hover {
 }
 
 .resetBtn {
-        color: purple;
+        color: white;
         border: white 2px solid;
         font-weight: bold;
         padding: 15px;
         border-radius: 20px;
         font-size: 1.5em;
         margin: 20px 100px;
-        background-color: pink;
+        background-color: black;
         text-align: center;
         justify-content: center;
 }
 
 .resetBtn:hover {
     cursor: pointer;
-    border: green 2px solid;
+    border: red 2px solid;
+    color: burlywood;
 }
 
 /* Media Query for Tablets and higher (768px and higher) */

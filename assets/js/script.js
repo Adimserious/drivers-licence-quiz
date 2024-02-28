@@ -106,28 +106,28 @@ function showBeginWindow(){
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = '1000px';
     begin.style.transitionDelay = '2s';
-    begin.style.backgroundColor = 'purple'
+    begin.style.backgroundColor = 'burlywood'
 }
 
 /**
  * This function makes the Begin Quiz button change border and font
- * color to black and white respectively when pointed
+ * color to black and burlywood respectively when pointed
  */
 
 function beginHover(event){
     beginBtn.style.borderColor = 'black';
-    beginBtn.style.color = 'white';
-    beginBtn.style.backgroundColor = 'pink';
+    beginBtn.style.color = 'burlywood';
+    beginBtn.style.backgroundColor = 'black';
     beginBtn.style.cursor = 'pointer';
 }
 
 /**
- * This function makes the Begin Quiz Button and border 
- * color change from white/purple at mouse-out
+ * This function makes the Start Quiz Button and border 
+ * color change from white/burlywood to white at mouse-out
  */
 function beginOut(event){
     beginBtn.style.borderColor = 'white';
-    beginBtn.style.color = 'purple';
+    beginBtn.style.color = 'white';
 }
 
 let beginBtn = document.getElementById('beginBtn');
