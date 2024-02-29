@@ -68,6 +68,72 @@ As a frequent user:
 ### Result Area
 - The result area displays the test 'Great job' together with the number of score the user got.
 - the result area also has a try again button which allow users to try the quiz again and try shuffles the question.
-- The result area contains an exit quiz button that takes the users out from the question area and back to the welcome page. 
+- The result area contains an exit quiz button that takes the users out from the question area and back to the welcome page.
+
+## Wireframes
+- Pen and paper in a notebook: simple and effective.
+
+## Features Left to Implement
+- Additional questions might be available in the question section.
+- Updated questions with images.
+- In the future, there could be more languages to choose from.
+
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript 
+
+## Frameworks, Libraries & Programs Used
+- Gitpod
+- - To write the code.
+- Git
+- - for vesion control.
+- Github
+- - Deployment of the website and storing the files online.
+- Google Fonts
+- - Import main font the website.
+- Am I Responsive
+- - Mockup picture for the README file.
+
+## Testing
+- The W3C Markup Validator and 
+- W3C CSS Validator services were used to validate every page of the project to ensure there were no errors.
+
+- The W3C Markup Validator
+
+- W3C CSS Validator
+- JavaScript Validator
+
+## Validation results
+
+## Manual Testing
+
+## Lighthouse Report
+
+## Deployment and local development
+GitHub Pages used to deploy live version of the website.
+
+1. Log in to GitHub and locate GitHub Repository Biafran history
+2. At the top of the Repository(not the main navigation) locate "Settings" button on the menu.
+3. Scroll down the Settings page until you locate "GitHub Pages".
+4. Under "Source", click the dropdown menu "None" and select "Main" and click "Save".
+5. The page will automatically refresh.
+Scroll back to locate the now-published site link in the "GitHub Pages" section.
+
+## Forking the GitHub Repository
+By forking the repository, we make a copy of the original repository on our GitHub account to view and change without affecting the original repository by using these steps:
+
+1. Log in to GitHub and locate GitHub Repository 
+2. At the top of the Repository(under the main navigation) locate "Fork" button.
+3. Now you should have a copy of the original repository in your GitHub account.
+
+## Local Clone
+1. Log in to GitHub and locate GitHub Repository 
+2. Under the repository name click "Clone or download"
+3. Click on the code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+Open Git Bash
+4. Change the current working directory to the location where you want the cloned directory to be made.
+5. Type git clone and then paste The URL copied in the step 3.
+6. Press Enter and your local clone will be created.
 
 

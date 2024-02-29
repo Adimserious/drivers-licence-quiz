@@ -282,7 +282,7 @@ function showAnswer(e){
  * the data-type of correct, if wrong it adds the data-type of wrong.
   */
 function setAnswerClass(element, correct){
-    // The clear answer class removes the datatype and class for the next question
+    // This clear answer class removes the datatype and class for the next question
     clearAnswerClass(element);
     if (correct) {
         element.classList.add('correct');
@@ -308,7 +308,7 @@ function clearAnswerClass(element){
 
  // This function closes the question Area and shows the results Area.
 
-function showResultsArea() {
+function showResultsArea(resultsText) {
     let questionArea = document.getElementById('questionArea');
     questionArea.style.maxHeight = '0';
     questionArea.style.minHeight = '0';
@@ -316,6 +316,19 @@ function showResultsArea() {
     let resultsWindow = document.getElementById('resultsDiv');
     resultsWindow.style.maxHeight ='1000px';
     resultsWindow.style.transitionDelay = '2s';
+    let resultText = document.getElementById('resultsText')
+
+    if (scoreText <=3) {
+        resultsWindow = resultsText.innerHTML(
+            'Ooof better luck next time'
+            );
+
+    } else if (scoreText <=5 && scoreText > 3) {
+        resultsWindow = resultsText.innerHTML('Almost a decent score...')
+
+    }else if (scoreText > 6 && scoreText <= 10) {
+        resultsWindow = resultsText.innerHTML('Now you are special')
+    }
 };
 
  // This function closes the Results Area by setting the maxHeight to 0px.
