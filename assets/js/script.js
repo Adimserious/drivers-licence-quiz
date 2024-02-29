@@ -308,7 +308,7 @@ function clearAnswerClass(element){
 
  // This function closes the question Area and shows the results Area.
 
-function showResultsArea(resultsText) {
+function showResultsArea() {
     let questionArea = document.getElementById('questionArea');
     questionArea.style.maxHeight = '0';
     questionArea.style.minHeight = '0';
@@ -316,20 +316,28 @@ function showResultsArea(resultsText) {
     let resultsWindow = document.getElementById('resultsDiv');
     resultsWindow.style.maxHeight ='1000px';
     resultsWindow.style.transitionDelay = '2s';
-    let resultText = document.getElementById('resultsText')
+};
 
-    if (scoreText <=3) {
-        resultsWindow = resultsText.innerHTML(
+function calculateScore(resultsText) {
+    let resultText = parseInt(document.getElementById('resultsText').innerHTML);
+    let calculatedScore = scoreText.innerHTML = parseInt(score);
+
+    if (calculatedScore <=3) {
+        resultsWindow = scoreText.innerHTML(
             'Ooof better luck next time'
             );
 
-    } else if (scoreText <=5 && scoreText > 3) {
-        resultsWindow = resultsText.innerHTML('Almost a decent score...')
+    } else if (calculatedScore <=5 && scoreText > 3) {
+        resultsWindow = scoreText.innerHTML('Almost a decent score...')
 
-    }else if (scoreText > 6 && scoreText <= 10) {
-        resultsWindow = resultsText.innerHTML('Now you are special')
+    }else if (calculatedScore > 6 && scoreText <= 10) {
+        resultsWindow = scoreText.innerHTML('Now you are special')
     }
-};
+    calculateScore()
+
+}
+    
+
 
  // This function closes the Results Area by setting the maxHeight to 0px.
 

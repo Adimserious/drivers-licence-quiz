@@ -4,6 +4,27 @@ The Führerschein English quiz application is designed to provide the English ve
 
 The live link can be found here -
 
+# Table of Contents
+## Project and Site Owner Goals
+## Target Audience
+## User Experience 
+- ####  User Stories
+## Features
+- #### Existing Features
+## Features Left to Implement
+## Technologies Used
+## Frameworks, Libraries & Programs Used
+## Testing
+- #### Validation Results
+- #### Manual Testing
+- #### Lighthouse Report
+## Deployment and local development
+- ####  GitHub Pages
+- ####  Forking the GitHub Repository
+- ####  Local Clone
+## Credits
+## Acknowledgements
+
 ## Project and Site Owner Goals
  Because the spoken language in Germany is deutsch, many migrants find it difficult to achieve their goal of obtaining a drivers licence on time due to the language barrier. Our goal is to help make the dream of learning and writing the theory exam in English language come through at the time of need for people who want it.
 
@@ -79,25 +100,25 @@ As a frequent user:
 - In the future, there could be more languages to choose from.
 
 ## Technologies Used
-- HTML5
-- CSS3
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
 - JavaScript 
 
 ## Frameworks, Libraries & Programs Used
-- Gitpod
-- - To write the code.
-- Git
-- - for vesion control.
-- Github
+### [Gitpod](https://www.gitpod.io/)
+- To write the code.
+### [Git](https://git-scm.com/)
+- for vesion control.
+### [Github](https://github.com/)
 - - Deployment of the website and storing the files online.
-- Google Fonts
+### [Google Fonts](https://fonts.google.com/)
 - - Import main font the website.
-- Am I Responsive
+### [Am I Responsive](https://ui.dev/amiresponsive)
 - - Mockup picture for the README file.
 
 ## Testing
-- The W3C Markup Validator and 
-- W3C CSS Validator services were used to validate every page of the project to ensure there were no errors.
+- [The W3C Markup Validator](https://validator.w3.org/ and 
+- [W3C CSS Validator](https://validator.w3.org) services were used to validate every page of the project to ensure there were no errors.
 
 - The W3C Markup Validator
 
@@ -136,4 +157,11 @@ Open Git Bash
 5. Type git clone and then paste The URL copied in the step 3.
 6. Press Enter and your local clone will be created.
 
+# Credits
+
+# Content
+
+## Media
+
+# Acknowledgements
 
