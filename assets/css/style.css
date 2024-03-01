@@ -381,16 +381,19 @@ i:hover {
 }
 
 .resetBtn {
-        color: white;
-        border: white 2px solid;
-        font-weight: bold;
-        padding: 15px;
-        border-radius: 20px;
-        font-size: 1.5em;
-        margin: 20px 100px;
-        background-color: black;
-        text-align: center;
-        justify-content: center;
+    color: white;
+    border: white 2px solid;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 1.5em;
+    margin: 20px 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    
 }
 
 .resetBtn:hover {
@@ -414,10 +417,10 @@ i:hover {
     /* This section refers to the header */
 
     #heading {
-        font-size: 3em;
+        font-size: 2em;
     }
 
-    /* This section refers to the welcome text */
+    /* This section refers to the welcome/ prompt area */
 
     #welcome-div {
         margin-left: 50px;
@@ -457,7 +460,7 @@ i:hover {
         font-size: 1.5em;
     }
 
-    /* This section refers to the begin window */
+    /* This section refers to the begin area */
 
     #beginDiv div {
         margin: 50px 150px;
@@ -465,9 +468,9 @@ i:hover {
         letter-spacing: 5px;
     }
 
-    /* This is the Question Window section */
+    /* This is the Question area section */
 
-    #questionWindow {
+    #questionArea {
         margin: 20px 50px;
     }
 
@@ -491,9 +494,6 @@ i:hover {
 
     .answerText {
         margin: 20px;
-    }
-
-    .answerText {
         font-size: 2em;
         padding: 20px;
     }
@@ -515,7 +515,7 @@ i:hover {
         font-size: 3rem;
     }
 
-    /* This section refers to the results window */
+    /* This section refers to the results area */
 
 #resultsDiv {
     margin: 30px 80px;
@@ -533,9 +533,9 @@ i:hover {
 }
 
 .resetBtn {
-        padding: 15px;
-        font-size: 2.5em;
-        margin: 20px 150px;
+    padding: 15px;
+    font-size: 2.5em;
+    margin: 20px 150px;
 }
 }
 
@@ -591,7 +591,7 @@ i:hover {
         font-size: 2em;
     }
 
-    /* This section is for the begin window */
+    /* This section is for the begin area */
 
 #beginDiv {
     margin: 20px 300px;
@@ -610,9 +610,9 @@ i:hover {
     letter-spacing: 3px;
 }
 
-    /* This is the Question Window section */
+    /* This is the Question area section */
 
-    #questionWindow {
+    #questionArea {
         margin: 20px 250px;
     }
 
@@ -667,7 +667,7 @@ i:hover {
         font-size: 4rem;
     }
 
-        /* This section refers to the results window */
+        /* This section refers to the results area */
 
 #resultsDiv {
     margin: 30px 150px;
@@ -687,6 +687,6 @@ i:hover {
 .resetBtn {
         padding: 15px;
         font-size: 3em;
-        margin: 50px 350px;
+        margin: 50px 350px;
 }
 }

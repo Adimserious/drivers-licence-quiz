@@ -373,7 +373,7 @@ const licenceQuestions = [
         answer: [
             {text: "Concentrate on the discussion", correct: false},
             {text: "Concentrate on the driving", correct: true},
-            {text: "Concentrate on the discussion and driving", correct: false},
+            {text: "Concentrate on both", correct: false},
         ]
     },
     {
@@ -396,7 +396,7 @@ const licenceQuestions = [
         question: 'What should you do if you start feeling tired while driving?',
         answer: [
             {text: "Take a break straightaway", correct: false},
-            {text: "Get out of the car and move around in the fresh air", correct: true},
+            {text: "Get out of the car and move around", correct: true},
             {text: "Listen to stimulating music", correct: false},
         ]
     },
@@ -419,9 +419,9 @@ const licenceQuestions = [
     {
         question: 'Are drivers during their probation period allowed to be under the influence of alcohol when driving motor vehicles?',
         answer: [
-            {text: "yes, up to a blood alcohol level of 30 miligrams", correct: false},
+            {text: "yes, up to 30 miligrams", correct: false},
             {text: "No, definitely not", correct: true},
-            {text: "upto 50 miligram if they haven't commited any alcohol violation", correct: false},
+            {text: "yes, upto 50 miligram", correct: false},
         ]
     },
     {
@@ -435,9 +435,9 @@ const licenceQuestions = [
     {
         question: 'You want to carry a child in your car, when must you use a child seat for this purpose?',
         answer: [
-            {text: "If the child is older than 12 years and is under 150 cm", correct: false},
-            {text: "If the child is older than 12 years and taller than 150 cm", correct: false},
-            {text: "If the child is younger than 12 years and under 150 cm", correct: true},
+            {text: "If the child is older than 12 years", correct: false},
+            {text: "If the child is taller than 150 cm", correct: false},
+            {text: "If the child is younger than 12 years", correct: true},
         ]
     },
     {
