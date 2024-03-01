@@ -316,28 +316,7 @@ function showResultsArea() {
     let resultsWindow = document.getElementById('resultsDiv');
     resultsWindow.style.maxHeight ='1000px';
     resultsWindow.style.transitionDelay = '2s';
-};
-
-function calculateScore(resultsText) {
-    let resultText = parseInt(document.getElementById('resultsText').innerHTML);
-    let calculatedScore = scoreText.innerHTML = parseInt(score);
-
-    if (calculatedScore <=3) {
-        resultsWindow = scoreText.innerHTML(
-            'Ooof better luck next time'
-            );
-
-    } else if (calculatedScore <=5 && scoreText > 3) {
-        resultsWindow = scoreText.innerHTML('Almost a decent score...')
-
-    }else if (calculatedScore > 6 && scoreText <= 10) {
-        resultsWindow = scoreText.innerHTML('Now you are special')
-    }
-    calculateScore()
-
 }
-    
-
 
  // This function closes the Results Area by setting the maxHeight to 0px.
 
