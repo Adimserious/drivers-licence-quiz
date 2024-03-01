@@ -398,6 +398,14 @@ i:hover {
     border: red 2px solid;
     color: burlywood;
 }
+/* Footer*/
+#social-networks {
+    text-align: right;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
 
 /* Media Query for Tablets and higher (768px and higher) */
 
