@@ -111,7 +111,7 @@ form input::placeholder {
 }
 
 form input:hover {
-    background: black;
+    background: white;
 }
 
 /* This is the Submit button Styles */
@@ -381,25 +381,31 @@ i:hover {
 }
 
 .resetBtn {
-    color: white;
-    border: white 2px solid;
-    font-weight: bold;
-    padding: 15px;
-    border-radius: 20px;
-    font-size: 1.5em;
-    margin: 20px 100px;
-    background-color: black;
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    
+    justify-content: space-evenly;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 1em;
 }
 
 .resetBtn:hover {
     cursor: pointer;
-    border: red 2px solid;
+    border: burlywood 2px solid;
     color: burlywood;
+}
+/* this is the try again and exit buttons */
+.try-again {
+    background-color: black;
+    border-radius: 30px;
+    text-decoration: none;
+    border: white 2px solid;
+    padding: 5px 20px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white; 
 }
 /* Footer*/
 #social-networks {
@@ -539,7 +545,7 @@ i:hover {
 }
 }
 
-/* Medis query for laptops and higher (1024px sand higher) */
+/* Media query for laptops and higher (1024px and higher) */
 
 @media screen and (min-width: 1024px) {
 
@@ -688,5 +694,11 @@ i:hover {
         padding: 15px;
         font-size: 3em;
         margin: 50px 350px;
+}
+
+#tryAgainBtn button {
+    font-size: 3rem;
+    padding: 15px;
+    margin: 30px;
 }
 }

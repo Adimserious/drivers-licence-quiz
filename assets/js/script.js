@@ -417,7 +417,7 @@ const licenceQuestions = [
         ]
     },
     {
-        question: 'Are drivers during their probation period allowed to be under the influence of alcohol when driving motor vehicles?',
+        question: 'Are drivers during their probation period allowed to be under the influence of alcohol when driving?',
         answer: [
             {text: "yes, up to 30 miligrams", correct: false},
             {text: "No, definitely not", correct: true},

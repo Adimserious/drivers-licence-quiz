@@ -134,7 +134,7 @@ As a frequent user:
 ## Deployment and local development
 GitHub Pages used to deploy live version of the website.
 
-1. Log in to GitHub and locate GitHub Repository Biafran history
+1. Log in to GitHub and locate GitHub Repository drivers-licence-quiz
 2. At the top of the Repository(not the main navigation) locate "Settings" button on the menu.
 3. Scroll down the Settings page until you locate "GitHub Pages".
 4. Under "Source", click the dropdown menu "None" and select "Main" and click "Save".
@@ -144,12 +144,12 @@ Scroll back to locate the now-published site link in the "GitHub Pages" section.
 ## Forking the GitHub Repository
 By forking the repository, we make a copy of the original repository on our GitHub account to view and change without affecting the original repository by using these steps:
 
-1. Log in to GitHub and locate GitHub Repository 
+1. Log in to GitHub and locate GitHub Repository drivers-licence-quiz
 2. At the top of the Repository(under the main navigation) locate "Fork" button.
 3. Now you should have a copy of the original repository in your GitHub account.
 
 ## Local Clone
-1. Log in to GitHub and locate GitHub Repository 
+1. Log in to GitHub and locate GitHub Repository drivers-licence-quiz
 2. Under the repository name click "Clone or download"
 3. Click on the code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 Open Git Bash
