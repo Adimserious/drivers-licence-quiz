@@ -1,42 +1,22 @@
-// This code switches between sign-in and sign-up 
-let signin = document.getElementById('signinBtn');
+// Grab elements from DOM and assign variables to them 
 let signup = document.getElementById('signupBtn');
 let title = document.getElementById('title');
 let usernameArea = document.getElementById('username');
 let passwordArea = document.getElementById('password');
 let passwordConfirmedArea = document.getElementById('confirm-password');
 
-/**
- * This function will change the title to 'sign-in and hide the 'confirm password' area
- * also highlights the sign-in button. Placeholder text will change aswell.
- */
-function displaySignIn(){
-    title.innerHTML = 'Sign-In';
-    signin.classList.add('active');
-    signup.classList.remove('active');
-    passwordConfirmedArea.style.maxHeight = '0';
-    passwordConfirmedArea.style.paddingTop = '0';
-    passwordConfirmedArea.style.paddingBottom = '0';
-    passwordArea.setAttribute('placeholder', 'Enter Password');
-    usernameArea.setAttribute('placeholder', 'Enter Username');
-}
 
-/**
- * This function will change the title to 'sign-up', show 'confirm password' area,
- * and highlight the sign-up button. Placeholder text changes as well.
- */
+
+ // This is the sign up function 
 function displaySignUp(){
     title.innerHTML = 'Sign-Up';
     signup.classList.add('active');
-    signin.classList.remove('active');
     passwordConfirmedArea.style.maxHeight = '80px';
     passwordConfirmedArea.style.paddingBottom = '1px';
     passwordConfirmedArea.style.paddingTop = '1px';
     passwordArea.setAttribute('placeholder', 'Create Password');
-    usernameArea.setAttribute('placeholder', 'Create Username');
+   usernameArea.setAttribute('placeholder', 'Create Username');
 }
-
-signin.addEventListener('click', displaySignIn);
 
 signup.addEventListener('click', displaySignUp);
 

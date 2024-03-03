@@ -163,11 +163,11 @@ form button:hover {
     transition: padding 0.5s;
 }
 
-/* Signup vs Signin Button Styles */
+/* Signup Style */
 
 .buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-left: 1px;
     margin-right: 1px;
     margin-bottom: 10px;
