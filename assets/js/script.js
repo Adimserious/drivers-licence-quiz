@@ -80,7 +80,7 @@ function hideForm(){
     showBeginWindow();
 }
 
-// This function shows the Begin Quiz area
+// This function shows the start Quiz area
  
 function showBeginWindow(){
     let begin = document.getElementById('beginDiv');
@@ -90,7 +90,7 @@ function showBeginWindow(){
 }
 
 /**
- * This function makes the Begin Quiz button change border and font
+ * This function makes the start Quiz button change border and font
  * color to black and burlywood respectively when pointed
  */
 
@@ -427,7 +427,15 @@ const licenceQuestions = [
             {text: "8 minutes", correct: false},
             {text: "5 minutes", correct: false},
         ]
-    }
+    },
+    {
+    question: 'Is it irresponsible to overtake a truck and trailer a short distance before crossroads?',
+        answer: [
+            {text: "No, they drive at low speed", correct: false},
+            {text: "No, they understands", correct: false},
+            {text: "Yes, they can obscure traffic signs", correct: true},
+        ]
+    }   
 
 
 
