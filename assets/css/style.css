@@ -191,7 +191,7 @@ form .active {
     background-color: white;
     color: black;
 }
-/* Sign up vs sign */ 
+/* Sign up */ 
 .btn:hover {
     background: burlywood;
 }
@@ -296,8 +296,7 @@ i:hover {
 }
 
 .answerText:hover {
-    border: 2px solid;
-    color: burlywood;
+    border: 2px burlywood solid;
     cursor: pointer;
 }
 
