@@ -90,6 +90,9 @@ As a frequent user:
 
 ### The Answer Area
 ![Answers image](/assets/images/answers-and-next.jpg)
+- The answer area will show red for the wrong answers upon choosing an answer.
+- The correct answer will show a green color.
+- There is also a hover effect which changes the burder and text color to when hovered before clicking.
 ### the X Icon
 ![The x icon image](/assets/images/x-icon.jpg)
 - The x icon allow users to leave the question area at any desired time.
@@ -106,7 +109,8 @@ As a frequent user:
 
 ### Try again and Exit button
 ![Try again and exit image](/assets/images/try-again-exit.jpg)
-
+- The try again button allows user to try the quiz again.
+- The exit bitton takes the users out from the quiz area.
 ## Wireframes
 - Pen and paper in a notebook: simple and effective.
 
@@ -174,10 +178,17 @@ Open Git Bash
 6. Press Enter and your local clone will be created.
 
 # Credits
+my inspiration came from [this youTube video](https://www.youtube.com/watch?v=LTPGyaEyTI4&t=1195s) by Great stack and
+from [Web Dev Simplified](https://www.youtube.com/c/webdevsimplified)
 
 # Content
+https://www.theorie24.de/- i used this app to gather the questions and answers for this quiz.
 
 ## Media
+Pexels free stock photos, royalty free images. Pixabay free stock photos, royalty free images. Canva to Resize images.
 
 # Acknowledgements
+My mentor Mitko Bachvarov provided me with the resource i used to learn the css overlay.
+
+Slack is a great community. very helpful and offers much encouragement as well as information. 
 
