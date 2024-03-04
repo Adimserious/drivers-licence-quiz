@@ -1,4 +1,5 @@
 # Führerschein Quiz (English)
+![Führerschein quiz image](/assets/images/responsive-image.png)
 
 Welcome to the Führerschein Quiz English version.
 ## Introduction 
@@ -69,7 +70,7 @@ As a frequent user:
 - Below the welcome text is a brief description of the next step which can be a sign up or to continue as a guest.
 
 ### Sign-Up Form
-- The sign up form .
+- The sign up form allows the user to sign up to the website in order to access the quiz .
 - The sign up has create username, email, password and confirm password field.
 - The form has a continue as guest botton which helps users to have the look and feel of the quiz before sigining up.
 
