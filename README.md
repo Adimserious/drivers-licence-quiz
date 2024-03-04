@@ -1,5 +1,5 @@
 # Führerschein Quiz (English)
-![Führerschein quiz image](/assets/images/responsive-image.png)
+![Führerschein quiz image](/assets/images/ami-responsive.png)
 
 Welcome to the Führerschein Quiz English version.
 ## Introduction 
@@ -64,6 +64,7 @@ As a frequent user:
 - The heading is responsive across all devices.
 
 ### The Welcome Text
+![the welcome text](/assets/images/welcom-text.png)
 - The welcome text describes further the main purpose of the Quiz, located underneath the header. it welcomes the user and give then a brief overview of the quiz they are about to partake on.
 - The welcome is also present throughout the entire quiz window; namely: The landing page, start quiz area.
 - The welcome text is responsive on all devices. the background color provides a very good contrast against the body of the website hereby optimising user accessibility.
