@@ -1,5 +1,5 @@
 # Führerschein Quiz (English)
-![Führerschein quiz image](/assets/images/ami-responsive.png)
+![Führerschein quiz image](/assets/images/am-i%20respon.jpg)
 
 Welcome to the Führerschein Quiz English version.
 ## Introduction 
@@ -64,22 +64,25 @@ As a frequent user:
 - The heading is responsive across all devices.
 
 ### The Welcome Text
-![the welcome text](/assets/images/welcom-text.png)
+![The welcome text image](/assets/images/welcome-text.jpg)
 - The welcome text describes further the main purpose of the Quiz, located underneath the header. it welcomes the user and give then a brief overview of the quiz they are about to partake on.
 - The welcome is also present throughout the entire quiz window; namely: The landing page, start quiz area.
 - The welcome text is responsive on all devices. the background color provides a very good contrast against the body of the website hereby optimising user accessibility.
 - Below the welcome text is a brief description of the next step which can be a sign up or to continue as a guest.
 
 ### Sign-Up Form
+![Sign up form image](/assets/images/sign-up.jpg)
 - The sign up form allows the user to sign up to the website in order to access the quiz .
 - The sign up has create username, email, password and confirm password field.
 - The form has a continue as guest botton which helps users to have the look and feel of the quiz before sigining up.
 
 ### Start Quiz Area
+![Start quiz image](/assets/images/start-quiz.jpg)
 - The start quiz area displays after 2 seconds of signing in.
 - The Start quiz area gives way for the question area once clicked.
 
 ### The Questio Area
+
 - The question area displays the first question out of ten.
 - the question area has three answers to choose from.
 - The correct answers shows a green color and the wrong answers shows red.

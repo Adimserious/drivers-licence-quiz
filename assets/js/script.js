@@ -1,6 +1,4 @@
-// Let the DOM load first
 // Then Grab elements from DOM and assign variables to them 
-document.addEventListener('DOMContentLoaded')
 let signup = document.getElementById('signupBtn');
 let title = document.getElementById('title');
 let usernameArea = document.getElementById('username');
