@@ -184,7 +184,7 @@ function getQuestion(){
     resetState();
     getNextQuestion(shuffledQuestions[currentQuestionIndex]);
     let questionNumber = document.getElementById('questionNoText');
-    questionNumber.innerHTML = `<span class="blue">Question ` + (parseInt(currentQuestionIndex) + 1) + ` of 10</span>`;
+    questionNumber.innerHTML = `<span class="blue">Question ` + (parseInt(currentQuestionIndex) + 1) + ` of 11</span>`;
 
     /**
  * This function sets the question Inner-html using question parameter.
@@ -230,7 +230,7 @@ function showAnswer(e){
         eventButton.removeEventListener('click', showAnswer);
     }
     
-    // This will take the object's correct value and passes it to the setAnswer Class function
+    // This will take the object's correct value and passes it to the setAnswerClass function
     let clickedButton = e.target;
     Array.from(answerDiv.children).forEach(button => {
         setAnswerClass(button, button.dataset.correct);
