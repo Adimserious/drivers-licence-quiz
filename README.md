@@ -82,22 +82,30 @@ As a frequent user:
 - The Start quiz area gives way for the question area once clicked.
 
 ### The Questio Area
-
+ ![Qestion image](/assets/images/question.jpg)
 - The question area displays the first question out of ten.
 - the question area has three answers to choose from.
 - The correct answers shows a green color and the wrong answers shows red.
 - the question area has a next question button which is hidden but displays once an answer is clicked.
 
+### The Answer Area
+![Answers image](/assets/images/answers-and-next.jpg)
 ### the X Icon
+![The x icon image](/assets/images/x-icon.jpg)
 - The x icon allow users to leave the question area at any desired time.
 
 ### See Result Button
+![The see result button image](/assets/images/see.result.jpg)
 - The see result button appears at the end of the quiz to show the result area once clicked.
 
 ### Result Area
+![Result image](/assets/images/result.jpg)
 - The result area displays the test 'Great job' together with the number of score the user got.
 - the result area also has a try again button which allow users to try the quiz again and try shuffles the question.
 - The result area contains an exit quiz button that takes the users out from the question area and back to the welcome page.
+
+### Try again and Exit button
+![Try again and exit image](/assets/images/try-again-exit.jpg)
 
 ## Wireframes
 - Pen and paper in a notebook: simple and effective.
