@@ -1,6 +1,8 @@
-# Führerschein (English)
+# Führerschein Quiz (English)
+
+Welcome to the Führerschein Quiz English version.
 ## Introduction 
-The Führerschein English quiz application is designed to provide the English version of the driving licence theory exam questions. Dedicated to migrants in Germany who wishes to optain a drivers licence and prefers to write the exam in English language.
+The Führerschein English quiz is designed to provide the English version of the driving licence theory exam questions in Germany. Dedicated to migrants in Germany who wishes to optain a drivers licence and prefers to write the exam in English language.
 
 The live link can be found here -
 
@@ -54,20 +56,21 @@ As a frequent user:
 - The main color scheme of the quiz application is burlywood, black and white.
 
 ## Features
-### The Heading
+### Landing Page
+#### The Heading
 - The heading text which describes the purpose of the application at first sight.
 - The heading is present throughout the entire quiz window; namely: The landing page, start quiz area and result area.
 - The heading is responsive across all devices.
 
-### The Welcom Text
-- The welcome text describes further the main purpose of the Quiz.
+### The Welcome Text
+- The welcome text describes further the main purpose of the Quiz, located underneath the header. it welcomes the user and give then a brief overview of the quiz they are about to partake on.
 - The welcome is also present throughout the entire quiz window; namely: The landing page, start quiz area.
-- The welcome text is responsive on all devices.
+- The welcome text is responsive on all devices. the background color provides a very good contrast against the body of the website hereby optimising user accessibility.
+- Below the welcome text is a brief description of the next step which can be a sign up or to continue as a guest.
 
-### The Sign-In And Sign-Up Form
-- The form switches between sign in and sign up.
+### Sign-Up Form
+- The sign up form .
 - The sign up has create username, email, password and confirm password field.
-- While the sign in has enter username. email and password field.
 - The form has a continue as guest botton which helps users to have the look and feel of the quiz before sigining up.
 
 ### Start Quiz Area
