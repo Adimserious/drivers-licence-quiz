@@ -86,7 +86,7 @@ function showBeginWindow(){
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = '1000px';
     begin.style.transitionDelay = '2s';
-    begin.style.backgroundColor = 'burlywood'
+    begin.style.backgroundColor = 'burlywood';
 }
 
 /**
@@ -242,7 +242,7 @@ function showAnswer(e){
         score = ++score;
         let scoreText = document.getElementById('score');
     scoreText.innerHTML = parseInt(score);
-    };   
+    }   
 
     // This if statement determines whether the nextQuestion Button or seeResults button is shown
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
@@ -440,4 +440,4 @@ const licenceQuestions = [
 
 
 
-]
+];
