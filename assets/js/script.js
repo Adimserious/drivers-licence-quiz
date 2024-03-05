@@ -375,8 +375,8 @@ const licenceQuestions = [
     {
         question: 'What should you do if you start feeling tired while driving?',
         answer: [
-            {text: "Take a break straightaway", correct: false},
-            {text: "Get out of the car and move around", correct: true},
+            {text: "Take a break straightaway", correct: true},
+            {text: "Get out of the car", correct: false},
             {text: "Listen to stimulating music", correct: false},
         ]
     },
@@ -415,9 +415,9 @@ const licenceQuestions = [
     {
         question: 'You want to carry a child in your car, when must you use a child seat for this purpose?',
         answer: [
-            {text: "If the child is older than 12 years", correct: false},
+            {text: "If the child is older than 12", correct: false},
             {text: "If the child is taller than 150 cm", correct: false},
-            {text: "If the child is younger than 12 years", correct: true},
+            {text: "If the child is younger than 12", correct: true},
         ]
     },
     {
