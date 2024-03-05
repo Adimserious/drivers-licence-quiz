@@ -248,7 +248,7 @@ function showAnswer(e) {
     let seeResultsBtn = document.getElementById('seeResultsID');
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextQuestionBtn.style.display = 'block';
-    } else if (shuffledQuestions.length = currentQuestionIndex + 1) {
+    } else if (shuffledQuestions.length == currentQuestionIndex + 1) {
         seeResultsBtn.classList.add('seeResultsBtn');
         seeResultsBtn.classList.add('question-btn');
         seeResultsBtn.style.cursor = 'pointer';

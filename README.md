@@ -66,25 +66,25 @@ As a frequent user:
 - The heading is responsive across all devices.
 
 ### The Welcome Text
-![The welcome text image](/assets/images/welcome-text.jpg)
+![The welcome text image](/assets/images/welcome-text.webp)
 - The welcome text describes further the main purpose of the Quiz, located underneath the header. it welcomes the user and give then a brief overview of the quiz they are about to partake on.
 - The welcome is also present throughout the entire quiz window; namely: The landing page, start quiz area.
 - The welcome text is responsive on all devices. the background color provides a very good contrast against the body of the website hereby optimising user accessibility.
 - Below the welcome text is a brief description of the next step which can be a sign up or to continue as a guest.
 
 ### Sign-Up Form
-![Sign up form image](/assets/images/sign-up.jpg)
+![Sign up form image](/assets/images/sign-up.webp)
 - The sign up form allows the user to sign up to the website in order to access the quiz .
 - The sign up has create username, email, password and confirm password field.
 - The form has a continue as guest botton which helps users to have the look and feel of the quiz before sigining up.
 
 ### Start Quiz Area
-![Start quiz image](/assets/images/start-quiz.jpg)
+![Start quiz image](/assets/images/start-quiz.webp)
 - The start quiz area displays after 2 seconds of signing in.
 - The Start quiz area gives way for the question area once clicked.
 
 ### The Questio Area
- ![Qestion image](/assets/images/question.jpg)
+ ![Qestion image](/assets/images/question.webp)
 - The question area displays the first question out of ten.
 - the question area has three answers to choose from.
 - The correct answers shows a green color and the wrong answers shows red.
@@ -96,21 +96,21 @@ As a frequent user:
 - The correct answer will show a green color.
 - There is also a hover effect which changes the burder and text color to when hovered before clicking.
 ### the X Icon
-![The x icon image](/assets/images/x-icon.jpg)
+![The x icon image](/assets/images/x-icon.webp)
 - The x icon allow users to leave the question area at any desired time.
 
 ### See Result Button
-![The see result button image](/assets/images/see.result.jpg)
+![The see result button image](/assets/images/see.result.webp)
 - The see result button appears at the end of the quiz to show the result area once clicked.
 
 ### Result Area
-![Result image](/assets/images/result.jpg)
+![Result image](/assets/images/result.webp)
 - The result area displays the test 'Great job' together with the number of score the user got.
 - the result area also has a try again button which allow users to try the quiz again and try shuffles the question.
 - The result area contains an exit quiz button that takes the users out from the question area and back to the welcome page.
 
 ### Try again and Exit button
-![Try again and exit image](/assets/images/try-again-exit.jpg)
+![Try again and exit image](/assets/images/try-again-exit.webp)
 - The try again button allows user to try the quiz again.
 - The exit bitton takes the users out from the quiz area.
 ## Wireframes
@@ -148,9 +148,9 @@ As a frequent user:
 ## **Post Development Testing**
 ### Validation results
 **HTML**
-- ![HTML Validator](/assets/images/html-testing.png)
+- ![HTML Validator](/assets/images/html-testing.webp)
 **CSS**
-- ![CSS Validator](/assets/images/css-validator.png)
+- ![CSS Validator](/assets/images/css-validator.webp)
 **JavaScript**
 - ![JavaScript Validator]()
 **Lighthouse**
