@@ -150,12 +150,13 @@ As a frequent user:
 - Returned no error nor warnings when checking the HTML document.
 - ![HTML Validator](/assets/images/html-testing.webp)
 **CSS**
-- Returned no error nor warnings when checking CSS document 
+- Returned no error however i got 2 warnings when checking CSS document which was the Google import link so i cant do much about it and the same color for background and border which was intentended. 
 - ![CSS Validator](/assets/images/css-validator.webp)
+- ![CSS Warning](/assets/images/css-warning.webp)
 **JavaScript**
 - ![JavaScript Validator](/assets/images/jshint.webp)
 **Lighthouse**
-- ![Lighthouse Report]()
+- ![Lighthouse Report](/assets/images/light-house.webp)
 
 ## Deployment and local development
 ### GitHub Pages 
