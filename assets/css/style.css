@@ -15,8 +15,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: 'Lato', sans-serif; 
-    
+    font-family: 'Lato', sans-serif;
+
 }
 
 /* This pushes the footer down to the bottom of the page and occupy surplus space */
@@ -67,7 +67,7 @@ footer {
     max-height: 1000px;
     transition: max-height 1.5s;
     overflow: hidden;
-} 
+}
 
 #form-title {
     display: flex;
@@ -82,6 +82,7 @@ footer {
     color: red;
     font-weight: 600;
 }
+
 /* Sign up text */
 #form-heading {
     width: 100%;
@@ -135,6 +136,7 @@ form #guestBtn:hover {
     color: burlywood;
     cursor: pointer;
 }
+
 /* Submit text styles */
 form button {
     margin-left: 20px;
@@ -148,6 +150,7 @@ form button {
     padding: 5px;
     letter-spacing: 2px;
 }
+
 /* Submit text */
 form button:hover {
     color: burlywood;
@@ -184,7 +187,8 @@ form .active {
     background-color: white;
     color: black;
 }
-/* Sign up */ 
+
+/* Sign up */
 .btn:hover {
     background: white;
 }
@@ -208,8 +212,8 @@ form .active {
     transition: max-height 1.5s;
 }
 
- /* This style targets the beginDiv's child */
- #beginDiv div {
+/* This style targets the beginDiv's child */
+#beginDiv div {
     padding: 20px;
     border: white 2px solid;
     color: white;
@@ -244,6 +248,7 @@ form .active {
     display: flex;
     justify-content: space-between;
 }
+
 /* Refers to question 1 of 10 text */
 #questionNoText {
     color: white;
@@ -253,8 +258,8 @@ form .active {
     text-decoration-thickness: 3px;
 }
 
-  /* These styles refers to the X icon */
-  i {
+/* These styles refers to the X icon */
+i {
     color: white;
     margin: 25px;
     font-size: 1.5em;
@@ -265,8 +270,8 @@ i:hover {
     cursor: pointer;
 }
 
- /* These styles refer to the question div and text */
- #questionDiv {
+/* These styles refer to the question div and text */
+#questionDiv {
     border: black 2px solid;
     border-radius: 10px;
     margin: 20px;
@@ -330,9 +335,10 @@ i:hover {
 
 /* These classes style the answerText elements according to what value the setAnswerClass function 
         passes to them */
-.correct, .correct:hover {
-     border: #00c04b 2px solid;
-     color: #00c04b;
+.correct,
+.correct:hover {
+    border: #00c04b 2px solid;
+    color: #00c04b;
 }
 
 .wrong {
@@ -388,6 +394,7 @@ i:hover {
     border: none;
     color: black;
 }
+
 /* this is the try again and exit buttons */
 .try-again {
     background-color: black;
@@ -398,8 +405,9 @@ i:hover {
     letter-spacing: 3px;
     cursor: pointer;
     font-weight: bold;
-    color: white; 
+    color: white;
 }
+
 /* Footer*/
 #social-networks {
     text-align: right;
@@ -516,26 +524,26 @@ i:hover {
 
     /* This section refers to the results area */
 
-#resultsDiv {
-    margin: 30px 80px;
-    border-radius: 10px;
-}
+    #resultsDiv {
+        margin: 30px 80px;
+        border-radius: 10px;
+    }
 
-#resultsText {
-    font-size: 3.5rem;
-    padding: 30px;
-    margin: 30px;
-}
+    #resultsText {
+        font-size: 3.5rem;
+        padding: 30px;
+        margin: 30px;
+    }
 
-#score {
-    font-size: 3.5rem;
-}
+    #score {
+        font-size: 3.5rem;
+    }
 
-.resetBtn {
-    padding: 15px;
-    font-size: 2.5em;
-    margin: 20px 150px;
-}
+    .resetBtn {
+        padding: 15px;
+        font-size: 2.5em;
+        margin: 20px 150px;
+    }
 }
 
 /* Media query for laptops and higher (1024px and higher) */
@@ -592,22 +600,22 @@ i:hover {
 
     /* This section is for the begin area */
 
-#beginDiv {
-    margin: 20px 300px;
-}
+    #beginDiv {
+        margin: 20px 300px;
+    }
 
-#beginDiv div {
-    padding: 20px;
-    border: #fff 2px solid;
-    color: #fff;
-    background-color: #000;
-    text-align: center;
-    margin: 50px 50px;
-    border-radius: 30px;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
+    #beginDiv div {
+        padding: 20px;
+        border: #fff 2px solid;
+        color: #fff;
+        background-color: #000;
+        text-align: center;
+        margin: 50px 50px;
+        border-radius: 30px;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
 
     /* This is the Question area section */
 
@@ -666,32 +674,32 @@ i:hover {
         font-size: 4rem;
     }
 
-        /* This section refers to the results area */
+    /* This section refers to the results area */
 
-#resultsDiv {
-    margin: 30px 150px;
-    border-radius: 10px;
-}
+    #resultsDiv {
+        margin: 30px 150px;
+        border-radius: 10px;
+    }
 
-#resultsText {
-    font-size: 4.5rem;
-    padding: 30px;
-    margin: 50px;
-}
+    #resultsText {
+        font-size: 4.5rem;
+        padding: 30px;
+        margin: 50px;
+    }
 
-#score {
-    font-size: 4.5rem;
-}
+    #score {
+        font-size: 4.5rem;
+    }
 
-.resetBtn {
+    .resetBtn {
         padding: 15px;
         font-size: 3em;
         margin: 50px 350px;
-}
+    }
 
-#tryAgainBtn button {
-    font-size: 3rem;
-    padding: 15px;
-    margin: 30px;
-}
+    #tryAgainBtn button {
+        font-size: 3rem;
+        padding: 15px;
+        margin: 30px;
+    }
 }

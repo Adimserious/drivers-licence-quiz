@@ -7,15 +7,15 @@ let passwordConfirmedArea = document.getElementById('confirm-password');
 
 
 
- // This is the sign up function 
-function displaySignUp(){
+// This is the sign up function 
+function displaySignUp() {
     title.innerHTML = 'Sign-Up';
     signup.classList.add('active');
     passwordConfirmedArea.style.maxHeight = '80px';
     passwordConfirmedArea.style.paddingBottom = '1px';
     passwordConfirmedArea.style.paddingTop = '1px';
     passwordArea.setAttribute('placeholder', 'Create Password');
-   usernameArea.setAttribute('placeholder', 'Create Username');
+    usernameArea.setAttribute('placeholder', 'Create Username');
 }
 
 signup.addEventListener('click', displaySignUp);
@@ -51,10 +51,10 @@ function handleSubmit(event) {
         console.log('Password must be at least 8 characters');
         passErrorMsg.innerHTML = 'Password must be at least 8 characters.';
     } else if (passwordValueLength > 20) {
-            console.log('Password must be less than 20 characters');
-            passErrorMsg.innerHTML = 'Password must be less than 20 characters.';
-        } else if (!passwordValue.match(/[0-9]/)) {
-            userErrorMsg.innerHTML = '';
+        console.log('Password must be less than 20 characters');
+        passErrorMsg.innerHTML = 'Password must be less than 20 characters.';
+    } else if (!passwordValue.match(/[0-9]/)) {
+        userErrorMsg.innerHTML = '';
         console.log('Password must contain a number');
         passErrorMsg.innerHTML = 'Password must contain a number.';
     } else {
@@ -73,16 +73,16 @@ let form = document.getElementById('form');
 form.addEventListener('submit', handleSubmit);
 
 // This function hides the form
- 
-function hideForm(){
+
+function hideForm() {
     event.preventDefault();
     form.style.maxHeight = ('0');
     showBeginWindow();
 }
 
 // This function shows the start Quiz area
- 
-function showBeginWindow(){
+
+function showBeginWindow() {
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = '1000px';
     begin.style.transitionDelay = '2s';
@@ -94,7 +94,7 @@ function showBeginWindow(){
  * color to black and burlywood respectively when pointed
  */
 
-function beginHover(event){
+function beginHover(event) {
     beginBtn.style.borderColor = 'black';
     beginBtn.style.color = 'burlywood';
     beginBtn.style.backgroundColor = 'black';
@@ -105,7 +105,7 @@ function beginHover(event){
  * This function makes the Start Quiz Button and border 
  * color change from white/burlywood to white at mouse-out
  */
-function beginOut(event){
+function beginOut(event) {
     beginBtn.style.borderColor = 'white';
     beginBtn.style.color = 'white';
 }
@@ -118,7 +118,7 @@ beginBtn.addEventListener('mouseout', beginOut);
  * This function hides the Begin Quiz Area by setting the max-height
  * to 0px, as well also removes the transition delay
  */
-function hideBeginArea(){
+function hideBeginArea() {
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = '0';
     begin.style.transitionDelay = '0s';
@@ -135,7 +135,7 @@ function showQuestionArea() {
     questionArea.style.transitionDelay = '0s';
 
 
-//  If statement  to set the min-height of the quiz area
+    //  If statement  to set the min-height of the quiz area
 
     if (windowWidth < '500') {
         questionArea.style.minHeight = '710px';
@@ -145,7 +145,7 @@ function showQuestionArea() {
         questionArea.style.minHeight = '850px';
     } else {
         questionArea.style.minHeight = '750px';
-}
+    }
 }
 
 // This section adds functionality to the quiz area
@@ -180,7 +180,7 @@ nextQuestionBtn.addEventListener('click', () => {
  * This function takes the parameters of the question objects and passes them into
  * the getNextQuestion function. Sets the question number in the quiz area.
  */
-function getQuestion(){
+function getQuestion() {
     resetState();
     getNextQuestion(shuffledQuestions[currentQuestionIndex]);
     let questionNumber = document.getElementById('questionNoText');
@@ -191,18 +191,18 @@ function getQuestion(){
  * Creates new question divs with the answers passed to the function.
  * It adds the class of correct to the answers that are correct.
  */
-function getNextQuestion(licenceQuestions) {
-    questionText.innerHTML = licenceQuestions.question;
-    licenceQuestions.answer.forEach(answer => {
-        let button = document.createElement('div');
-        button.innerHTML = answer.text;
-        button.classList.add('answerText');
-        if (answer.correct){
-            button.dataset.correct = answer.correct;
-        } button.addEventListener('click', showAnswer);
-        answerDiv.appendChild(button);
-    });
-}
+    function getNextQuestion(licenceQuestions) {
+        questionText.innerHTML = licenceQuestions.question;
+        licenceQuestions.answer.forEach(answer => {
+            let button = document.createElement('div');
+            button.innerHTML = answer.text;
+            button.classList.add('answerText');
+            if (answer.correct) {
+                button.dataset.correct = answer.correct;
+            } button.addEventListener('click', showAnswer);
+            answerDiv.appendChild(button);
+        });
+    }
 
 }
 
@@ -211,9 +211,9 @@ function getNextQuestion(licenceQuestions) {
  * Thereby setting the state of the questionArea back to default.
  * Removes the display of the Next Question button.
  */
-function resetState(){
+function resetState() {
     nextQuestionBtn.style.display = 'none';
-    while (answerDiv.firstChild){
+    while (answerDiv.firstChild) {
         answerDiv.removeChild(answerDiv.firstChild);
     }
 }
@@ -223,14 +223,14 @@ function resetState(){
  * Passes the correct value to the function of setAnswerClass.
  * Determines whether to show the Next Question button or See Results Button.
   */
-function showAnswer(e){
+function showAnswer(e) {
     // This removes the event listener after the first click.
     let eventButtons = document.getElementsByClassName('answerText');
     for (let eventButton of eventButtons) {
         eventButton.removeEventListener('click', showAnswer);
     }
-    
-    // This will take the object's correct value and passes it to the setAnswerClass function
+
+    // This will take the correct value of the object and pass it to the setAnswerClass function
     let clickedButton = e.target;
     Array.from(answerDiv.children).forEach(button => {
         setAnswerClass(button, button.dataset.correct);
@@ -241,14 +241,14 @@ function showAnswer(e){
     if (dataType) {
         score = ++score;
         let scoreText = document.getElementById('score');
-    scoreText.innerHTML = parseInt(score);
-    }   
+        scoreText.innerHTML = parseInt(score);
+    }
 
     // This if statement determines whether the nextQuestion Button or seeResults button is shown
+    let seeResultsBtn = document.getElementById('seeResultsID');
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
-         nextQuestionBtn.style.display = 'block';
+        nextQuestionBtn.style.display = 'block';
     } else if (shuffledQuestions.length = currentQuestionIndex + 1) {
-        let seeResultsBtn = document.getElementById('seeResultsID');
         seeResultsBtn.classList.add('seeResultsBtn');
         seeResultsBtn.classList.add('question-btn');
         seeResultsBtn.style.cursor = 'pointer';
@@ -261,7 +261,7 @@ function showAnswer(e){
  * This function takes the parameter of the question objects answer values, if correct it adds
  * the data-type of correct, if wrong it adds the data-type of wrong.
   */
-function setAnswerClass(element, correct){
+function setAnswerClass(element, correct) {
     // This clear answer class removes the datatype and class for the next question
     clearAnswerClass(element);
     if (correct) {
@@ -277,7 +277,7 @@ function setAnswerClass(element, correct){
  * This function removes both the class and data-type of the parameters passed
  * to the function so that they are cleared for the next question.
  */
-function clearAnswerClass(element){
+function clearAnswerClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
     element.removeAttribute('data-type', 'correct');
@@ -286,7 +286,7 @@ function clearAnswerClass(element){
 
 // This section refers to the Results Area 
 
- // This function closes the question Area and shows the results Area.
+// This function closes the question Area and shows the results Area.
 
 function showResultsArea() {
     let questionArea = document.getElementById('questionArea');
@@ -294,15 +294,15 @@ function showResultsArea() {
     questionArea.style.minHeight = '0';
     questionArea.style.transitionDelay = '0s';
     let resultsWindow = document.getElementById('resultsDiv');
-    resultsWindow.style.maxHeight ='1000px';
+    resultsWindow.style.maxHeight = '1000px';
     resultsWindow.style.transitionDelay = '2s';
 }
 
- // This function closes the Results Area by setting the maxHeight to 0px.
+// This function closes the Results Area by setting the maxHeight to 0px.
 
 function closeQuiz() {
     let resultsWindow = document.getElementById('resultsDiv');
-    resultsWindow.style.maxHeight ='0';
+    resultsWindow.style.maxHeight = '0';
     resultsWindow.style.transitionDelay = '0s';
 }
 
@@ -351,91 +351,91 @@ const licenceQuestions = [
     {
         question: 'Your passenger wants to discuss something with you during the journey. what should you do?',
         answer: [
-            {text: "Concentrate on the discussion", correct: false},
-            {text: "Concentrate on the driving", correct: true},
-            {text: "Concentrate on both", correct: false},
+            { text: "Concentrate on the discussion", correct: false },
+            { text: "Concentrate on the driving", correct: true },
+            { text: "Concentrate on both", correct: false },
         ]
     },
     {
         question: 'What could cause the vehicle to leave the road?',
         answer: [
-            {text: "Tiredness", correct: false},
-            {text: "Distraction", correct: false},
-            {text: "Inattention", correct: true},
+            { text: "Tiredness", correct: false },
+            { text: "Distraction", correct: false },
+            { text: "Inattention", correct: true },
         ]
     },
     {
         question: 'What can inpair fitness to drive?',
         answer: [
-            {text: "Fatigue", correct: false},
-            {text: "Certain medicines", correct: true},
-            {text: "Alcohol and other intoxicants", correct: false},
-        ]        
+            { text: "Fatigue", correct: false },
+            { text: "Certain medicines", correct: true },
+            { text: "Alcohol and other intoxicants", correct: false },
+        ]
     },
     {
         question: 'What should you do if you start feeling tired while driving?',
         answer: [
-            {text: "Take a break straightaway", correct: true},
-            {text: "Get out of the car", correct: false},
-            {text: "Listen to stimulating music", correct: false},
+            { text: "Take a break straightaway", correct: true },
+            { text: "Get out of the car", correct: false },
+            { text: "Listen to stimulating music", correct: false },
         ]
     },
     {
         question: 'What emotions can influence driving behaviour?',
         answer: [
-            {text: "Sorrow and worry", correct: false},
-            {text: "Happiness and exuberance", correct: false},
-            {text: "Anger and rage", correct: true},
+            { text: "Sorrow and worry", correct: false },
+            { text: "Happiness and exuberance", correct: false },
+            { text: "Anger and rage", correct: true },
         ]
     },
     {
         question: 'What can be the effect of even small quantities of alcohol?',
         answer: [
-            {text: "Reckless driving", correct: true},
-            {text: "Delayed reactions", correct: false},
-            {text: "Impairment of hearing and vision", correct: false},
+            { text: "Reckless driving", correct: true },
+            { text: "Delayed reactions", correct: false },
+            { text: "Impairment of hearing and vision", correct: false },
         ]
     },
     {
         question: 'Are drivers during their probation period allowed to be under the influence of alcohol when driving?',
         answer: [
-            {text: "yes, up to 30 miligrams", correct: false},
-            {text: "No, definitely not", correct: true},
-            {text: "yes, upto 50 miligram", correct: false},
+            { text: "yes, up to 30 miligrams", correct: false },
+            { text: "No, definitely not", correct: true },
+            { text: "yes, upto 50 miligram", correct: false },
         ]
     },
     {
         question: 'When will offences carrying two points be deleted from the Central Register of Road Traffic Offenders?',
         answer: [
-            {text: "-5 years", correct: true},
-            {text: "-2 years", correct: false},
-            {text: "-3 years", correct: false},
+            { text: "-5 years", correct: true },
+            { text: "-2 years", correct: false },
+            { text: "-3 years", correct: false },
         ]
     },
     {
         question: 'You want to carry a child in your car, when must you use a child seat for this purpose?',
         answer: [
-            {text: "If the child is older than 12", correct: false},
-            {text: "If the child is taller than 150 cm", correct: false},
-            {text: "If the child is younger than 12", correct: true},
+            { text: "If the child is older than 12", correct: false },
+            { text: "If the child is taller than 150 cm", correct: false },
+            { text: "If the child is younger than 12", correct: true },
         ]
     },
     {
         question: 'What is the maximum length of time you are allowed to stop at a bus stop provided you do not present an obstruction to buses?',
         answer: [
-            {text: "3 minutes", correct: true},
-            {text: "8 minutes", correct: false},
-            {text: "5 minutes", correct: false},
+            { text: "3 minutes", correct: true },
+            { text: "8 minutes", correct: false },
+            { text: "5 minutes", correct: false },
         ]
     },
     {
-    question: 'Is it irresponsible to overtake a truck and trailer a short distance before crossroads?',
+        question: 'Is it irresponsible to overtake a truck and trailer a short distance before crossroads?',
         answer: [
-            {text: "No, they drive at low speed", correct: false},
-            {text: "No, they understands", correct: false},
-            {text: "Yes, they can obscure traffic signs", correct: true},
+            { text: "No, they drive at low speed", correct: false },
+            { text: "No, they understands", correct: false },
+            { text: "Yes, they can obscure traffic signs", correct: true },
         ]
-    }   
+    }
 
 
 
