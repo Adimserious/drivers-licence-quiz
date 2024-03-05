@@ -334,9 +334,9 @@ exitQuizBtn.addEventListener('click', closeQuiz);
   */
 function exitQuiz() {
     let questionWindow = document.getElementById('questionArea');
-    questionArea.style.maxHeight = '0';
-    questionArea.style.minHeight = '0';
-    questionArea.style.transitionDelay = '0s';
+    questionWindow.style.maxHeight = '0';
+    questionWindow.style.minHeight = '0';
+    questionWindow.style.transitionDelay = '0s';
 }
 
 let crossBtn = document.getElementById('quizExit');

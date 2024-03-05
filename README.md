@@ -7,26 +7,28 @@ The Führerschein English quiz is designed to provide the English version of the
 
 The live link can be found here -
 
-# Table of Contents
-## Project and Site Owner Goals 
-## Target Audience
+# **Table of Contents**
+- [**Project and Site Owner Goals**](#project-and-site-owner-goals) 
+- [**Target Audience**](#target-audience)
 ## User Experience 
-- ####  User Stories
+- [**User Stories**](#user-stories)
+- [**Design**](#design)
+- [**Colors**](#colors)
 ## Features
-- #### Existing Features
-## Features Left to Implement
-## Technologies Used
-## Frameworks, Libraries & Programs Used
+- [**Existing Features**](#existing-features)
+- [**Features Left to Implement**](#features-left-to-implement)
+- [**Technologies Used**](#technologies-used)
+- [**Frameworks, Libraries & Programs Used**](#frameworks-libraries--programs-used)
 ## Testing
-- #### Validation Results
-- #### Manual Testing
-- #### Lighthouse Report
+- [**Validation Results**](#validation-results)
+- [**Manual Testing**](#manual-testing)
+- [**Lighthouse Report**](#lighthouse-report)
 ## Deployment and local development
-- ####  GitHub Pages
-- ####  Forking the GitHub Repository
-- ####  Local Clone
-## Credits
-## Acknowledgements
+- [**GitHub Pages**](#github-pages)
+- [**Forking the GitHub Repository**](#forking-the-github-repository)
+- [**Local Clone**](#local-clone)
+- [**Credits**](#credits)
+- [**Acknowledgements**](#acknowledgements)
 
 ## Project and Site Owner Goals
  Because the spoken language in Germany is deutsch, many migrants find it difficult to achieve their goal of obtaining a drivers licence on time due to the language barrier. Our goal is to help make the dream of learning and writing the theory exam in English language come through at the time of need for people who want it.
@@ -57,9 +59,9 @@ As a frequent user:
 - The main color scheme of the quiz application is burlywood, black and white.
 
 ## Features
-### Landing Page
+### Existing Features 
 #### The Heading
-- The heading text which describes the purpose of the application at first sight.
+- The heading text is the first thing the users will see on the landing page which describes the purpose of the application at first sight.
 - The heading is present throughout the entire quiz window; namely: The landing page, start quiz area and result area.
 - The heading is responsive across all devices.
 
@@ -137,22 +139,26 @@ As a frequent user:
 - - Mockup picture for the README file.
 
 ## Testing
-- [The W3C Markup Validator](https://validator.w3.org/ and 
+### Manual Testing
+- Manually testing each section while building the quiz for appearance and responsiveness using Chrome developer tools and Microsoft Edge
+- [The W3C Markup Validator](https://validator.w3.org/) and 
 - [W3C CSS Validator](https://validator.w3.org) services were used to validate every page of the project to ensure there were no errors.
 
-- The W3C Markup Validator
-
-- W3C CSS Validator
 - JavaScript Validator
-
-## Validation results
-
-## Manual Testing
-
-## Lighthouse Report
+## **Post Development Testing**
+### Validation results
+**HTML**
+- ![HTML Validator](/assets/images/html-testing.png)
+**CSS**
+- ![CSS Validator](/assets/images/css-validator.png)
+**JavaScript**
+- ![JavaScript Validator]()
+**Lighthouse**
+- ![Lighthouse Report]()
 
 ## Deployment and local development
-GitHub Pages used to deploy live version of the website.
+### GitHub Pages 
+- used to deploy live version of the website.
 
 1. Log in to GitHub and locate GitHub Repository drivers-licence-quiz
 2. At the top of the Repository(not the main navigation) locate "Settings" button on the menu.
