@@ -5,14 +5,13 @@ Welcome to the Führerschein Quiz English version.
 ## Introduction 
 The Führerschein English quiz is designed to provide the English version of the driving licence theory exam questions in Germany. Dedicated to migrants in Germany who wishes to optain a drivers licence and prefers to write the exam in English language.
 
-The live link can be found here -
+The live link can be found here -[Führerschein (English)](https://adimserious.github.io/drivers-licence-quiz/)
 
 # **Table of Contents**
 - [**Project and Site Owner Goals**](#project-and-site-owner-goals) 
 - [**Target Audience**](#target-audience)
 ## User Experience 
 - [**User Stories**](#user-stories)
-- [**Design**](#design)
 - [**Colors**](#colors)
 ## Features
 - [**Existing Features**](#existing-features)
@@ -53,8 +52,6 @@ As a frequent user:
 - I want to be familiar with most questions, understand them and know the right answers.
 - I want very few or no fails with the questions.
 
-### Design
-
 ### Colors
 - The main color scheme of the quiz application is burlywood, black and white.
 
@@ -77,6 +74,7 @@ As a frequent user:
 - The sign up form allows the user to sign up to the website in order to access the quiz .
 - The sign up has create username, email, password and confirm password field.
 - The form has a continue as guest botton which helps users to have the look and feel of the quiz before sigining up.
+- I checked the forn to make sure users cant submit without meeting the criteria
 
 ### Start Quiz Area
 ![Start quiz image](/assets/images/start-quiz.webp)
@@ -144,15 +142,18 @@ As a frequent user:
 - [The W3C Markup Validator](https://validator.w3.org/) and 
 - [W3C CSS Validator](https://validator.w3.org) services were used to validate every page of the project to ensure there were no errors.
 
-- JavaScript Validator
+- [JavaScript Validator](https://jshint.com/)
+
 ## **Post Development Testing**
 ### Validation results
 **HTML**
+- Returned no error nor warnings when checking the HTML document.
 - ![HTML Validator](/assets/images/html-testing.webp)
 **CSS**
+- Returned no error nor warnings when checking CSS document 
 - ![CSS Validator](/assets/images/css-validator.webp)
 **JavaScript**
-- ![JavaScript Validator]()
+- ![JavaScript Validator](/assets/images/jshint.webp)
 **Lighthouse**
 - ![Lighthouse Report]()
 
