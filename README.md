@@ -43,7 +43,7 @@ The live link can be found here -[Führerschein (English)](https://adimserious.g
   As a first-time user, i would like to:
   - Understand the main purpose of the site and know how many questions it provides.
   - Easily navigate throughout the site.
-  - Find the Sign Up and Sign In forms and fill them out.
+  - Find the Sign Up form and fill it out.
   - Find out if they can visit as a guest to get the look and feel of the app.
 
 - ### Returning User
@@ -58,32 +58,32 @@ As a frequent user:
 ## Features
 ### Existing Features 
 #### The Heading
-- The heading text is the first thing the users will see on the landing page which describes the purpose of the application at first sight.
+- The heading text is the first thing the users will see on the landing page which describes the purpose of the website at first sight.
 - The heading is present throughout the entire quiz window; namely: The landing page, start quiz area and result area.
 - The heading is responsive across all devices.
 
 ### The Welcome Text
 ![The welcome text image](/assets/images/welcome-text.webp)
 - The welcome text describes further the main purpose of the Quiz, located underneath the header. it welcomes the user and give then a brief overview of the quiz they are about to partake on.
-- The welcome is also present throughout the entire quiz window; namely: The landing page, start quiz area.
+- The welcome text is also present throughout the entire quiz window; namely: The landing page, start quiz and exit area.
 - The welcome text is responsive on all devices. the background color provides a very good contrast against the body of the website hereby optimising user accessibility.
 - Below the welcome text is a brief description of the next step which can be a sign up or to continue as a guest.
 
 ### Sign-Up Form
 ![Sign up form image](/assets/images/sign-up.webp)
 - The sign up form allows the user to sign up to the website in order to access the quiz .
-- The sign up has create username, email, password and confirm password field.
+- The sign up has a create username, email, password and confirm password field.
 - The form has a continue as guest botton which helps users to have the look and feel of the quiz before sigining up.
-- I checked the forn to make sure users cant submit without meeting the criteria
+- I checked the form to make sure users cant submit without meeting the form criteria
 
 ### Start Quiz Area
 ![Start quiz image](/assets/images/start-quiz.webp)
 - The start quiz area displays after 2 seconds of signing in.
 - The Start quiz area gives way for the question area once clicked.
 
-### The Questio Area
+### The Question Area
  ![Qestion image](/assets/images/question.webp)
-- The question area displays the first question out of ten.
+- The question area displays the first question out of eleven.
 - the question area has three answers to choose from.
 - The correct answers shows a green color and the wrong answers shows red.
 - the question area has a next question button which is hidden but displays once an answer is clicked.
@@ -92,7 +92,7 @@ As a frequent user:
 ![Answers image](/assets/images/answers-and-next.jpg)
 - The answer area will show red for the wrong answers upon choosing an answer.
 - The correct answer will show a green color.
-- There is also a hover effect which changes the burder and text color to when hovered before clicking.
+- There is also a hover effect which changes the burder and text color to burlywood when hovered before clicking.
 ### the X Icon
 ![The x icon image](/assets/images/x-icon.webp)
 - The x icon allow users to leave the question area at any desired time.
@@ -103,8 +103,8 @@ As a frequent user:
 
 ### Result Area
 ![Result image](/assets/images/result.webp)
-- The result area displays the test 'Great job' together with the number of score the user got.
-- the result area also has a try again button which allow users to try the quiz again and try shuffles the question.
+- The result area displays the test 'you scored' together with the number of score the user got out of 11.
+- the result area also has a try again button which allow users to try the quiz again and shuffles the questions each try.
 - The result area contains an exit quiz button that takes the users out from the question area and back to the welcome page.
 
 ### Try again and Exit button
@@ -122,7 +122,7 @@ As a frequent user:
 ## Technologies Used
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/CSS)
-- JavaScript 
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 ## Frameworks, Libraries & Programs Used
 ### [Gitpod](https://www.gitpod.io/)
@@ -139,6 +139,8 @@ As a frequent user:
 ## Testing
 ### Manual Testing
 - Manually testing each section while building the quiz for appearance and responsiveness using Chrome developer tools and Microsoft Edge
+- Family and friends helped to test it by taking part in the quiz and gave me no issues as feedback.
+- I tested it on mobile, tablet and laptop to make sure it works well across all devices.
 - [The W3C Markup Validator](https://validator.w3.org/) and 
 - [W3C CSS Validator](https://validator.w3.org) services were used to validate every page of the project to ensure there were no errors.
 
@@ -150,7 +152,7 @@ As a frequent user:
 - Returned no error nor warnings when checking the HTML document.
 - ![HTML Validator](/assets/images/html-testing.webp)
 **CSS**
-- Returned no error however i got 2 warnings when checking CSS document which was the Google import link so i cant do much about it and the same color for background and border which was intentended. 
+- Returned no error however i got 2 warnings when checking CSS document which was the Google import link so i cant do much about it and the same color for background and border which was intended. 
 - ![CSS Validator](/assets/images/css-validator.webp)
 - ![CSS Warning](/assets/images/css-warning.webp)
 **JavaScript**
