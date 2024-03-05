@@ -185,10 +185,11 @@ from [Web Dev Simplified](https://www.youtube.com/c/webdevsimplified)
 https://www.theorie24.de/- i used this app to gather the questions and answers for this quiz.
 
 ## Media
-Pexels free stock photos, royalty free images. Pixabay free stock photos, royalty free images. Canva to Resize images.
+[Pexels](https://www.pexels.com/) free stock photos, royalty free images. [Pixabay](https://pixabay.com/) free stock photos, royalty free images. Canva to Resize images.
+[favicon](https://favicon.io/favicon-converter/#google_vignette)to display the driving licence icon on the browser.
 
 # Acknowledgements
-My mentor Mitko Bachvarov provided me with the resource i used to learn the css overlay.
+My mentor Mitko Bachvarov provided me with the resource i used to learn the css overlay and gave me a description of what is expected for this project.
 
 Slack is a great community. very helpful and offers much encouragement as well as information. 
 
