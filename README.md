@@ -57,16 +57,17 @@ As a frequent user:
 
 ## Features
 ### Existing Features 
-#### The Heading
+#### The Heading and Welcome Text
+![The header and welcome image](/assets/images/header-welcom.webp)
 - The heading text is the first thing the users will see on the landing page which describes the purpose of the website at first sight.
 - The heading is present throughout the entire quiz window; namely: The landing page, start quiz area and result area.
 - The heading is responsive across all devices.
-
-### The Welcome Text
-![The welcome text image](/assets/images/welcome-text.webp)
 - The welcome text describes further the main purpose of the Quiz, located underneath the header. it welcomes the user and give then a brief overview of the quiz they are about to partake on.
 - The welcome text is also present throughout the entire quiz window; namely: The landing page, start quiz and exit area.
 - The welcome text is responsive on all devices. the background color provides a very good contrast against the body of the website hereby optimising user accessibility.
+
+### The Prompt text
+![The prompt text image](/assets/images/prompt-text.webp)
 - Below the welcome text is a brief description of the next step which can be a sign up or to continue as a guest.
 
 ### Sign-Up Form
@@ -74,7 +75,13 @@ As a frequent user:
 - The sign up form allows the user to sign up to the website in order to access the quiz .
 - The sign up has a create username, email, password and confirm password field.
 - The form has a continue as guest botton which helps users to have the look and feel of the quiz before sigining up.
-- I checked the form to make sure users cant submit without meeting the form criteria
+- I checked the form to make sure users cant submit without meeting the form criteria:
+
+### The Form Validation 
+![tht form validation prompt](/assets/images/form-validatn.webp)
+- The validator makes sure the user inputs all fields with at least 8 characters, a number and email address.
+- It validates that the user inputs an email before submitting.
+- It also makes sure that the password and confirm passpassword fields matches.
 
 ### Start Quiz Area
 ![Start quiz image](/assets/images/start-quiz.webp)
@@ -141,30 +148,35 @@ As a frequent user:
 - Manually testing each section while building the quiz for appearance and responsiveness using Chrome developer tools and Microsoft Edge
 - Family and friends helped to test it by taking part in the quiz and gave me no issues as feedback.
 - I tested it on mobile, tablet and laptop to make sure it works well across all devices.
+
+## **Post Development Testing**
 - [The W3C Markup Validator](https://validator.w3.org/) and 
 - [W3C CSS Validator](https://validator.w3.org) services were used to validate every page of the project to ensure there were no errors.
 
-- [JavaScript Validator](https://jshint.com/)
+- aswell as [JavaScript Validator](https://jshint.com/)
 
-## **Post Development Testing**
 ### Validation results
 **HTML**
 - Returned no error nor warnings when checking the HTML document.
-- ![HTML Validator](/assets/images/html-testing.webp)
+ ![HTML Validator](/assets/images/html-testing.webp)
+
 **CSS**
 - Returned no error however i got 2 warnings when checking CSS document which was the Google import link so i cant do much about it and the same color for background and border which was intended. 
-- ![CSS Validator](/assets/images/css-validator.webp)
-- ![CSS Warning](/assets/images/css-warning.webp)
+ ![CSS Validator](/assets/images/css-validator.webp)
+
+ ![CSS Warning](/assets/images/css-warning.webp)
+
 **JavaScript**
-- ![JavaScript Validator](/assets/images/jshint.webp)
+ ![JavaScript Validator](/assets/images/jshint.webp)
+
 **Lighthouse**
-- ![Lighthouse Report](/assets/images/light-house.webp)
+ ![Lighthouse Report](/assets/images/light-house.webp)
 
 ## Deployment and local development
 ### GitHub Pages 
 - used to deploy live version of the website.
 
-1. Log in to GitHub and locate GitHub Repository drivers-licence-quiz
+1. Log in to GitHub and locate GitHub Repository [drivers-licence-quiz](https://adimserious.github.io/drivers-licence-quiz/)
 2. At the top of the Repository(not the main navigation) locate "Settings" button on the menu.
 3. Scroll down the Settings page until you locate "GitHub Pages".
 4. Under "Source", click the dropdown menu "None" and select "Main" and click "Save".
@@ -174,12 +186,12 @@ Scroll back to locate the now-published site link in the "GitHub Pages" section.
 ## Forking the GitHub Repository
 By forking the repository, we make a copy of the original repository on our GitHub account to view and change without affecting the original repository by using these steps:
 
-1. Log in to GitHub and locate GitHub Repository drivers-licence-quiz
+1. Log in to GitHub and locate GitHub Repository [drivers-licence-quiz](https://adimserious.github.io/drivers-licence-quiz/)
 2. At the top of the Repository(under the main navigation) locate "Fork" button.
 3. Now you should have a copy of the original repository in your GitHub account.
 
 ## Local Clone
-1. Log in to GitHub and locate GitHub Repository drivers-licence-quiz
+1. Log in to GitHub and locate GitHub Repository [drivers-licence-quiz](https://adimserious.github.io/drivers-licence-quiz/)
 2. Under the repository name click "Clone or download"
 3. Click on the code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 Open Git Bash
@@ -188,8 +200,8 @@ Open Git Bash
 6. Press Enter and your local clone will be created.
 
 # Credits
-my inspiration came from [this youTube video](https://www.youtube.com/watch?v=LTPGyaEyTI4&t=1195s) by Great stack and
-from [Web Dev Simplified](https://www.youtube.com/c/webdevsimplified)
+part of my inspiration came from [this youTube video](https://www.youtube.com/watch?v=LTPGyaEyTI4&t=1195s) by Great stack in creating a sign up form  and
+from [Web Dev Simplified](https://www.youtube.com/c/webdevsimplified) very helpful in understanding how to structure a quiz.
 
 # Content
 https://www.theorie24.de/- i used this app to gather the questions and answers for this quiz.
