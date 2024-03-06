@@ -124,6 +124,11 @@ As a frequent user:
 ![Try again and exit image](/assets/images/try-again-exit.webp)
 - The try again button allows user to try the quiz again.
 - The exit bitton takes the users out from the quiz area.
+
+### The Footer
+![The footer image](/assets/images/footer.webp)
+- The footer contents two social network icons of LinkedIn and GitHub. 
+
 ## Wireframes
 - Pen and paper in a notebook: simple and effective.
 
@@ -143,11 +148,11 @@ As a frequent user:
 ### [Git](https://git-scm.com/)
 - for vesion control.
 ### [Github](https://github.com/)
-- - Deployment of the website and storing the files online.
+- Deployment of the website and storing the files online.
 ### [Google Fonts](https://fonts.google.com/)
-- - Import main font the website.
+- Import main font the website.
 ### [Am I Responsive](https://ui.dev/amiresponsive)
-- - Mockup picture for the README file.
+- Mockup picture for the README file.
 
 ## Testing
 ### Manual Testing
