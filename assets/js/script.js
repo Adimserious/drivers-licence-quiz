@@ -1,4 +1,4 @@
-// Then Grab elements from DOM and assign variables to them 
+// Grab elements from DOM and assign variables to them 
 let signup = document.getElementById('signupBtn');
 let title = document.getElementById('title');
 let usernameArea = document.getElementById('username');
