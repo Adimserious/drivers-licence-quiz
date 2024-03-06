@@ -183,6 +183,10 @@ As a frequent user:
 **Lighthouse**
  ![Lighthouse Report](/assets/images/light-house.webp)
 
+### Bugs Encountered
+- I encountered a bug on laptops and larger screens with the "Try again and Exit" buttons while using media query to make sure its responsive on all device.
+- I formally used a div element for the "try again and exit" quiz area but changing the div to button elements fixed the bug on larger screens.
+
 ## Deployment and local development
 ### GitHub Pages 
 - used to deploy live version of the website.
