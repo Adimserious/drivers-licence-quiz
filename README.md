@@ -95,6 +95,10 @@ As a frequent user:
 - The correct answers shows a green color and the wrong answers shows red.
 - the question area has a next question button which is hidden but displays once an answer is clicked.
 
+### Question Increment
+ ![question increment](/assets/images/increment-qstn.webp)
+ - The question increases as the user proceed accordingly to describe the number of question the user has attempted.
+
 ### The Answer Area
 ![Answers image](/assets/images/answers-and-next.jpg)
 - The answer area will show red for the wrong answers upon choosing an answer.
