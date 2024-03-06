@@ -99,11 +99,13 @@ As a frequent user:
  ![question increment](/assets/images/increment-qstn.webp)
  - The question increases as the user proceed accordingly to describe the number of question the user has attempted.
 
-### The Answer Area
+### The Answer and Next Question Area
 ![Answers image](/assets/images/answers-and-next.jpg)
 - The answer area will show red for the wrong answers upon choosing an answer.
 - The correct answer will show a green color.
 - There is also a hover effect which changes the burder and text color to burlywood when hovered before clicking.
+- The next question button is disabled but appears once the user chose an answer.
+
 ### the X Icon
 ![The x icon image](/assets/images/x-icon.webp)
 - The x icon allow users to leave the question area at any desired time.
