@@ -1,92 +1,80 @@
 // These are the quiz questions
 const licenceQuestions = [
+
     {
         question: 'Your passenger wants to discuss something with you during the journey. what should you do?',
-        answer: [
-            { choices: "Concentrate on the discussion", correct: false },
-            { choices: "Concentrate on the driving", correct: true },
-            { choices: "Concentrate on both", correct: false },
-        ]
+        choices: ["Concentrate on the discussion",
+                  "Concentrate on the driving",
+                  "Concentrate on both"],
+        correct: "Concentrate on both"
     },
     {
         question: 'What could cause the vehicle to leave the road?',
-        answer: [
-            { choices: "Tiredness", correct: false },
-            { choices: "Distraction", correct: false },
-            { choices: "Inattention", correct: true },
-        ]
+        choices: ["Tiredness","Distraction","Inattention", ],
+        correct: "Inattention"
     },
     {
         question: 'What can inpair fitness to drive?',
-        answer: [
-            { choices: "Fatigue", correct: false },
-            { choices: "Certain medicines", correct: true },
-            { choices: "Alcohol and other intoxicants", correct: false },
-        ]
+        choices: ["Fatigue", 
+                  "Certain medicines", 
+                  "Alcohol and other intoxicants"],
+        correct:  "Fatigue"
     },
     {
         question: 'What should you do if you start feeling tired while driving?',
-        answer: [
-            { choices: "Take a break straightaway", correct: true },
-            { choices: "Get out of the car", correct: false },
-            { choices: "Listen to stimulating music", correct: false },
-        ]
+        choices: ["Take a break straightaway",
+                  "Get out of the car",
+                  "Listen to stimulating music"],
+        correct:  "Take a break straightaway"
     },
     {
         question: 'What emotions can influence driving behaviour?',
-        answer: [
-            { choices: "Sorrow and worry", correct: false },
-            { choices: "Happiness and exuberance", correct: false },
-            { choices: "Anger and rage", correct: true },
-        ]
+        choices: ["Sorrow and worry",
+                  "Happiness and exuberance",
+                  "Anger and rage"],
+        correct:  "Anger and rage"
     },
     {
         question: 'What can be the effect of even small quantities of alcohol?',
-        answer: [
-            { choices: "Reckless driving", correct: true },
-            { choices: "Delayed reactions", correct: false },
-            { choices: "Impairment of hearing and vision", correct: false },
-        ]
+        choices: ["Reckless driving",
+                  "Delayed reactions",
+                  "Impairment of hearing and vision"],
+        correct:  "Reckless driving"
     },
     {
         question: 'Are drivers during their probation period allowed to be under the influence of alcohol when driving?',
-        answer: [
-            { choices: "yes, up to 30 miligrams", correct: false },
-            { choices: "No, definitely not", correct: true },
-            { choices: "yes, upto 50 miligram", correct: false },
-        ]
+        choices: ["yes, up to 30 miligrams",
+                  "No, definitely not",
+                  "yes, upto 50 miligram"],
+        correct:  "No, definitely not"
     },
     {
         question: 'When will offences carrying two points be deleted from the Central Register of Road Traffic Offenders?',
-        answer: [
-            { choices: "-5 years", correct: true },
-            { choices: "-2 years", correct: false },
-            { choices: "-3 years", correct: false },
-        ]
+        choices: ["-5 years",
+                  "-2 years",
+                  "-3 years"],
+        correct:  "-5 years"
     },
     {
         question: 'You want to carry a child in your car, when must you use a child seat for this purpose?',
-        answer: [
-            { choices: "If the child is older than 12", correct: false },
-            { choices: "If the child is taller than 150 cm", correct: false },
-            { choices: "If the child is younger than 12", correct: true },
-        ]
+        choices: ["If the child is older than 12",
+                  "If the child is taller than 150 cm",
+                  "If the child is younger than 12"],
+        correct:  "If the child is younger than 12"
     },
     {
         question: 'What is the maximum length of time you are allowed to stop at a bus stop provided you do not present an obstruction to buses?',
-        answer: [
-            { choices: "3 minutes", correct: true },
-            { choices: "8 minutes", correct: false },
-            { choices: "5 minutes", correct: false },
-        ]
+        choices: ["3 minutes",
+                 "8 minutes",
+                 "5 minutes"],
+        correct: "8 minutes"
     },
     {
         question: 'Is it irresponsible to overtake a truck and trailer a short distance before crossroads?',
-        answer: [
-            { choices: "No, they drive at low speed", correct: false },
-            { choices: "No, they understands", correct: false },
-            { choices: "Yes, they can obscure traffic signs", correct: true },
-        ]
+        choices: ["No, they drive at low speed",
+                  "No, they understands",
+                  "Yes, they can obscure traffic signs"],
+        correct:  "Yes, they can obscure traffic signs"
     }
 
 ];
@@ -259,57 +247,67 @@ const submitButton = document.getElementById('submit');
 const resultsContainer = document.getElementById('results');
 const scoreElement = document.getElementById('score');
 const restartButton = document.getElementById('restart');
+const exitButton = document.getElementById('exit');
 
+// Variables to keep track of current quiz question and score
+let currentQuiz = 0;
+let score = 0;
 
+// Load the first quiz question
+loadQuiz();
 
+// Function to load the current quiz question and choices
+function loadQuiz() {
+    // Deselect any previously selected answer
+    deselectAnswers();
 
- 
+    // Get the current quiz data
+    const currentQuizData = licenceQuestions[currentQuiz];
 
+    // Update the question and choices in the DOM
+    questionElement.innerText = currentQuizData.question;
+    choiceTextElements.forEach((choiceTextElement, index) => {
+        choiceTextElement.innerText = currentQuizData.choices[index];
+    });
+}
 
+// Function to deselect any selected answers
+function deselectAnswers() {
+    choices.forEach(choice => choice.checked = false);
+}
 
+// Function to get the selected answer
+function getSelected() {
+    let answer;
+    choices.forEach(choice => {
+        if (choice.checked) {
+            // Get the text of the selected answer
+            answer = choice.nextElementSibling.innerText;
+        }
+    });
+    return answer;
+}
 
-   
+// Event listener for the submit button
+submitButton.addEventListener('click', () => {
+    const answer = getSelected();
+    if (answer) {
+        // Check if the selected answer is correct
+        if (answer === quizData[currentQuiz].correct) {
+            score++;
+        }
+        // Move to the next question
+        currentQuiz++;
 
-    // This if statement determines whether the nextQuestion Button or seeResults button is shown
-    
-
-
-
-
-/**
- * This function removes both the class and data-type of the parameters passed
- * to the function so that they are cleared for the next question.
- */
-
-
-
-// This section refers to the Results Area 
-
-// This function closes the question Area and shows the results Area.
-
-
-
-// This function closes the Results Area by setting the maxHeight to 0px.
-
-
-
-/**
- * This function closes the Results Area and re-opens the 
- * StartQuiz Area for the user to repeat the quiz. Reset's the user score.
-  */
-
-
-    
-
-
-
-/**
- * This function allows the user to exit the quiz Area by clicking 
- * the X at the top-right corner of the quiz area.
-  */
-
-
-
-
-
-
+        // Check if there are more questions
+        if (currentQuiz < quizData.length) {
+            // Load the next question
+            loadQuiz();
+        } else {
+            // No more questions, show the results
+            quiz.classList.add('hidden');
+            resultsContainer.classList.remove('hidden');
+            scoreElement.innerText = `Your Score: ${score} out of ${quizData.length}`;
+        }
+    }
+});
