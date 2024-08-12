@@ -9,7 +9,7 @@
 }
 
 body {
-    background: burlywood;
+    background: blue;
     color: black;
     width: 100%;
     min-height: 100vh;
@@ -22,16 +22,18 @@ body {
 /* This pushes the footer down to the bottom of the page and occupy surplus space */
 main {
     flex: 1 0 auto;
-    background: url('../images/cars.png') fixed center / cover;
+    background: url('../images/background-image.jpg') fixed center / cover;
 }
 
 footer {
+    background-color: #00c04b;
     align-content: flex-end;
 }
 
 /* header styles */
 .heading {
-    color: black;
+    background-color: #00c04b;
+    color: white;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 5px;
@@ -42,21 +44,15 @@ footer {
     text-decoration-thickness: 5px;
 }
 
-/* main body styles */
-#welcome-div,
-#prompt-div {
-    border: solid black 2px;
-    border-radius: 10px;
-    margin: 30px 50px 0;
-    background-color: burlywood;
+.welcome-note {
+    background-color: #00c04b;
+    text-align: center;
 }
 
-#welcome-text,
-#prompt-text {
-    padding: 5px;
-    font-size: 1.5em;
-    text-align: center;
-    color: black;
+/* main body styles */
+
+#signupBtn {
+    color: #00c04b;
 }
 
 /* form styles */
@@ -86,7 +82,7 @@ footer {
 /* Sign up text */
 #form-heading {
     width: 100%;
-    color: white;
+    color: black;
     text-align: center;
     font-size: 1.5em;
     text-decoration: solid;
@@ -99,7 +95,7 @@ footer {
 
 /* this is the imput div */
 #inputs {
-    background-color: burlywood;
+    background-color: #00c04b;
     border: none;
     padding: 20px;
     border-radius: 20px;

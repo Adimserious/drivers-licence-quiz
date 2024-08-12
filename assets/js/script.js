@@ -1,3 +1,99 @@
+// These are the quiz questions
+const licenceQuestions = [
+    {
+        question: 'Your passenger wants to discuss something with you during the journey. what should you do?',
+        answer: [
+            { choices: "Concentrate on the discussion", correct: false },
+            { choices: "Concentrate on the driving", correct: true },
+            { choices: "Concentrate on both", correct: false },
+        ]
+    },
+    {
+        question: 'What could cause the vehicle to leave the road?',
+        answer: [
+            { choices: "Tiredness", correct: false },
+            { choices: "Distraction", correct: false },
+            { choices: "Inattention", correct: true },
+        ]
+    },
+    {
+        question: 'What can inpair fitness to drive?',
+        answer: [
+            { choices: "Fatigue", correct: false },
+            { choices: "Certain medicines", correct: true },
+            { choices: "Alcohol and other intoxicants", correct: false },
+        ]
+    },
+    {
+        question: 'What should you do if you start feeling tired while driving?',
+        answer: [
+            { choices: "Take a break straightaway", correct: true },
+            { choices: "Get out of the car", correct: false },
+            { choices: "Listen to stimulating music", correct: false },
+        ]
+    },
+    {
+        question: 'What emotions can influence driving behaviour?',
+        answer: [
+            { choices: "Sorrow and worry", correct: false },
+            { choices: "Happiness and exuberance", correct: false },
+            { choices: "Anger and rage", correct: true },
+        ]
+    },
+    {
+        question: 'What can be the effect of even small quantities of alcohol?',
+        answer: [
+            { choices: "Reckless driving", correct: true },
+            { choices: "Delayed reactions", correct: false },
+            { choices: "Impairment of hearing and vision", correct: false },
+        ]
+    },
+    {
+        question: 'Are drivers during their probation period allowed to be under the influence of alcohol when driving?',
+        answer: [
+            { choices: "yes, up to 30 miligrams", correct: false },
+            { choices: "No, definitely not", correct: true },
+            { choices: "yes, upto 50 miligram", correct: false },
+        ]
+    },
+    {
+        question: 'When will offences carrying two points be deleted from the Central Register of Road Traffic Offenders?',
+        answer: [
+            { choices: "-5 years", correct: true },
+            { choices: "-2 years", correct: false },
+            { choices: "-3 years", correct: false },
+        ]
+    },
+    {
+        question: 'You want to carry a child in your car, when must you use a child seat for this purpose?',
+        answer: [
+            { choices: "If the child is older than 12", correct: false },
+            { choices: "If the child is taller than 150 cm", correct: false },
+            { choices: "If the child is younger than 12", correct: true },
+        ]
+    },
+    {
+        question: 'What is the maximum length of time you are allowed to stop at a bus stop provided you do not present an obstruction to buses?',
+        answer: [
+            { choices: "3 minutes", correct: true },
+            { choices: "8 minutes", correct: false },
+            { choices: "5 minutes", correct: false },
+        ]
+    },
+    {
+        question: 'Is it irresponsible to overtake a truck and trailer a short distance before crossroads?',
+        answer: [
+            { choices: "No, they drive at low speed", correct: false },
+            { choices: "No, they understands", correct: false },
+            { choices: "Yes, they can obscure traffic signs", correct: true },
+        ]
+    }
+
+];
+
+
+
+
 // Grab elements from DOM and assign variables to them 
 let signup = document.getElementById('signupBtn');
 let title = document.getElementById('title');
@@ -148,296 +244,72 @@ function showQuestionArea() {
     }
 }
 
-// This section adds functionality to the quiz area
 
-let nextQuestionBtn = document.getElementById('nextQuestionBtn');
-let questionText = document.getElementById('questionText');
-let answerDiv = document.getElementById('answerDiv');
-let shuffledQuestions;
-let currentQuestionIndex;
-let score = 0;
+// DOM elements for quiz and result sections
+const quiz = document.getElementById('quiz');
+const choices = document.querySelectorAll('.answer');
+const questionElement = document.getElementById('question');
+const choiceTextElements = [
+    document.getElementById('choice1_text'),
+    document.getElementById('choice2_text'),
+    document.getElementById('choice3_text'),
+];
+
+const submitButton = document.getElementById('submit');
+const resultsContainer = document.getElementById('results');
+const scoreElement = document.getElementById('score');
+const restartButton = document.getElementById('restart');
 
 
-/**
- * This function hides the Begin Quiz Area and reveals the Question Area. It also shuffles the
- * question order using the sort and random functions. Sets question index to 0.
- */
-function runQuiz() {
-    hideBeginArea();
-    showQuestionArea();
-    shuffledQuestions = licenceQuestions.sort(() => Math.random() - 0.5);
-    currentQuestionIndex = 0;
-    getQuestion();
-}
-beginBtn.addEventListener('click', runQuiz);
 
-nextQuestionBtn.addEventListener('click', () => {
-    currentQuestionIndex++;
-    getQuestion();
-});
 
-/**
- * This function takes the parameters of the question objects and passes them into
- * the getNextQuestion function. Sets the question number in the quiz area.
- */
-function getQuestion() {
-    resetState();
-    getNextQuestion(shuffledQuestions[currentQuestionIndex]);
-    let questionNumber = document.getElementById('questionNoText');
-    questionNumber.innerHTML = `<span class="blue">Question ` + (parseInt(currentQuestionIndex) + 1) + ` of 11</span>`;
+ 
 
-    /**
- * This function sets the question Inner-html using question parameter.
- * Creates new question divs with the answers passed to the function.
- * It adds the class of correct to the answers that are correct.
- */
-    function getNextQuestion(licenceQuestions) {
-        questionText.innerHTML = licenceQuestions.question;
-        licenceQuestions.answer.forEach(answer => {
-            let button = document.createElement('div');
-            button.innerHTML = answer.text;
-            button.classList.add('answerText');
-            if (answer.correct) {
-                button.dataset.correct = answer.correct;
-            } button.addEventListener('click', showAnswer);
-            answerDiv.appendChild(button);
-        });
-    }
 
-}
 
-/**
- * This function removes the div elements created in the function above,
- * Thereby setting the state of the questionArea back to default.
- * Removes the display of the Next Question button.
- */
-function resetState() {
-    nextQuestionBtn.style.display = 'none';
-    while (answerDiv.firstChild) {
-        answerDiv.removeChild(answerDiv.firstChild);
-    }
-}
 
-/**
- * This function deactivates the answer buttons after first click.
- * Passes the correct value to the function of setAnswerClass.
- * Determines whether to show the Next Question button or See Results Button.
-  */
-function showAnswer(e) {
-    // This removes the event listener after the first click.
-    let eventButtons = document.getElementsByClassName('answerText');
-    for (let eventButton of eventButtons) {
-        eventButton.removeEventListener('click', showAnswer);
-    }
-
-    // This will take the correct value of the object and pass it to the setAnswerClass function
-    let clickedButton = e.target;
-    Array.from(answerDiv.children).forEach(button => {
-        setAnswerClass(button, button.dataset.correct);
-    });
-
-    // This increments the user's score by 1 if its answered correctly
-    let dataType = clickedButton.classList.contains('correct');
-    if (dataType) {
-        score = ++score;
-        let scoreText = document.getElementById('score');
-        scoreText.innerHTML = parseInt(score);
-    }
+   
 
     // This if statement determines whether the nextQuestion Button or seeResults button is shown
-    let seeResultsBtn = document.getElementById('seeResultsID');
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextQuestionBtn.style.display = 'block';
-    } else if (shuffledQuestions.length == currentQuestionIndex + 1) {
-        seeResultsBtn.classList.add('seeResultsBtn');
-        seeResultsBtn.classList.add('question-btn');
-        seeResultsBtn.style.cursor = 'pointer';
-        seeResultsBtn.style.display = 'block';
-        seeResultsBtn.addEventListener('click', showResultsArea);
-    }
-}
+    
 
-/**
- * This function takes the parameter of the question objects answer values, if correct it adds
- * the data-type of correct, if wrong it adds the data-type of wrong.
-  */
-function setAnswerClass(element, correct) {
-    // This clear answer class removes the datatype and class for the next question
-    clearAnswerClass(element);
-    if (correct) {
-        element.classList.add('correct');
-        element.setAttribute('data-type', 'correct');
-    } else {
-        element.classList.add('wrong');
-        element.setAttribute('data-type', 'false');
-    }
-}
+
+
 
 /**
  * This function removes both the class and data-type of the parameters passed
  * to the function so that they are cleared for the next question.
  */
-function clearAnswerClass(element) {
-    element.classList.remove('correct');
-    element.classList.remove('wrong');
-    element.removeAttribute('data-type', 'correct');
-    element.removeAttribute('data-type', 'false');
-}
+
+
 
 // This section refers to the Results Area 
 
 // This function closes the question Area and shows the results Area.
 
-function showResultsArea() {
-    let questionArea = document.getElementById('questionArea');
-    questionArea.style.maxHeight = '0';
-    questionArea.style.minHeight = '0';
-    questionArea.style.transitionDelay = '0s';
-    let resultsWindow = document.getElementById('resultsDiv');
-    resultsWindow.style.maxHeight = '1000px';
-    resultsWindow.style.transitionDelay = '2s';
-}
+
 
 // This function closes the Results Area by setting the maxHeight to 0px.
 
-function closeQuiz() {
-    let resultsWindow = document.getElementById('resultsDiv');
-    resultsWindow.style.maxHeight = '0';
-    resultsWindow.style.transitionDelay = '0s';
-}
+
 
 /**
  * This function closes the Results Area and re-opens the 
  * StartQuiz Area for the user to repeat the quiz. Reset's the user score.
   */
-function tryAgain() {
-    closeQuiz();
-    showBeginWindow();
-    let seeResultsBtn = document.getElementById('seeResultsID');
-    seeResultsBtn.style.display = 'none';
-    seeResultsBtn.classList.remove('seeResultsBtn');
-    seeResultsBtn.classList.remove('question-btn');
 
-    // User score is set back to 0
-    score = 0;
-}
 
-let tryAgainBtn = document.getElementById('tryAgainBtn');
-tryAgainBtn.addEventListener('click', tryAgain);
+    
 
-let exitQuizBtn = document.getElementById('exitQuizBtn');
-exitQuizBtn.addEventListener('click', closeQuiz);
+
 
 /**
  * This function allows the user to exit the quiz Area by clicking 
  * the X at the top-right corner of the quiz area.
   */
-function exitQuiz() {
-    let questionWindow = document.getElementById('questionArea');
-    questionWindow.style.maxHeight = '0';
-    questionWindow.style.minHeight = '0';
-    questionWindow.style.transitionDelay = '0s';
-}
-
-let crossBtn = document.getElementById('quizExit');
-crossBtn.addEventListener('click', exitQuiz);
 
 
 
 
 
-// These are the quiz questions
-const licenceQuestions = [
-    {
-        question: 'Your passenger wants to discuss something with you during the journey. what should you do?',
-        answer: [
-            { text: "Concentrate on the discussion", correct: false },
-            { text: "Concentrate on the driving", correct: true },
-            { text: "Concentrate on both", correct: false },
-        ]
-    },
-    {
-        question: 'What could cause the vehicle to leave the road?',
-        answer: [
-            { text: "Tiredness", correct: false },
-            { text: "Distraction", correct: false },
-            { text: "Inattention", correct: true },
-        ]
-    },
-    {
-        question: 'What can inpair fitness to drive?',
-        answer: [
-            { text: "Fatigue", correct: false },
-            { text: "Certain medicines", correct: true },
-            { text: "Alcohol and other intoxicants", correct: false },
-        ]
-    },
-    {
-        question: 'What should you do if you start feeling tired while driving?',
-        answer: [
-            { text: "Take a break straightaway", correct: true },
-            { text: "Get out of the car", correct: false },
-            { text: "Listen to stimulating music", correct: false },
-        ]
-    },
-    {
-        question: 'What emotions can influence driving behaviour?',
-        answer: [
-            { text: "Sorrow and worry", correct: false },
-            { text: "Happiness and exuberance", correct: false },
-            { text: "Anger and rage", correct: true },
-        ]
-    },
-    {
-        question: 'What can be the effect of even small quantities of alcohol?',
-        answer: [
-            { text: "Reckless driving", correct: true },
-            { text: "Delayed reactions", correct: false },
-            { text: "Impairment of hearing and vision", correct: false },
-        ]
-    },
-    {
-        question: 'Are drivers during their probation period allowed to be under the influence of alcohol when driving?',
-        answer: [
-            { text: "yes, up to 30 miligrams", correct: false },
-            { text: "No, definitely not", correct: true },
-            { text: "yes, upto 50 miligram", correct: false },
-        ]
-    },
-    {
-        question: 'When will offences carrying two points be deleted from the Central Register of Road Traffic Offenders?',
-        answer: [
-            { text: "-5 years", correct: true },
-            { text: "-2 years", correct: false },
-            { text: "-3 years", correct: false },
-        ]
-    },
-    {
-        question: 'You want to carry a child in your car, when must you use a child seat for this purpose?',
-        answer: [
-            { text: "If the child is older than 12", correct: false },
-            { text: "If the child is taller than 150 cm", correct: false },
-            { text: "If the child is younger than 12", correct: true },
-        ]
-    },
-    {
-        question: 'What is the maximum length of time you are allowed to stop at a bus stop provided you do not present an obstruction to buses?',
-        answer: [
-            { text: "3 minutes", correct: true },
-            { text: "8 minutes", correct: false },
-            { text: "5 minutes", correct: false },
-        ]
-    },
-    {
-        question: 'Is it irresponsible to overtake a truck and trailer a short distance before crossroads?',
-        answer: [
-            { text: "No, they drive at low speed", correct: false },
-            { text: "No, they understands", correct: false },
-            { text: "Yes, they can obscure traffic signs", correct: true },
-        ]
-    }
 
-
-
-
-];

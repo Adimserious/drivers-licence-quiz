@@ -22,26 +22,13 @@
 <body>
   <header>
     <h1 class="heading">
-      <img src="assets/images/canca-d-flag.png" alt="logo" class="logo">Führerschein Quiz (English)
+      <img src="assets/images/canca-d-flag.png" alt="logo" class="logo">Drivers Licence Quiz
     </h1>
+    <h2 class="welcome-note">Welcome to the driving licence quiz, sign up to take a quiz or continue as a guest</h2>
   </header>
 
   <main id="container">
     <!-- this is the main content -->
-    <div id="welcome-div">
-      <p id="welcome-text">
-        Welcome to the driving licence quiz, this quiz provides you with the English questions for the theorie training
-        exam to obtain a drivers license in Germany
-      </p>
-    </div>
-    <br>
-    <div id="prompt-div">
-      <p id="prompt-text">
-        Register below to start your training! Alternatively, continue as a guest
-      </p>
-    </div>
-    <br>
-    <br>
     <!-- this div holds the form -->
     <div id="form-div">
       <form action="https://formdump.codeinstitute.net/" method="post" id="form" target="_blank">
@@ -85,7 +72,7 @@
     </div>
 
     <!-- This section contains the Quiz Area -->
-    <div id="questionBackground">
+    <div class="quiz-container">
       <div id="questionArea">
         <div id="question-no-text-div">
           <p id="questionNoText"><span class="blue">Question 1 of 11</span></p>
@@ -94,45 +81,37 @@
 
         <div id="questionDiv">
           <!-- This is the h3 element that will be manipulated by JavaScript -->
-          <h3 id="questionText">Your passenger wants to discuss something with you
-            during the journey. what should you do?</h3>
+          <h3 id="question">Question text</h3>
         </div>
 
         <div id="answerDiv">
           <!-- These are the elements that will be targeted by JavaScript -->
-          <div class="answerText" id="answer1">
-            Concentrate on the discussion
-          </div>
-          <div class="answerText" id="answer2">
-            Concentrate on the driving
-          </div>
-          <div class="answerText" id="answer3">
-            Concentrate on the discussion and driving
-          </div>
+
+          <ul id="choices">
+            <li>
+              <input type="radio" id="answer1" name="choice" class="answer">
+              <label for="choice1" id="choice1_text">Choice 1</label>
+            </li>
+            <li>
+              <input type="radio" id="answer2" name="choice" class="answer">
+              <label for="choice2" id="choice2_text">Choice 2</label>
+            </li>
+            <li>
+              <input type="radio" id="answer3" name="choice" class="answer">
+              <label for="choice3" id="choice3_text">Choice 3</label>
+            </li>
+          </ul>
+          <button id="submit">Submit Answer</button>
         </div>
+
         <br>
-        <div id="nextQuestionDiv">
-          <p id="nextQuestionBtn" class="question-btn">Next Question</p>
-          <br>
-          <!-- This paragraph will be hidden until called by JavaScript -->
-          <p id="seeResultsID">See Results</p>
+        <div id="results" class="hidden">
+          <h2 id="score">Your Score: </h2>
+          <p id="resultsText">you scored <span id="score">0</span> out of 11!</p>
+          <button id="restart">Restart Quiz</button>
+          <button type="button" class="try-again">Exit Quiz</button>
         </div>
       </div>
-    </div>
-    <br>
-
-    <!-- This section contains the results area -->
-    <div id="resultsDiv">
-      <p id="resultsText">you scored <span id="score">0</span> out of 11!</p>
-      <br>
-      <!-- These are the reset buttons -->
-      <div id="tryAgainBtn" class="resetBtn">
-        <button type="button" class="try-again">Try Again</button>
-        <button type="button" class="try-again">Exit Quiz</button>
-        <div id="exitQuizBtn">
-        </div>
-      </div>
-
     </div>
 
   </main>
@@ -148,7 +127,6 @@
           aria-label="Visit my Github page"><i class="fa-brands fa-github"></i></a>
       </li>
     </ul>
-
   </footer>
   <script src="assets/js/script.js"></script>
   <!-- Font awesome kit -->
