@@ -90,6 +90,23 @@ let passwordArea = document.getElementById('password');
 let passwordConfirmedArea = document.getElementById('confirm-password');
 
 
+// DOM elements for quiz and result sections
+const quiz = document.getElementById('quiz');
+const choices = document.querySelectorAll('.answer');
+const questionElement = document.getElementById('question');
+const choiceTextElements = [
+    document.getElementById('choice1_text'),
+    document.getElementById('choice2_text'),
+    document.getElementById('choice3_text'),
+];
+
+const submitButton = document.getElementById('submit');
+const resultsContainer = document.getElementById('results');
+const scoreElement = document.getElementById('score');
+const restartButton = document.getElementById('restart');
+const exitButton = document.getElementById('exit');
+
+
 
 // This is the sign up function 
 function displaySignUp() {
@@ -164,15 +181,6 @@ function hideForm() {
     showBeginWindow();
 }
 
-// This function shows the start Quiz area
-
-function showBeginWindow() {
-    let begin = document.getElementById('beginDiv');
-    begin.style.maxHeight = '1000px';
-    begin.style.transitionDelay = '2s';
-    begin.style.backgroundColor = 'burlywood';
-}
-
 /**
  * This function makes the start Quiz button change border and font
  * color to black and burlywood respectively when pointed
@@ -198,66 +206,37 @@ let beginBtn = document.getElementById('beginBtn');
 beginBtn.addEventListener('mouseover', beginHover);
 beginBtn.addEventListener('mouseout', beginOut);
 
-/**
- * This function hides the Begin Quiz Area by setting the max-height
- * to 0px, as well also removes the transition delay
- */
-function hideBeginArea() {
+
+// This function shows the start Quiz area
+
+function showBeginWindow() {
     let begin = document.getElementById('beginDiv');
-    begin.style.maxHeight = '0';
-    begin.style.transitionDelay = '0s';
+    begin.style.maxHeight = '1000px';
+    begin.style.transitionDelay = '1s';
+    begin.style.backgroundColor = 'Green';
+    begin.addEventListener('click', hideStartQuiz)
 }
 
-/**
- * This function reveals the quiz area by setting the max-height
- * property to 1000px
- */
-function showQuestionArea() {
-    let questionArea = document.getElementById('questionArea');
-    let windowWidth = window.innerWidth;
-    questionArea.style.maxHeight = '1000px';
-    questionArea.style.transitionDelay = '0s';
+function hideStartQuiz() {
+    let begin = document.getElementById('beginDiv');
+    begin.style.maxHeight = ('0');
+    begin.style.transitionDelay = '1s';
+    // Load the first quiz question
+    loadQuiz()
+    
+} 
 
-
-    //  If statement  to set the min-height of the quiz area
-
-    if (windowWidth < '500') {
-        questionArea.style.minHeight = '710px';
-    } else if (windowWidth < '768') {
-        questionArea.style.minHeight = '850px';
-    } else if (windowWidth < '1000') {
-        questionArea.style.minHeight = '850px';
-    } else {
-        questionArea.style.minHeight = '750px';
-    }
-}
-
-
-// DOM elements for quiz and result sections
-const quiz = document.getElementById('quiz');
-const choices = document.querySelectorAll('.answer');
-const questionElement = document.getElementById('question');
-const choiceTextElements = [
-    document.getElementById('choice1_text'),
-    document.getElementById('choice2_text'),
-    document.getElementById('choice3_text'),
-];
-
-const submitButton = document.getElementById('submit');
-const resultsContainer = document.getElementById('results');
-const scoreElement = document.getElementById('score');
-const restartButton = document.getElementById('restart');
-const exitButton = document.getElementById('exit');
+    
 
 // Variables to keep track of current quiz question and score
 let currentQuiz = 0;
 let score = 0;
 
-// Load the first quiz question
-loadQuiz();
+
 
 // Function to load the current quiz question and choices
 function loadQuiz() {
+    document.getElementById('quiz').style.display = 'block'
     // Deselect any previously selected answer
     deselectAnswers();
 
@@ -293,21 +272,38 @@ submitButton.addEventListener('click', () => {
     const answer = getSelected();
     if (answer) {
         // Check if the selected answer is correct
-        if (answer === quizData[currentQuiz].correct) {
+        if (answer === licenceQuestions[currentQuiz].correct) {
             score++;
         }
         // Move to the next question
         currentQuiz++;
 
         // Check if there are more questions
-        if (currentQuiz < quizData.length) {
+        if (currentQuiz < licenceQuestions.length) {
             // Load the next question
             loadQuiz();
         } else {
             // No more questions, show the results
             quiz.classList.add('hidden');
             resultsContainer.classList.remove('hidden');
-            scoreElement.innerText = `Your Score: ${score} out of ${quizData.length}`;
+            resultsContainer.style.display = 'block'
+            scoreElement.innerText = `Your Score: ${score} out of ${licenceQuestions.length}`;
         }
     }
 });
+
+// Event listener for the restart button
+restartButton.addEventListener('click', () => {
+    // Reset the quiz variables
+    currentQuiz = 0;
+    score = 0;
+
+    // Show the quiz and hide the results
+    quiz.classList.remove('hidden');
+    resultsContainer.classList.add('hidden');
+    resultsContainer.style.display = 'none'
+
+    // Load the first question
+    loadQuiz();
+});
+
