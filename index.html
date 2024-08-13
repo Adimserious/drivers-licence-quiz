@@ -67,16 +67,17 @@
 
     <div id="beginDiv">
       <div id="beginBtn" data-type='begin' class="diffBtn">
-        <button id="start" onclick="loadQuiz()" aria-label="Click this button to begin the quiz">Start Quiz</button>
+        <button id="start" onclick="loadQuiz()" aria-label="Click this button to begin the quiz">Click To Start
+          Quiz</button>
       </div>
     </div>
 
     <!-- This section contains the Quiz Area -->
-    <div class="quiz-container">
+    
       <div id="quiz" style="display: none;">
         <div id="question-no-text-div">
-          <p id="questionNoText"><span class="blue">Question 1 of 11</span></p>
-          <i class="fa-solid fa-xmark" id="quizExit"></i>
+          <p id="questionNoText"><span class="count">Question 1 of 11</span></p>
+          <i class="fa-solid fa-xmark" id="xExit"></i>
         </div>
 
         <div id="questionDiv">
@@ -111,7 +112,7 @@
         <button type="button" id="exit">Exit Quiz</button>
       </div>
 
-    </div>
+    
 
   </main>
 

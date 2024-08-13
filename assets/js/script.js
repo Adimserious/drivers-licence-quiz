@@ -207,7 +207,7 @@ beginBtn.addEventListener('mouseover', beginHover);
 beginBtn.addEventListener('mouseout', beginOut);
 
 
-// This function shows the start Quiz area
+// This function shows the start Quiz
 
 function showBeginWindow() {
     let begin = document.getElementById('beginDiv');
@@ -217,21 +217,19 @@ function showBeginWindow() {
     begin.addEventListener('click', hideStartQuiz)
 }
 
+// This function hides the start Quiz and load the first quiz
 function hideStartQuiz() {
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = ('0');
     begin.style.transitionDelay = '1s';
     // Load the first quiz question
     loadQuiz()
-    
 } 
 
-    
 
 // Variables to keep track of current quiz question and score
 let currentQuiz = 0;
 let score = 0;
-
 
 
 // Function to load the current quiz question and choices
@@ -248,6 +246,11 @@ function loadQuiz() {
     choiceTextElements.forEach((choiceTextElement, index) => {
         choiceTextElement.innerText = currentQuizData.choices[index];
     });
+
+    let questionNumber = document.getElementById('questionNoText');
+    questionNumber.innerHTML = `<span class="count">Question ` + (parseInt(currentQuiz) + 1) + ` of 11</span>`;
+
+    shuffledQuestions = licenceQuestions.sort(() => Math.random() - 0.5);
 }
 
 // Function to deselect any selected answers
@@ -307,3 +310,14 @@ restartButton.addEventListener('click', () => {
     loadQuiz();
 });
 
+function exitQuiz() {
+    let questionWindow = document.getElementById('quiz');
+    questionWindow.style.display = 'none'
+    
+
+}
+let exit = document.getElementById('exit');
+exit.addEventListener('click', exitQuiz());
+
+let cross = document.getElementById('xExit');
+cross.addEventListener('click', exitQuiz());
