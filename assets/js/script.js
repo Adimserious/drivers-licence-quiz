@@ -105,6 +105,7 @@ const resultsContainer = document.getElementById('results');
 const scoreElement = document.getElementById('score');
 const restartButton = document.getElementById('restart');
 const exitButton = document.getElementById('exit');
+const exitMessage = document.getElementById('exit-message');
 
 
 
@@ -246,10 +247,10 @@ function loadQuiz() {
     choiceTextElements.forEach((choiceTextElement, index) => {
         choiceTextElement.innerText = currentQuizData.choices[index];
     });
-
+    // quiz number count
     let questionNumber = document.getElementById('questionNoText');
     questionNumber.innerHTML = `<span class="count">Question ` + (parseInt(currentQuiz) + 1) + ` of 11</span>`;
-
+    // shuffle quiz questions
     shuffledQuestions = licenceQuestions.sort(() => Math.random() - 0.5);
 }
 
@@ -289,7 +290,7 @@ submitButton.addEventListener('click', () => {
             // No more questions, show the results
             quiz.classList.add('hidden');
             resultsContainer.classList.remove('hidden');
-            resultsContainer.style.display = 'block'
+            resultsContainer.style.display = 'block';
             scoreElement.innerText = `Your Score: ${score} out of ${licenceQuestions.length}`;
         }
     }
@@ -304,20 +305,34 @@ restartButton.addEventListener('click', () => {
     // Show the quiz and hide the results
     quiz.classList.remove('hidden');
     resultsContainer.classList.add('hidden');
-    resultsContainer.style.display = 'none'
+    resultsContainer.style.display = 'none';
 
     // Load the first question
     loadQuiz();
 });
 
-function exitQuiz() {
-    let questionWindow = document.getElementById('quiz');
-    questionWindow.style.display = 'none'
-    
+// Event listiner to hide the quiz and result container then show exit message
+exitButton.addEventListener('click', () => {
+    quiz.classList.add('hidden');
+    quiz.style.display = 'none';
+    resultsContainer.classList.add('hidden');
+    resultsContainer.style.display = 'none'
+    exitMessage.classList.remove('hidden');
+    exitMessage.style.display = 'block';
+    showBeginWindow()
+});
 
-}
-let exit = document.getElementById('exit');
-exit.addEventListener('click', exitQuiz());
+
+
 
 let cross = document.getElementById('xExit');
-cross.addEventListener('click', exitQuiz());
+cross.addEventListener('click', () => {
+    quiz.classList.add('hidden');
+    quiz.style.display = 'none';
+    resultsContainer.classList.add('hidden');
+    resultsContainer.style.display = 'none';
+    exitMessage.classList.remove('hidden');
+    exitMessage.style.display = 'block';
+    showBeginWindow()
+
+});
