@@ -153,29 +153,6 @@ form button:hover {
     transition: padding 0.5s;
 }
 
-/* Log in div Style */
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    margin-left: 1px;
-    margin-right: 1px;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    font-size: 1em;
-}
-
-/* log in text */
-form .active {
-    background-color: white;
-    color: black;
-}
-
-/* Log in hover effect*/
-.btn:hover {
-    background: #00c04b;
-}
-
 /* This is the click to start quiz div */
 
 #beginDiv {
