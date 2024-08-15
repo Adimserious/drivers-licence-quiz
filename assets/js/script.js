@@ -80,16 +80,6 @@ const licenceQuestions = [
 ];
 
 
-
-
-// Grab elements from DOM and assign variables to them 
-let signup = document.getElementById('signupBtn');
-let title = document.getElementById('title');
-let usernameArea = document.getElementById('username');
-let passwordArea = document.getElementById('password');
-let passwordConfirmedArea = document.getElementById('confirm-password');
-
-
 // DOM elements for quiz and result sections
 const quiz = document.getElementById('quiz');
 const choices = document.querySelectorAll('.answer');
@@ -108,20 +98,6 @@ const exitButton = document.getElementById('exit');
 const exitMessage = document.getElementById('exit-message');
 
 
-
-// This is the sign up function 
-function displaySignUp() {
-    title.innerHTML = 'Sign-Up';
-    signup.classList.add('active');
-    passwordConfirmedArea.style.maxHeight = '80px';
-    passwordConfirmedArea.style.paddingBottom = '1px';
-    passwordConfirmedArea.style.paddingTop = '1px';
-    passwordArea.setAttribute('placeholder', 'Create Password');
-    usernameArea.setAttribute('placeholder', 'Create Username');
-}
-
-signup.addEventListener('click', displaySignUp);
-
 /**
  *  This function checks for form validation to see
  * if the username and passwords matches the criteria provided before
@@ -138,30 +114,22 @@ function handleSubmit(event) {
     let userErrorMsg = document.getElementById('user-msg');
     let passErrorMsg = document.getElementById('error-msg');
 
-    if (usernameLength < 8) {
-        console.log('Username must be at least 8 characters');
-        userErrorMsg.innerHTML = 'Username must be at least 8 characters';
-    } else if (!user.match(/[0-9]/)) {
-        console.log('Username must contain a number');
-        userErrorMsg.innerHTML = 'Username must contain a number';
+    if (usernameLength < 2) {
+        userErrorMsg.innerHTML = 'Username must be at least 2 characters';
     } else if (passwordValue !== confirmPasswordValue) {
         userErrorMsg.innerHTML = '';
-        console.log('Passwords do not match');
         passErrorMsg.innerHTML = 'Passwords do not match.';
-    } else if (passwordValueLength < 8) {
+    } else if (passwordValueLength < 6) {
         userErrorMsg.innerHTML = '';
-        console.log('Password must be at least 8 characters');
-        passErrorMsg.innerHTML = 'Password must be at least 8 characters.';
+        passErrorMsg.innerHTML = 'Password must be at least 6 characters.';
     } else if (passwordValueLength > 20) {
-        console.log('Password must be less than 20 characters');
-        passErrorMsg.innerHTML = 'Password must be less than 20 characters.';
+        passErrorMsg.innerHTML = 'Password must not be greater than 20 characters.';
     } else if (!passwordValue.match(/[0-9]/)) {
         userErrorMsg.innerHTML = '';
-        console.log('Password must contain a number');
-        passErrorMsg.innerHTML = 'Password must contain a number.';
+        passErrorMsg.innerHTML = 'Password must contain at least a number.';
     } else {
-        passErrorMsg.innerHTML = '';
         userErrorMsg.innerHTML = '';
+        passErrorMsg.innerHTML = '';
         form.submit();
         showBeginWindow();
         hideForm();
@@ -183,32 +151,31 @@ function hideForm() {
 }
 
 /**
- * This function makes the start Quiz button change border and font
- * color to black and burlywood respectively when pointed
+ * This function makes the start Quiz button change border
+ * color to black when pointed
  */
 
 function beginHover(event) {
     beginBtn.style.borderColor = 'black';
-    beginBtn.style.color = 'burlywood';
     beginBtn.style.backgroundColor = 'black';
     beginBtn.style.cursor = 'pointer';
 }
 
 /**
- * This function makes the Start Quiz Button and border 
- * color change from white/burlywood to white at mouse-out
+ * This function makes the Start Quiz border 
+ * color change to white at mouse-out
  */
 function beginOut(event) {
     beginBtn.style.borderColor = 'white';
     beginBtn.style.color = 'white';
 }
-
+// Add eventlistner to mouseover and mouseout for beginBtn
 let beginBtn = document.getElementById('beginBtn');
 beginBtn.addEventListener('mouseover', beginHover);
 beginBtn.addEventListener('mouseout', beginOut);
 
 
-// This function shows the start Quiz
+// This function shows the start Quiz area
 
 function showBeginWindow() {
     let begin = document.getElementById('beginDiv');
