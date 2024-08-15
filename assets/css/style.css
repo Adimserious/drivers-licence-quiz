@@ -378,7 +378,14 @@ i:hover {
 #exit-message {
     text-align: center;
     font-size: 24px;
-    margin-bottom: 20px;
+    
+    color: white;
+    background-color: #00c04b;
+    width: 500px;
+    margin: 10px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px;
+    border-radius: 10px;
 }
 
 /* Footer styles*/

@@ -289,6 +289,7 @@ submitButton.addEventListener('click', () => {
         } else {
             // No more questions, show the results
             quiz.classList.add('hidden');
+            quiz.style.display = 'none'
             resultsContainer.classList.remove('hidden');
             resultsContainer.style.display = 'block';
             scoreElement.innerText = `Your Score: ${score} out of ${licenceQuestions.length}`;
@@ -311,20 +312,24 @@ restartButton.addEventListener('click', () => {
     loadQuiz();
 });
 
-// Event listiner to hide the quiz and result container then show exit message
+// Event listiner for exit button to hide the quiz and result container then show begin div
 exitButton.addEventListener('click', () => {
     quiz.classList.add('hidden');
     quiz.style.display = 'none';
     resultsContainer.classList.add('hidden');
     resultsContainer.style.display = 'none'
     exitMessage.classList.remove('hidden');
-    exitMessage.style.display = 'block';
-    showBeginWindow()
+    exitMessage.style.display = 'block'
+    showBeginWindow();
+
+    // Reset the quiz variables
+    currentQuiz = 0;
+    score = 0;
+
+    
 });
 
-
-
-
+// Event listiner for x icon to hide the quiz and result container then show bigin div
 let cross = document.getElementById('xExit');
 cross.addEventListener('click', () => {
     quiz.classList.add('hidden');
@@ -333,6 +338,12 @@ cross.addEventListener('click', () => {
     resultsContainer.style.display = 'none';
     exitMessage.classList.remove('hidden');
     exitMessage.style.display = 'block';
-    showBeginWindow()
+    showBeginWindow();
+
+    // Reset the quiz variables
+    currentQuiz = 0;
+    score = 0;
+
+    
 
 });
