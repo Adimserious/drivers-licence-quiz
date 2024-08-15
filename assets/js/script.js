@@ -223,6 +223,7 @@ function hideStartQuiz() {
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = ('0');
     begin.style.transitionDelay = '1s';
+    exitMessage.style.display = 'none';
     // Load the first quiz question
     loadQuiz()
 } 
