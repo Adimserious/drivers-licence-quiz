@@ -90,13 +90,13 @@ const choiceTextElements = [
     document.getElementById('choice3_text'),
 ];
 
+const timerCount = document.getElementById('timerCount');
 const submitButton = document.getElementById('submit');
 const resultsContainer = document.getElementById('results');
 const scoreElement = document.getElementById('score');
 const restartButton = document.getElementById('restart');
 const exitButton = document.getElementById('exit');
 const exitMessage = document.getElementById('exit-message');
-
 
 /**
  *  This function checks for form validation to see
@@ -199,11 +199,18 @@ function hideStartQuiz() {
 // Variables to keep track of current quiz question and score
 let currentQuiz = 0;
 let score = 0;
+let timer;
+let timeLeft = 15;
 
 
 // Function to load the current quiz question and choices
 function loadQuiz() {
     document.getElementById('quiz').style.display = 'block'
+
+    clearInterval(timer); // Clear any existing timer
+    timeLeft = 15;
+    startTimer();
+
     // Deselect any previously selected answer
     deselectAnswers();
 
@@ -239,6 +246,30 @@ function getSelected() {
     return answer;
 }
 
+function startTimer() {
+    timerCount.innerText = `Time left: ${timeLeft} seconds`;
+    timer = setInterval(() => {
+        timeLeft--;
+        timerCount.innerText = `Time left: ${timeLeft} seconds`;
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            moveToNextQuestion();
+        }
+    }, 1000);
+}
+
+function moveToNextQuestion() {
+    currentQuiz++;
+    if (currentQuiz < licenceQuestions.length) {
+        loadQuiz();
+    } else {
+        quiz.classList.add('hidden');
+        resultsContainer.classList.remove('hidden');
+        scoreElement.innerText = `Your Score: ${score} out of ${licenceQuestions.length}`;
+    }
+}
+
 // Event listener for the submit button
 submitButton.addEventListener('click', () => {
     const answer = getSelected();
@@ -249,6 +280,7 @@ submitButton.addEventListener('click', () => {
         }
         // Move to the next question
         currentQuiz++;
+        
 
         // Check if there are more questions
         if (currentQuiz < licenceQuestions.length) {
@@ -282,6 +314,7 @@ restartButton.addEventListener('click', () => {
 
 // Event listiner for exit button to hide the quiz and result container then show begin div
 exitButton.addEventListener('click', () => {
+    clearInterval(timer); // Clear timer on exit
     quiz.classList.add('hidden');
     quiz.style.display = 'none';
     resultsContainer.classList.add('hidden');
