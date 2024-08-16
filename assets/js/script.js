@@ -199,16 +199,20 @@ function hideStartQuiz() {
 // Variables to keep track of current quiz question and score
 let currentQuiz = 0;
 let score = 0;
+// Variable to hold the interval timer
 let timer;
+// Variable to track the remaining time for the current question
 let timeLeft = 15;
 
 
 // Function to load the current quiz question and choices
 function loadQuiz() {
     document.getElementById('quiz').style.display = 'block'
-
-    clearInterval(timer); // Clear any existing timer
+    // Clear any existing timer to ensure no multiple timers run concurrently
+    clearInterval(timer);
+    // Reset the time left for the new question
     timeLeft = 15;
+    // Start the timer for the current question
     startTimer();
 
     // Deselect any previously selected answer
@@ -231,12 +235,14 @@ function loadQuiz() {
 
 // Function to deselect any selected answers
 function deselectAnswers() {
+    // Deselect all radio button choices
     choices.forEach(choice => choice.checked = false);
 }
 
 // Function to get the selected answer
 function getSelected() {
     let answer;
+    // Check each radio button to find the selected one
     choices.forEach(choice => {
         if (choice.checked) {
             // Get the text of the selected answer
@@ -247,16 +253,23 @@ function getSelected() {
 }
 
 function startTimer() {
+    // Display the initial time left
     timerCount.innerText = `Time left: ${timeLeft} seconds`;
+    // Set an interval to decrease the time left every second
     timer = setInterval(() => {
+        // Decrease the time left by 1 second
         timeLeft--;
+        // Update the timer display
         timerCount.innerText = `Time left: ${timeLeft} seconds`;
 
+        // Check if the time left has reached 0
         if (timeLeft <= 0) {
+            // Stop the timer
             clearInterval(timer);
+            // Automatically move to the next question
             moveToNextQuestion();
         }
-    }, 1000);
+    }, 1000); // Interval is set to 1000 milliseconds (1 second)
 }
 
 function moveToNextQuestion() {
@@ -265,7 +278,9 @@ function moveToNextQuestion() {
         loadQuiz();
     } else {
         quiz.classList.add('hidden');
+        quiz.style.display = 'none'
         resultsContainer.classList.remove('hidden');
+        resultsContainer.style.display = 'block';
         scoreElement.innerText = `Your Score: ${score} out of ${licenceQuestions.length}`;
     }
 }
