@@ -33,7 +33,7 @@
     <div id="form-div">
       <form action="https://formdump.codeinstitute.net/" method="post" id="form" target="_blank">
           <div id="form-title">
-            <h3 id="form-heading"><span class="sign-up-text">Welcome to the driving licence quiz. Sign up here! to take a quiz or continue as a guest</span></h3>
+            <h3 id="form-heading"><span class="sign-up-text">Welcome to the driving licence quiz. Sign up below! to take a quiz or continue as a guest</span></h3>
           </div>
           <!-- Input field-->
           <div id="inputs">
@@ -59,8 +59,18 @@
 
     <div id="beginDiv">
       <div id="beginBtn" data-type='begin' class="diffBtn">
-        <button id="start" onclick="loadQuiz()" aria-label="Click this button to begin the quiz">Click To Start
-          Quiz</button>
+        <button id="start" onclick="loadQuiz()" aria-label="Click this button to begin the quiz">Click to Start Quiz
+        </button>
+      </div>
+    </div>
+
+    <div id="info" style="display: none;">
+      <div class="info-title">Some Rules to the quiz</div>
+      <div class="info-list">
+        <p>1. You will have only 15 seconds to answer each question.</p>
+        <p>2. Once an answer is submitted, it can't be undone.</p>
+        <p>3. You can't select any option once the timer goes of for each question.</p>
+        <p>4. You will get points on the basis of your correct answers.</p>
       </div>
     </div>
 

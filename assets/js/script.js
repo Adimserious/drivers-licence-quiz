@@ -1,3 +1,4 @@
+
 // These are the quiz questions
 const licenceQuestions = [
 
@@ -81,6 +82,7 @@ const licenceQuestions = [
 
 
 // DOM elements for quiz and result sections
+const info = document.getElementById('info')
 const quiz = document.getElementById('quiz');
 const choices = document.querySelectorAll('.answer');
 const questionElement = document.getElementById('question');
@@ -181,7 +183,8 @@ function showBeginWindow() {
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = '1000px';
     begin.style.transitionDelay = '1s';
-    begin.style.backgroundColor = 'Green';
+    begin.style.backgroundColor = 'Transparent';
+    info.style.display = 'block';
     begin.addEventListener('click', hideStartQuiz)
 }
 
@@ -190,6 +193,7 @@ function hideStartQuiz() {
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = ('0');
     begin.style.transitionDelay = '1s';
+    info.style.display = 'none';
     exitMessage.style.display = 'none';
     // Load the first quiz question
     loadQuiz()
@@ -337,6 +341,7 @@ exitButton.addEventListener('click', () => {
     exitMessage.classList.remove('hidden');
     exitMessage.style.display = 'block'
     showBeginWindow();
+    info.style.display = 'none'
 
     // Reset the quiz variables
     currentQuiz = 0;
@@ -348,6 +353,7 @@ exitButton.addEventListener('click', () => {
 // Event listiner for x icon to hide the quiz and result container then show bigin div
 let cross = document.getElementById('xExit');
 cross.addEventListener('click', () => {
+    clearInterval(timer); // Clear timer on exit
     quiz.classList.add('hidden');
     quiz.style.display = 'none';
     resultsContainer.classList.add('hidden');
@@ -355,6 +361,7 @@ cross.addEventListener('click', () => {
     exitMessage.classList.remove('hidden');
     exitMessage.style.display = 'block';
     showBeginWindow();
+    info.style.display = 'none'
 
     // Reset the quiz variables
     currentQuiz = 0;

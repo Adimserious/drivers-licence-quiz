@@ -1,4 +1,3 @@
-
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
@@ -154,6 +153,29 @@ form button:hover {
     transition: padding 0.5s;
 }
 
+#info {
+    background-color: #00c04b;
+    width: 300px;
+    height: 170px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+}
+
+.info-title {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.info-list {
+    font-size: 1rem;
+    font-weight: bold;
+}
 /* This is the click to start quiz div */
 
 #beginDiv {
@@ -165,8 +187,8 @@ form button:hover {
     align-content: center;
     margin: 20px 50px;
     position: relative;
-    bottom: 80px;
-    height: 400px;
+    bottom: 0px;
+    height: 250px;
     max-height: 0px;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -188,7 +210,6 @@ form button:hover {
 }
 
 /* Question Area section */
-
 
 #quiz {
     width: 300px;
@@ -424,8 +445,17 @@ footer {
 
     /* This section is for the begin area */
 
+    #info {
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
     #beginDiv {
-        margin: 50px  220px;
+        margin: 200px  220px;
         width: 300px;
     }
 
@@ -529,8 +559,20 @@ footer {
 
     /* This section is for the begin area */
 
+    #info{
+        width: 400px;
+        height: 200px;
+    }
+
+    .info-list {
+        font-size: 1.rem;
+        padding: 20px;
+    }
+
     #beginDiv {
-        margin: 80px  350px;
+        margin: 150px  330px;
+        width: 600px;
+        
     }
 
     #beginDiv div {
@@ -594,7 +636,7 @@ footer {
 
 }
 
-/* Media Query for Tablets and higher (1440px and higher) */
+/* Media Query for screen  (1440px and higher) */
 @media screen and (min-width: 1440px) {
     #beginDiv {
         margin: 120px  300px;
