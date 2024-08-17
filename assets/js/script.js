@@ -1,4 +1,5 @@
 
+
 // These are the quiz questions
 const licenceQuestions = [
 
@@ -102,47 +103,36 @@ const exitMessage = document.getElementById('exit-message');
 
 /**
  *  This function checks for form validation to see
- * if the username and passwords matches the criteria provided before
+ * if the username is provided before
  * submiting.
  */
-function handleSubmit(event) {
-    event.preventDefault();
+ function handleSubmit(event) {
+  //  event.preventDefault();
 
     let usernameLength = document.getElementById('username').value.length;
     let user = document.getElementById('username').value;
-    let passwordValue = document.getElementById('password').value;
-    let passwordValueLength = document.getElementById('password').value.length;
-    let confirmPasswordValue = document.getElementById('confirm-password').value;
+    
     let userErrorMsg = document.getElementById('user-msg');
-    let passErrorMsg = document.getElementById('error-msg');
+    
 
-    if (usernameLength < 2) {
-        userErrorMsg.innerHTML = 'Username must be at least 2 characters';
-    } else if (passwordValue !== confirmPasswordValue) {
-        userErrorMsg.innerHTML = '';
-        passErrorMsg.innerHTML = 'Passwords do not match.';
-    } else if (passwordValueLength < 6) {
-        userErrorMsg.innerHTML = '';
-        passErrorMsg.innerHTML = 'Password must be at least 6 characters.';
-    } else if (passwordValueLength > 20) {
-        passErrorMsg.innerHTML = 'Password must not be greater than 20 characters.';
-    } else if (!passwordValue.match(/[0-9]/)) {
-        userErrorMsg.innerHTML = '';
-        passErrorMsg.innerHTML = 'Password must contain at least a number.';
+    if (usernameLength !== "") {
+        userErrorMsg.innerHTML = 'Username must not be empty';
+    
     } else {
         userErrorMsg.innerHTML = '';
-        passErrorMsg.innerHTML = '';
-        form.submit();
         showBeginWindow();
         hideForm();
     }
 }
 
-let guestButton = document.getElementById('guestBtn');
-guestButton.addEventListener('click', hideForm);
+
+//let guestButton = document.getElementById('guestBtn');
+//guestButton.addEventListener('click', hideForm);
 
 let form = document.getElementById('form');
-form.addEventListener('submit', handleSubmit);
+let submit = document.getElementById('submit')
+submit.addEventListener('click', handleSubmit)
+form.addEventListener('click', handleSubmit);
 
 // This function hides the form
 
@@ -183,7 +173,7 @@ function showBeginWindow() {
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = '1000px';
     begin.style.transitionDelay = '1s';
-    begin.style.backgroundColor = 'Transparent';
+    begin.style.backgroundColor = '';
     info.style.display = 'block';
     begin.addEventListener('click', hideStartQuiz)
 }
