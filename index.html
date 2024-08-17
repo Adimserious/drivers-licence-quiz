@@ -32,20 +32,21 @@
     <!-- this div holds the form -->
     <div id="form-div">
       <form id="form" method="post" action="javascript:void(0)" onsubmit="hideForm(event)">
-          <div id="form-title">
-            <h3 id="form-heading"><span class="sign-up-text">Welcome to the driving licence quiz. Please write your username</span></h3>
-          </div>
-          <!-- Input field-->
-          <div id="inputs">
-            <input type="text" placeholder="Create Username" id="username" name="username" required>
-            <p id="user-msg" class="error-msg"></p><br>
-            
-          </div>
-          <br> 
-          <div id="submitBtns">
-            <button type="submit" id="submit-btn" aria-label="Submit the form and continue to the quiz">Submit</button>
-            
-          </div>
+        <div id="form-title">
+          <h3 id="form-heading"><span class="sign-up-text">Welcome to the driving licence quiz. Please write your
+              username</span></h3>
+        </div>
+        <!-- Input field-->
+        <div id="inputs">
+          <input type="text" placeholder="Create Username" id="username" name="username" required>
+          <p id="user-msg" class="error-msg"></p><br>
+
+        </div>
+        <br>
+        <div id="submitBtns">
+          <button type="submit" id="submit-btn" aria-label="Submit the form and continue to the quiz">Submit</button>
+
+        </div>
       </form>
     </div>
     <br>
@@ -86,19 +87,17 @@
 
         <ul id="choices">
           <li>
-            <input type="radio" id="answer1" name="choice" class="answer">
-            <label for="choice1" id="choice1_text">Choice 1</label>
+            <div id="choice1_text" name="choice" class="answer"></div>
           </li>
           <li>
-            <input type="radio" id="answer2" name="choice" class="answer">
-            <label for="choice2" id="choice2_text">Choice 2</label>
+            <div id="choice2_text" name="choice" class="answer"></div>
           </li>
           <li>
-            <input type="radio" id="answer3" name="choice" class="answer">
-            <label for="choice3" id="choice3_text">Choice 3</label>
+            <div id="choice3_text" name="choice" class="answer"></div>
           </li>
         </ul>
-        <button id="submit">Submit Answer</button>
+
+        
       </div>
     </div>
 

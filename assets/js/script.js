@@ -94,7 +94,6 @@ const choiceTextElements = [
 ];
 
 const timerCount = document.getElementById('timerCount');
-const submitButton = document.getElementById('submit');
 const resultsContainer = document.getElementById('results');
 const scoreElement = document.getElementById('score');
 const restartButton = document.getElementById('restart');
@@ -126,12 +125,8 @@ const exitMessage = document.getElementById('exit-message');
 }
 
 
-//let guestButton = document.getElementById('guestBtn');
-//guestButton.addEventListener('click', hideForm);
 
 let form = document.getElementById('form');
-let submit = document.getElementById('submit')
-submit.addEventListener('click', handleSubmit)
 form.addEventListener('click', handleSubmit);
 
 // This function hides the form
@@ -219,6 +214,7 @@ function loadQuiz() {
     questionElement.innerText = currentQuizData.question;
     choiceTextElements.forEach((choiceTextElement, index) => {
         choiceTextElement.innerText = currentQuizData.choices[index];
+        choiceTextElement.onclick = () => selectAnswer(currentQuizData.choices[index]);
     });
     // quiz number count
     let questionNumber = document.getElementById('questionNoText');
@@ -229,14 +225,14 @@ function loadQuiz() {
 
 // Function to deselect any selected answers
 function deselectAnswers() {
-    // Deselect all radio button choices
+    // Deselect  choices
     choices.forEach(choice => choice.checked = false);
 }
 
 // Function to get the selected answer
 function getSelected() {
     let answer;
-    // Check each radio button to find the selected one
+    // Check each button to find the selected one
     choices.forEach(choice => {
         if (choice.checked) {
             // Get the text of the selected answer
@@ -266,6 +262,15 @@ function startTimer() {
     }, 1000); // Interval is set to 1000 milliseconds (1 second)
 }
 
+function selectAnswer(answer) {
+    clearInterval(timer);
+
+    if (answer === licenceQuestions[currentQuiz].correct) {
+        score++;
+    }
+    moveToNextQuestion();
+}
+
 function moveToNextQuestion() {
     currentQuiz++;
     if (currentQuiz < licenceQuestions.length) {
@@ -279,32 +284,7 @@ function moveToNextQuestion() {
     }
 }
 
-// Event listener for the submit button
-submitButton.addEventListener('click', () => {
-    const answer = getSelected();
-    if (answer) {
-        // Check if the selected answer is correct
-        if (answer === licenceQuestions[currentQuiz].correct) {
-            score++;
-        }
-        // Move to the next question
-        currentQuiz++;
-        
 
-        // Check if there are more questions
-        if (currentQuiz < licenceQuestions.length) {
-            // Load the next question
-            loadQuiz();
-        } else {
-            // No more questions, show the results
-            quiz.classList.add('hidden');
-            quiz.style.display = 'none'
-            resultsContainer.classList.remove('hidden');
-            resultsContainer.style.display = 'block';
-            scoreElement.innerText = `Your Score: ${score} out of ${licenceQuestions.length}`;
-        }
-    }
-});
 
 // Event listener for the restart button
 restartButton.addEventListener('click', () => {
