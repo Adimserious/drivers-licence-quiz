@@ -183,16 +183,18 @@ form button:hover {
 .wrapper{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 0 10px;
-    flex-wrap: wrap;
+    padding: 50px 10px;
+    
 }
 /* Question Area section */
 
 #quiz {
     width: 300px;
     background-color: #80D5A1;
+    margin: 10px auto;
+    padding: 15px;
+    box-shadow: 0 0 10px;
+    border-radius: 50px;
 }
 
 .hidden {
@@ -442,7 +444,7 @@ footer {
         padding: 15px;
         box-shadow: 0 0 10px;
         border-radius: 50px;
-        position: relative; top: -50px;
+        position: relative;
     }
 
     #questionNoText {
@@ -531,8 +533,7 @@ footer {
 
     #beginDiv {
         margin: 150px  230px;
-        width: 200px;
-        position: absolute;
+        
     }
 
     #beginDiv div {
@@ -556,7 +557,7 @@ footer {
         padding: 15px;
         box-shadow: 0 0 10px;
         border-radius: 50px;
-        position: relative; top: -50px;
+        position: relative;
     }
 
     #questionNoText {
@@ -591,6 +592,12 @@ footer {
 
     #score {
         font-size: 4.5rem;
+    }
+
+    .wrapper{
+        flex-direction: column;
+        gap: 10px;
+        display: flex;
     }
 
 }

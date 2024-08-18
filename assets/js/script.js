@@ -161,7 +161,6 @@ function showBeginWindow() {
     begin.style.maxHeight = '1000px';
     begin.style.display = 'block';
     begin.style.transitionDelay = '1s';
-    begin.style.backgroundColor = '';
     info.style.display = 'block';
     begin.addEventListener('click', hideStartQuiz);
 }
@@ -327,7 +326,10 @@ exitButton.addEventListener('click', () => {
     showBeginWindow();
     info.style.display = 'none';
     let wrap = document.querySelector('.wrapper')
-    wrap.style.display = 'block'
+    wrap.style.display = ''
+
+    let formDiv = document.querySelector('#form-div');
+    formDiv.style.display = 'none'
 
     // Reset the quiz variables
     currentQuiz = 0;
@@ -345,10 +347,13 @@ cross.addEventListener('click', () => {
     resultsContainer.style.display = 'none';
     exitMessage.classList.remove('hidden');
     exitMessage.style.display = 'block';
+    let wrap = document.querySelector('.wrapper')
+    wrap.style.display = ''
     showBeginWindow();
     info.style.display = 'none';
-    let wrap = document.querySelector('.wrapper')
-    wrap.style.display = 'block'
+    
+    let formDiv = document.querySelector('#form-div');
+    formDiv.style.display = 'none'
 
     // Reset the quiz variables
     currentQuiz = 0;
