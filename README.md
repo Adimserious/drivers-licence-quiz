@@ -158,7 +158,7 @@ As a frequent user:
 - Additional questions might be available in the question section.
 - Updated questions with images.
 - In the future, there could be more languages to choose from.
-- intended to add username to userscore in the future
+- I intend to add username to userscore in the future
 
 ## Technologies Used
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -182,6 +182,17 @@ As a frequent user:
 - Manually testing each section while building the quiz for appearance and responsiveness using Chrome developer tools and Microsoft Edge
 - Family and friends helped to test it by taking part in the quiz and gave me no issues as feedback.
 - I tested it on mobile, tablet and laptop to make sure it works well across all devices.
+
+### User Input/Form Validation
+| Feature            | Tested? | Action        | Expected Outcome | Pass/Fail | 
+|--------------------|---------|---------------|------------------|-----------|
+| Log in Form  | Yes | Submit form | user is redirected to the start quiz area| pass |
+| Start quiz button  | Yes | hides the start quiz | user is redirected to the quiz question area| pass |
+| Answer buttons  | Yes | click | the next question and answers displays | pass |
+| Score area  | Yes | displays | the score is displayed after the last quiz| pass |
+| Restart button  | Yes | hides score area | user is redirected to the quiz area| pass |
+| Exit quiz  | Yes | hides the score area | user is redirected to the start quiz area and a message is displayed to confirm exit| pass |
+
 
 ## **Post Development Testing**
 - [The W3C Markup Validator](https://validator.w3.org/) and 
