@@ -97,6 +97,11 @@ As a frequent user:
  ![question increment](/assets/images/qustn2of11.webp)
  - The question increases as the user proceed accordingly to describe the number of question the user has attempted.
 
+### Timer
+![Timer](/assets/images/timer.webp)
+- The timer is set to 15 seconds for each question
+- If user doesn't select an answer before the 15 seconds elapse, it moves to the next question and the score wont be counted.
+
 ### The Answer and Next Question Area
 ![Answers image](/assets/images/answers.webp)
 - The answer area will show red for the wrong answers upon choosing an answer.
@@ -124,10 +129,18 @@ As a frequent user:
 ![Exit Message](/assets/images/exit-msg.webp)
 - The exit message is seen when user click the exit button and x-icon
 
-### Score and score messages 
+### Score and score messages
+
+- Score less than 50%
 ![Score less than 50%](/assets/images/score-50%25.webp)
+
+- Score 50% plus
 ![Score 50% plus](/assets/images/score50+.webp)
+
+- Score 80% plus
 ![Score 80% plus](/assets/images/score80%25+.webp)
+
+- Score all correct
 ![Score all correct](/assets/images/score-all.webp)
 
 - The Score message is displayed based on the users score.
