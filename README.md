@@ -41,11 +41,11 @@ The live link can be found here -[Führerschein (English)](https://adimserious.g
 ## User Stories
 - ### First time user
   As a first-time user, i would like to:
+  - Find the log in form and fill it out.
   - Understand the main purpose of the site and know how many questions it provides.
   - Easily navigate throughout the site.
-  - Find the Sign Up form and fill it out.
-  - Find out if they can visit as a guest to get the look and feel of the app.
-
+  
+  
 - ### Returning User
 As a frequent user:
 - I want to check if there are any new questions and answers added to get updated with. 
@@ -53,29 +53,30 @@ As a frequent user:
 - I want very few or no fails with the questions.
 
 ### Colors
-- The main color scheme of the quiz application is burlywood, black and white.
+- The main colors scheme of the quiz application is #2E7248, and #80D5A1.
 
 ## Features
 ### Existing Features 
 #### The Heading
 ![The header](/assets/images/header.webp)
+
 - The heading text is the first thing the users will see on the landing page which describes the purpose of the website at first sight.
+
 - The heading is present throughout the entire quiz window; namely: The landing page, start quiz area and result area.
 - The heading is responsive across all devices.
-- The welcome text describes further the main purpose of the Quiz, located underneath the header. it welcomes the user and give then a brief overview of the quiz they are about to partake on.
-- The welcome text is also present throughout the entire quiz window; namely: The landing page, start quiz and exit area.
-- The welcome text is responsive on all devices. the background color provides a very good contrast against the body of the website hereby optimising user accessibility.
 
-### The Prompt text
+### The Welcome Message and Prompt text
 ![The prompt text image](/assets/images/welcom-prompt.png)
-- Below the header is a welcome text and brief description of the next step which is  a create username.
+- Below the header is a welcome text and brief description of the next step which is to create a username.
+
+- The welcome text describes further the main purpose of the Quiz, located underneath the header. it welcomes the user and give then a brief overview of the quiz they are about to partake on.
+
+- The welcome text is responsive on all devices. the background color provides a very good contrast against the body of the website hereby optimising user accessibility.
 
 ### Username Form
 ![Username form image](/assets/images/username-form.png)
-- The sign up form allows the user to sign up to the website in order to access the quiz .
-- The sign up has a create username, email, password and confirm password field.
-- The form has a continue as guest botton which helps users to have the look and feel of the quiz before sigining up.
-- I checked the form to make sure users cant submit without meeting the form criteria:
+- The log in form allows the user to log in to the website in order to access the quiz.
+- I checked the form to make sure users cant submit empty form.
 
 ### The Form Validation 
 ![tht form validation prompt](/assets/images/form-validation.webp)
@@ -83,8 +84,12 @@ As a frequent user:
 
 ### Start Quiz Area
 ![Start quiz image](/assets/images/start-quiz.webp)
-- The start quiz area displays after 2 seconds of signing in.
-- The Start quiz area gives way for the question area once clicked.
+- The start quiz area displays once the form is submitted.
+- The Start quiz area shows some rules to the quiz.
+
+### Rules of the quiz
+![Rules of the quiz](/assets/images/rules.webp)
+- The rules show three rules about the game.
 
 ### The Question Area
  ![Qestion image](/assets/images/qstn-area.webp)
@@ -102,12 +107,9 @@ As a frequent user:
 - The timer is set to 15 seconds for each question
 - If user doesn't select an answer before the 15 seconds elapse, it moves to the next question and the score wont be counted.
 
-### The Answer and Next Question Area
+### The Answer Area
 ![Answers image](/assets/images/answers.webp)
-- The answer area will show red for the wrong answers upon choosing an answer.
-- The correct answer will show a green color.
-- There is also a hover effect which changes the burder and text color to burlywood when hovered before clicking.
-- The next question button is disabled but appears once the user chose an answer.
+- There is also a hover effect which changes the burder to green when hovered before clicking.
 
 ### the X Icon
 ![The x icon image](/assets/images/x-icon.webp)
@@ -116,13 +118,13 @@ As a frequent user:
 
 ### Result Area
 ![Result image](/assets/images/result-area.webp)
-- The result area displays the test 'you scored' together with the number of score the user got out of 11.
-- the result area also has a try again button which allow users to try the quiz again and shuffles the questions each try.
+- The result area displays the test 'You scored' together with the number of score the user got out of 11.
+- the result area also has a restart quiz button which allow users to try the quiz again and shuffles the questions each try.
 - The result area contains an exit quiz button that takes the users out from the result area and back to the start quiz page with the message, You have exited the quiz.
 
-### Try again and Exit button
-![Try again and exit image](/assets/images/try-again-exit.webp)
-- The try again button allows user to try the quiz again.
+### Restart and Exit button
+![Restart again and exit image](/assets/images/try-again-exit.webp)
+- Restart button allows user to try the quiz again.
 - The exit bitton takes the users out from the quiz area.
 
 ### Exit Message
@@ -156,6 +158,7 @@ As a frequent user:
 - Additional questions might be available in the question section.
 - Updated questions with images.
 - In the future, there could be more languages to choose from.
+- intended to add username to userscore in the future
 
 ## Technologies Used
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -204,8 +207,7 @@ As a frequent user:
  ![Lighthouse Report](/assets/images/light-house.webp)
 
 ### Bugs Encountered
-- I encountered a bug on laptops and larger screens with the "Try again and Exit" buttons while using media query to make sure its responsive on all device.
-- I formally used a div element for the "try again and exit" quiz area but changing the div to button elements fixed the bug on larger screens.
+- I encountered a bug on laptops and larger screens with the start quiz area  while using media query to make sure its responsive on all device.
 
 ## Deployment and local development
 ### GitHub Pages 
