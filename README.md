@@ -57,8 +57,8 @@ As a frequent user:
 
 ## Features
 ### Existing Features 
-#### The Heading and Welcome Text
-![The header and welcome image](/assets/images/header-welcom.webp)
+#### The Heading
+![The header](/assets/images/header.webp)
 - The heading text is the first thing the users will see on the landing page which describes the purpose of the website at first sight.
 - The heading is present throughout the entire quiz window; namely: The landing page, start quiz area and result area.
 - The heading is responsive across all devices.
@@ -67,21 +67,19 @@ As a frequent user:
 - The welcome text is responsive on all devices. the background color provides a very good contrast against the body of the website hereby optimising user accessibility.
 
 ### The Prompt text
-![The prompt text image](/assets/images/prompt-text.webp)
-- Below the welcome text is a brief description of the next step which can be a sign up or to continue as a guest.
+![The prompt text image](/assets/images/welcom-prompt.png)
+- Below the header is a welcome text and brief description of the next step which is  a create username.
 
-### Sign-Up Form
-![Sign up form image](/assets/images/sign-up.webp)
+### Username Form
+![Username form image](/assets/images/username-form.png)
 - The sign up form allows the user to sign up to the website in order to access the quiz .
 - The sign up has a create username, email, password and confirm password field.
 - The form has a continue as guest botton which helps users to have the look and feel of the quiz before sigining up.
 - I checked the form to make sure users cant submit without meeting the form criteria:
 
 ### The Form Validation 
-![tht form validation prompt](/assets/images/form-validatn.webp)
-- The validator makes sure the user inputs all fields with at least 8 characters, a number and email address.
-- It validates that the user inputs an email before submitting.
-- It also makes sure that the password and confirm passpassword fields matches.
+![tht form validation prompt](/assets/images/form-validation.webp)
+- The validator makes sure the username field is not empty.
 
 ### Start Quiz Area
 ![Start quiz image](/assets/images/start-quiz.webp)
@@ -89,18 +87,18 @@ As a frequent user:
 - The Start quiz area gives way for the question area once clicked.
 
 ### The Question Area
- ![Qestion image](/assets/images/question.webp)
+ ![Qestion image](/assets/images/qstn-area.webp)
 - The question area displays the first question out of eleven.
 - the question area has three answers to choose from.
-- The correct answers shows a green color and the wrong answers shows red.
-- the question area has a next question button which is hidden but displays once an answer is clicked.
+- The choosen answers shows a green color.
+- Once an answer is choosen, it moves to the next question.
 
 ### Question Increment
- ![question increment](/assets/images/increment-qstn.webp)
+ ![question increment](/assets/images/qustn2of11.webp)
  - The question increases as the user proceed accordingly to describe the number of question the user has attempted.
 
 ### The Answer and Next Question Area
-![Answers image](/assets/images/answers-and-next.jpg)
+![Answers image](/assets/images/answers.webp)
 - The answer area will show red for the wrong answers upon choosing an answer.
 - The correct answer will show a green color.
 - There is also a hover effect which changes the burder and text color to burlywood when hovered before clicking.
@@ -110,9 +108,6 @@ As a frequent user:
 ![The x icon image](/assets/images/x-icon.webp)
 - The x icon allow users to leave the question area at any desired time.
 
-### See Result Button
-![The see result button image](/assets/images/see.result.webp)
-- The see result button appears at the end of the quiz to show the result area once clicked.
 
 ### Result Area
 ![Result image](/assets/images/result.webp)
@@ -124,6 +119,10 @@ As a frequent user:
 ![Try again and exit image](/assets/images/try-again-exit.webp)
 - The try again button allows user to try the quiz again.
 - The exit bitton takes the users out from the quiz area.
+
+### Exit Message
+![Exit Message](/assets/images/exit-msg.webp)
+- The exit message is seen when user click the exit button and x-icon
 
 ### The Footer
 ![The footer image](/assets/images/footer.webp)
