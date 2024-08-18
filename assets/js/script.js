@@ -80,7 +80,7 @@ const licenceQuestions = [
 ];
 
 // DOM elements for quiz and result sections
-const info = document.getElementById('info')
+const info = document.getElementById('info');
 const quiz = document.getElementById('quiz');
 const choices = document.querySelectorAll('.answer');
 const questionElement = document.getElementById('question');
@@ -105,7 +105,6 @@ const exitMessage = document.getElementById('exit-message');
  function handleSubmit(event) {
 
     let usernameLength = document.getElementById('username').value.length;
-    let user = document.getElementById('username').value;
     
     let userErrorMsg = document.getElementById('user-msg');
     
@@ -160,21 +159,23 @@ beginBtn.addEventListener('mouseout', beginOut);
 function showBeginWindow() {
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = '1000px';
+    begin.style.display = 'block';
     begin.style.transitionDelay = '1s';
     begin.style.backgroundColor = '';
     info.style.display = 'block';
-    begin.addEventListener('click', hideStartQuiz)
+    begin.addEventListener('click', hideStartQuiz);
 }
 
 // This function hides the start Quiz and load the first quiz
 function hideStartQuiz() {
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = ('0');
+    begin.style.display = 'none';
     begin.style.transitionDelay = '1s';
     info.style.display = 'none';
     exitMessage.style.display = 'none';
     // Load the first quiz question
-    loadQuiz()
+    loadQuiz();
 } 
 
 // Variables to keep track of current quiz question and score
@@ -184,7 +185,6 @@ let score = 0;
 let timer;
 // Variable to track the remaining time for the current question
 let timeLeft = 15;
-
 
 
 function shuffle(array) {
@@ -199,7 +199,7 @@ shuffle(licenceQuestions);
 
 // Function to load the current quiz question and choices
 function loadQuiz() {
-    document.getElementById('quiz').style.display = 'block'
+    document.getElementById('quiz').style.display = 'block';
     // Clear any existing timer to ensure no multiple timers run concurrently
     clearInterval(timer);
     // Reset the time left for the new question
@@ -228,19 +228,6 @@ function loadQuiz() {
 function deselectAnswers() {
     // Deselect  choices
     choices.forEach(choice => choice.checked = false);
-}
-
-// Function to get the selected answer
-function getSelected() {
-    let answer;
-    // Check each button to find the selected one
-    choices.forEach(choice => {
-        if (choice.checked) {
-            // Get the text of the selected answer
-            answer = choice.nextElementSibling.innerText;
-        }
-    });
-    return answer;
 }
 
 function startTimer() {
@@ -278,10 +265,10 @@ function moveToNextQuestion() {
         loadQuiz();
     } else {
         quiz.classList.add('hidden');
-        quiz.style.display = 'none'
+        quiz.style.display = 'none';
         resultsContainer.classList.remove('hidden');
         resultsContainer.style.display = 'block';
-        displayScoreMessage()
+        displayScoreMessage();
     }
 }
 
@@ -332,18 +319,16 @@ exitButton.addEventListener('click', () => {
     quiz.classList.add('hidden');
     quiz.style.display = 'none';
     resultsContainer.classList.add('hidden');
-    resultsContainer.style.display = 'none'
+    resultsContainer.style.display = 'none';
     exitMessage.classList.remove('hidden');
-    exitMessage.style.display = 'block'
+    exitMessage.style.display = 'block';
     showBeginWindow();
-    info.style.display = 'none'
+    info.style.display = 'none';
 
     // Reset the quiz variables
     currentQuiz = 0;
     score = 0;
-    shuffle(licenceQuestions)
-
-    
+    shuffle(licenceQuestions);
 });
 
 // Event listiner for x icon to hide the quiz and result container then show bigin div
@@ -357,7 +342,7 @@ cross.addEventListener('click', () => {
     exitMessage.classList.remove('hidden');
     exitMessage.style.display = 'block';
     showBeginWindow();
-    info.style.display = 'none'
+    info.style.display = 'none';
 
     // Reset the quiz variables
     currentQuiz = 0;

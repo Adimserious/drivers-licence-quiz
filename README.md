@@ -248,8 +248,10 @@ Open Git Bash
 6. Press Enter and your local clone will be created.
 
 # Credits
-part of my inspiration came from [this youTube video](https://www.youtube.com/watch?v=LTPGyaEyTI4&t=1195s) by Great stack in creating a sign up form  and
+- The content lessens in JavaScript with code institute played a major role in this project.
+- part of my inspiration came from [this youTube video](https://www.youtube.com/watch?v=LTPGyaEyTI4&t=1195s) by Great stack in creating a sign up form  and
 from [Web Dev Simplified](https://www.youtube.com/c/webdevsimplified) very helpful in understanding how to structure a quiz.
+- i learnt about Destructuring assignment from this website [website](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 # Content
 https://www.theorie24.de/- i used this app to gather the questions and answers for this quiz.
