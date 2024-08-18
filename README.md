@@ -1,5 +1,5 @@
 # Führerschein Quiz (English)
-![Führerschein quiz image](/assets/images/am-i%20respon.jpg)
+![Führerschein quiz image](/assets/images/responsive-img.webp)
 
 Welcome to the Führerschein Quiz English version.
 ## Introduction 

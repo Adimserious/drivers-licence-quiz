@@ -110,6 +110,8 @@ const exitMessage = document.getElementById('exit-message');
 
     let usernameLength = document.getElementById('username').value.length;
     let user = document.getElementById('username').value;
+    user.addEventListener('click', () => {
+        user.value.trim();});
     
     let userErrorMsg = document.getElementById('user-msg');
     
@@ -123,8 +125,6 @@ const exitMessage = document.getElementById('exit-message');
         hideForm();
     }
 }
-
-
 
 let form = document.getElementById('form');
 form.addEventListener('click', handleSubmit);
@@ -192,6 +192,18 @@ let score = 0;
 let timer;
 // Variable to track the remaining time for the current question
 let timeLeft = 15;
+//let user = '';
+
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+// Shuffle the quiz questions at the start
+shuffle(licenceQuestions);
 
 
 // Function to load the current quiz question and choices
@@ -220,7 +232,7 @@ function loadQuiz() {
     let questionNumber = document.getElementById('questionNoText');
     questionNumber.innerHTML = `<span class="count">Question ` + (parseInt(currentQuiz) + 1) + ` of 11</span>`;
     // shuffle quiz questions
-    shuffledQuestions = licenceQuestions.sort(() => Math.random() - 0.5);
+    //shuffledQuestions = licenceQuestions.sort(() => Math.random() - 0.5);
 }
 
 // Function to deselect any selected answers
@@ -280,7 +292,7 @@ function moveToNextQuestion() {
         quiz.style.display = 'none'
         resultsContainer.classList.remove('hidden');
         resultsContainer.style.display = 'block';
-        scoreElement.innerText = `Your Score: ${score} out of ${licenceQuestions.length}`;
+        scoreElement.innerText = `${user}, Your Score: ${score} out of ${licenceQuestions.length}`;
     }
 }
 
@@ -291,6 +303,7 @@ restartButton.addEventListener('click', () => {
     // Reset the quiz variables
     currentQuiz = 0;
     score = 0;
+    shuffle(licenceQuestions)
 
     // Show the quiz and hide the results
     quiz.classList.remove('hidden');
@@ -316,6 +329,7 @@ exitButton.addEventListener('click', () => {
     // Reset the quiz variables
     currentQuiz = 0;
     score = 0;
+    shuffle(licenceQuestions)
 
     
 });

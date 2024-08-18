@@ -1,3 +1,4 @@
+
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
@@ -67,7 +68,7 @@ main {
     transition: max-height 1.5s;
 }
 
-/* Your Details here text */
+/* Welcome div */
 #form-heading { 
     width: 100%;
     color: black;
@@ -136,24 +137,22 @@ form button:hover {
     margin-left: 20px;
 }
 
-#confirm-password {
-    max-height: 80px;
-    overflow: hidden;
-    transition: max-height 0.5s;
-    transition: padding 0.5s;
-}
+
 
 #info {
     background-color: #80D5A1;
     width: 300px;
     height: 170px;
     border-radius: 5px;
-    position: absolute;
     top: 10px;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
+    display: flex;
+    justify-content: center; /* Centers the div horizontally */
+    align-items: center;     /* Centers the div vertically */
+    position: absolute;
     
 }
 
@@ -176,9 +175,10 @@ form button:hover {
     justify-content: center;
     align-content: center;
     margin: 20px 50px;
-    position: relative;
+    position: absolute;
+    top: 200px;
     bottom: 0px;
-    height: 100px;
+    height: 120px;
     max-height: 0px;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -418,17 +418,17 @@ footer {
     /* This section is for the begin area */
 
     #info {
-        position: absolute;
-        top: 0px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;     
+        position: relative;
     }
 
     #beginDiv {
         margin: 200px  220px;
         width: 300px;
+        height: 250px;
+        
     }
 
     #start {
@@ -530,9 +530,13 @@ footer {
 
     /* This section is for the begin area */
 
-    #info{
-        width: 400px;
-        height: 200px;
+    #info {
+        display: flex;
+        justify-content: center;
+        align-items: center;     
+        
+        position: absolute;
+        bottom: 40px;
     }
 
     .info-list {
@@ -541,9 +545,9 @@ footer {
     }
 
     #beginDiv {
-        margin: 150px  330px;
-        width: 600px;
-        
+        margin: 150px  230px;
+        width: 200px;
+        position: absolute;
     }
 
     #beginDiv div {
