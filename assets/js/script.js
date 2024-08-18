@@ -168,6 +168,8 @@ function showBeginWindow() {
 
 // This function hides the start Quiz and load the first quiz
 function hideStartQuiz() {
+    let wrap = document.querySelector('.wrapper')
+    wrap.style.display = 'none'
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = ('0');
     begin.style.display = 'none';
@@ -324,6 +326,8 @@ exitButton.addEventListener('click', () => {
     exitMessage.style.display = 'block';
     showBeginWindow();
     info.style.display = 'none';
+    let wrap = document.querySelector('.wrapper')
+    wrap.style.display = 'block'
 
     // Reset the quiz variables
     currentQuiz = 0;
@@ -343,6 +347,8 @@ cross.addEventListener('click', () => {
     exitMessage.style.display = 'block';
     showBeginWindow();
     info.style.display = 'none';
+    let wrap = document.querySelector('.wrapper')
+    wrap.style.display = 'block'
 
     // Reset the quiz variables
     currentQuiz = 0;
