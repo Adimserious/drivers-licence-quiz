@@ -1,5 +1,3 @@
-
-
 // These are the quiz questions
 const licenceQuestions = [
 
@@ -81,7 +79,6 @@ const licenceQuestions = [
 
 ];
 
-
 // DOM elements for quiz and result sections
 const info = document.getElementById('info')
 const quiz = document.getElementById('quiz');
@@ -106,15 +103,12 @@ const exitMessage = document.getElementById('exit-message');
  * submiting.
  */
  function handleSubmit(event) {
-  //  event.preventDefault();
 
     let usernameLength = document.getElementById('username').value.length;
     let user = document.getElementById('username').value;
     
-    
     let userErrorMsg = document.getElementById('user-msg');
     
-
     if (usernameLength !== "") {
         userErrorMsg.innerHTML = 'Username must not be empty';
     
@@ -183,7 +177,6 @@ function hideStartQuiz() {
     loadQuiz()
 } 
 
-
 // Variables to keep track of current quiz question and score
 let currentQuiz = 0;
 let score = 0;
@@ -203,7 +196,6 @@ function shuffle(array) {
 
 // Shuffle the quiz questions at the start
 shuffle(licenceQuestions);
-
 
 // Function to load the current quiz question and choices
 function loadQuiz() {
@@ -290,7 +282,6 @@ function moveToNextQuestion() {
         resultsContainer.classList.remove('hidden');
         resultsContainer.style.display = 'block';
         displayScoreMessage()
-        //scoreElement.innerText = `Your Score: ${score} out of ${licenceQuestions.length}`;
     }
 }
 

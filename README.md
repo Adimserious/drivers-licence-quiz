@@ -110,10 +110,10 @@ As a frequent user:
 
 
 ### Result Area
-![Result image](/assets/images/result.webp)
+![Result image](/assets/images/result-area.webp)
 - The result area displays the test 'you scored' together with the number of score the user got out of 11.
 - the result area also has a try again button which allow users to try the quiz again and shuffles the questions each try.
-- The result area contains an exit quiz button that takes the users out from the question area and back to the welcome page.
+- The result area contains an exit quiz button that takes the users out from the result area and back to the start quiz page with the message, You have exited the quiz.
 
 ### Try again and Exit button
 ![Try again and exit image](/assets/images/try-again-exit.webp)
@@ -123,6 +123,14 @@ As a frequent user:
 ### Exit Message
 ![Exit Message](/assets/images/exit-msg.webp)
 - The exit message is seen when user click the exit button and x-icon
+
+### Score and score messages 
+![Score less than 50%](/assets/images/score-50%25.webp)
+![Score 50% plus](/assets/images/score50+.webp)
+![Score 80% plus](/assets/images/score80%25+.webp)
+![Score all correct](/assets/images/score-all.webp)
+
+- The Score message is displayed based on the users score.
 
 ### The Footer
 ![The footer image](/assets/images/footer.webp)
