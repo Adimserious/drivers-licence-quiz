@@ -8,7 +8,7 @@ const licenceQuestions = [
         choices: ["Concentrate on the discussion",
                   "Concentrate on the driving",
                   "Concentrate on both"],
-        correct: "Concentrate on both"
+        correct: "Concentrate on the driving"
     },
     {
         question: 'What could cause the vehicle to leave the road?',
@@ -110,8 +110,7 @@ const exitMessage = document.getElementById('exit-message');
 
     let usernameLength = document.getElementById('username').value.length;
     let user = document.getElementById('username').value;
-    user.addEventListener('click', () => {
-        user.value.trim();});
+    
     
     let userErrorMsg = document.getElementById('user-msg');
     
@@ -192,7 +191,7 @@ let score = 0;
 let timer;
 // Variable to track the remaining time for the current question
 let timeLeft = 15;
-//let user = '';
+
 
 
 function shuffle(array) {
@@ -231,8 +230,6 @@ function loadQuiz() {
     // quiz number count
     let questionNumber = document.getElementById('questionNoText');
     questionNumber.innerHTML = `<span class="count">Question ` + (parseInt(currentQuiz) + 1) + ` of 11</span>`;
-    // shuffle quiz questions
-    //shuffledQuestions = licenceQuestions.sort(() => Math.random() - 0.5);
 }
 
 // Function to deselect any selected answers
@@ -292,8 +289,32 @@ function moveToNextQuestion() {
         quiz.style.display = 'none'
         resultsContainer.classList.remove('hidden');
         resultsContainer.style.display = 'block';
-        scoreElement.innerText = `${user}, Your Score: ${score} out of ${licenceQuestions.length}`;
+        displayScoreMessage()
+        //scoreElement.innerText = `Your Score: ${score} out of ${licenceQuestions.length}`;
     }
+}
+
+// Function to display a message based on the user's quiz score
+function displayScoreMessage() {
+    let message = '';
+    const totalQuestions = licenceQuestions.length;
+    
+    if (score === totalQuestions) {
+        // If the user answered all questions correctly
+        message = `Excellent work, You got all ${score} out of ${totalQuestions} questions correct!`;
+    } else if (score >= totalQuestions * 0.8) {
+        // If the user scored 80% or more of the total questions
+        message = `Great job, You scored ${score} out of ${totalQuestions}.`;
+    } else if (score >= totalQuestions * 0.5) {
+        // If the user scored 50% or more of the total questions
+        message = `Good effort, You scored ${score} out of ${totalQuestions}.`;
+    } else {
+        // If the user scored less than 50% of the total questions
+        message = `You scored ${score} out of ${totalQuestions}, Keep practicing!`;
+    }
+
+    // Display the message by setting the inner text of the score element
+    scoreElement.innerText = message;
 }
 
 
@@ -350,7 +371,4 @@ cross.addEventListener('click', () => {
     // Reset the quiz variables
     currentQuiz = 0;
     score = 0;
-
-    
-
 });
