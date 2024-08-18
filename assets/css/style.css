@@ -137,15 +137,10 @@ form button:hover {
     width: 300px;
     height: 170px;
     border-radius: 5px;
-    top: 10px;
+    top: 45px;
     bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    display: flex;
-    justify-content: center; /* Centers the div horizontally */
-    align-items: center;     /* Centers the div vertically */
-    position: absolute;
+    margin: 120px;
+    position: absolute
     
 }
 
