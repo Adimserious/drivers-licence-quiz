@@ -54,6 +54,7 @@ As a frequent user:
 
 ### Colors
 - The main colors scheme of the quiz application is #2E7248, and #80D5A1.
+![color combination](/assets/images/colors.webp)
 
 ## Features
 ### Existing Features 

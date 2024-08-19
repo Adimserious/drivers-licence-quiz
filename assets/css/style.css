@@ -168,7 +168,7 @@ form button:hover {
     color: white;
     background-color: black;
     text-align: center;
-    margin: 20px 50px 50px;
+    margin: 60px 50px 50px;
     border-radius: 30px;
     font-size: 1.5em;
     text-transform: uppercase;
@@ -398,12 +398,13 @@ footer {
 
     #info {
         display: flex;
-        justify-content: center;
-        align-items: center;     
+        justify-self: center;
+        align-self: center;     
         position: relative;
     }
 
     .wrapper {
+        display: grid;
         flex-direction: column; /* Stack the containers vertically */
         gap: 10px; /* Reduce space between the containers */
     }

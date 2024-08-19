@@ -158,7 +158,8 @@ beginBtn.addEventListener('mouseout', beginOut);
 
 function showBeginWindow() {
     let begin = document.getElementById('beginDiv');
-    begin.style.maxHeight = '1000px';
+    begin.style.maxHeight = '100px';
+    begin.style.backgroundColor = 'Transparent';
     begin.style.display = 'block';
     begin.style.transitionDelay = '1s';
     info.style.display = 'block';
@@ -167,8 +168,8 @@ function showBeginWindow() {
 
 // This function hides the start Quiz and load the first quiz
 function hideStartQuiz() {
-    let wrap = document.querySelector('.wrapper')
-    wrap.style.display = 'none'
+    let wrap = document.querySelector('.wrapper');
+    wrap.style.display = 'none';
     let begin = document.getElementById('beginDiv');
     begin.style.maxHeight = ('0');
     begin.style.display = 'none';
@@ -303,7 +304,7 @@ restartButton.addEventListener('click', () => {
     // Reset the quiz variables
     currentQuiz = 0;
     score = 0;
-    shuffle(licenceQuestions)
+    shuffle(licenceQuestions);
 
     // Show the quiz and hide the results
     quiz.classList.remove('hidden');
@@ -325,11 +326,12 @@ exitButton.addEventListener('click', () => {
     exitMessage.style.display = 'block';
     showBeginWindow();
     info.style.display = 'none';
-    let wrap = document.querySelector('.wrapper')
-    wrap.style.display = ''
+    let wrap = document.querySelector('.wrapper');
+    // Wrap was causing issues and i set it empty
+    wrap.style.display = '';
 
     let formDiv = document.querySelector('#form-div');
-    formDiv.style.display = 'none'
+    formDiv.style.display = 'none';
 
     // Reset the quiz variables
     currentQuiz = 0;
@@ -347,13 +349,13 @@ cross.addEventListener('click', () => {
     resultsContainer.style.display = 'none';
     exitMessage.classList.remove('hidden');
     exitMessage.style.display = 'block';
-    let wrap = document.querySelector('.wrapper')
-    wrap.style.display = ''
+    let wrap = document.querySelector('.wrapper');
+    wrap.style.display = '';
     showBeginWindow();
     info.style.display = 'none';
     
     let formDiv = document.querySelector('#form-div');
-    formDiv.style.display = 'none'
+    formDiv.style.display = 'none';
 
     // Reset the quiz variables
     currentQuiz = 0;
