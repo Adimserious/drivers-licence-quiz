@@ -1,11 +1,11 @@
-# Führerschein Quiz (English)
-![Führerschein quiz image](/assets/images/responsive-img.webp)
+# Drivers Licence Quiz
+![Drivers Licence Quiz image](/assets/images/responsive-img.webp)
 
-Welcome to the Führerschein Quiz English version.
+Welcome to the Drivers Licence Quiz.
 ## Introduction 
-The Führerschein English quiz is designed to provide the English version of the driving licence theory exam questions in Germany. Dedicated to migrants in Germany who wishes to optain a drivers licence and prefers to write the exam in English language.
+The Drivers Licence Quiz is designed to provide the English version of the driving licence theory exam questions in Germany. Dedicated to migrants in Germany who wishes to optain a drivers licence and prefers to write the exam in English language.
 
-The live link can be found here -[Führerschein (English)](https://adimserious.github.io/drivers-licence-quiz/)
+The live link can be found here -[Drivers Licence Quiz](https://adimserious.github.io/drivers-licence-quiz/)
 
 # **Table of Contents**
 - [**Project and Site Owner Goals**](#project-and-site-owner-goals) 
